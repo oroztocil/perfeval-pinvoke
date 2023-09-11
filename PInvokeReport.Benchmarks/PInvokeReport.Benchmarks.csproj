@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks Condition="'$(TargetFrameworks)' == '' AND '$(OS)' == 'Windows_NT'">net48;net6.0;net7.0</TargetFrameworks>
+    <TargetFrameworks Condition="'$(TargetFrameworks)' == '' AND '$(OS)' != 'Windows_NT'">net6.0;net7.0</TargetFrameworks>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>preview</LangVersion>
+    <Optimize>true</Optimize>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <EnableXlfLocalization>false</EnableXlfLocalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeLibs Include="$(ProjectDir)..\Native\*.so;$(ProjectDir)..\Native\*.dll" />
+  </ItemGroup>
+
+  <Target Name="CompileNativeLibrary" BeforeTargets="PreBuildEvent">
+    <Exec Command="make clean -C $(ProjectDir)..\Native -f Makefile" />
+    <Exec Command="make -C $(ProjectDir)..\Native -f Makefile" />
+    <Copy SourceFiles="@(NativeLibs)" DestinationFolder="$(ProjectDir)$(OutDir)\" />
+    <Copy SourceFiles="@(NativeLibs)" DestinationFolder="$(ProjectDir)\" />
+  </Target>
+
+  <ItemGroup>
+    <None Update="bench_lib.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework'">
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' Or ('$(TargetFrameworkIdentifier)' == '.NETCoreApp' And '$(_TargetFrameworkVersionWithoutV)' &lt; '7.0')">
+    <Compile Remove="LibraryImport/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Workaround https://github.com/dotnet/project-system/issues/935 -->
+    <None Include="**/*.cs" />
+  </ItemGroup>
+
+</Project>
