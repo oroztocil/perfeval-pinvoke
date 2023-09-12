@@ -1,32 +1,56 @@
 #include <algorithm>
+#include <cstring>
 #include <iostream>
 #include <string>
 
-#include <stdio.h>
 #include "bench_lib.h"
 
-void Hello() { printf("Do you want to know the answer to the ultimate question of life, the universe, and everything?\n"); }
-void Hello2 () { std::cout << "Do you want to know the answer to the ultimate question of life, the universe, and everything?" << std::endl; }
+void Empty() {}
 
-int Answer() { return 42; }
-
-int Mul2(int x) { return x * 2; }
-
-void ShoutAtMe(const char* input) {
-    std::string str(input);
-    std::transform(str.begin(), str.end(), str.begin(), ::toupper);
-    std::cout << str << std::endl;
+int32_t ConstantInt() {
+	return 42;
 }
 
-int main() {
-    Hello();
-
-    std::string str = "Blbabla";
-
-    printf("Test: %s\n", str.c_str());
-
-    Hello2();
-
-
-    return 42;
+int32_t MultiplyInt(int32_t a, int32_t b) {
+	return a * b;
 }
+
+bool NegateBool(bool value) {
+	return !value;
+}
+
+int SumIntArray(int32_t *arr, int32_t count) {
+	int32_t acc = 0;
+
+	for (int32_t i = 0; i < count; i++) {
+		acc += arr[i];
+	}
+
+	return acc;
+}
+
+double SumDoubleArray(double *arr, int32_t count) {
+	double acc = 0;
+
+	for (int32_t i = 0; i < count; i++) {
+		acc += arr[i];
+	}
+
+	return acc;
+}
+
+int StringLength8(const char *str) {
+	return (int)strlen(str);
+}
+
+
+int StringLength16(const char16_t *str) {
+	return (int)std::char_traits<char16_t>::length(str);
+}
+
+//void StringToUppercase(char *str) {
+//	std::transform(str.begin(), str.end(), str.begin(), ::toupper);
+//	return new 
+//}
+
+

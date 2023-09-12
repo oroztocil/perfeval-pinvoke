@@ -18,20 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <NativeLibs Include="$(ProjectDir)..\Native\*.so;$(ProjectDir)..\Native\*.dll" />
-  </ItemGroup>
-
-  <Target Name="CompileNativeLibrary" BeforeTargets="PreBuildEvent">
-    <Exec Command="make clean -C $(ProjectDir)..\Native -f Makefile" />
-    <Exec Command="make -C $(ProjectDir)..\Native -f Makefile" />
-    <Copy SourceFiles="@(NativeLibs)" DestinationFolder="$(ProjectDir)$(OutDir)\" />
-    <Copy SourceFiles="@(NativeLibs)" DestinationFolder="$(ProjectDir)\" />
-  </Target>
-
-  <ItemGroup>
-    <None Update="bench_lib.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <ProjectReference Include="..\PInvoke.NativeInterface.DllImport\PInvoke.NativeInterface.DllImport.csproj" />
+    <ProjectReference Include="..\PInvoke.NativeInterface.LibraryImport\PInvoke.NativeInterface.LibraryImport.csproj" Condition="('$(TargetFrameworkIdentifier)' == '.NETCoreApp' And '$(_TargetFrameworkVersionWithoutV)' &gt;= '7.0')" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework'">
@@ -45,5 +33,5 @@
     <!-- Workaround https://github.com/dotnet/project-system/issues/935 -->
     <None Include="**/*.cs" />
   </ItemGroup>
-
+  
 </Project>

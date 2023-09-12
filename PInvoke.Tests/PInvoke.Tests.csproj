@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.2.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PInvoke.NativeInterface.DllImport\PInvoke.NativeInterface.DllImport.csproj" />
+    <ProjectReference Include="..\PInvoke.NativeInterface.LibraryImport\PInvoke.NativeInterface.LibraryImport.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeLibs Include="$(ProjectDir)..\Native\*.so;$(ProjectDir)..\Native\*.dll" />
+  </ItemGroup>
+
+  <Target Name="CompileNativeLibrary" BeforeTargets="PreBuildEvent">
+    <Exec Command="make -C $(ProjectDir)..\Native -f Makefile" />
+    <Copy SourceFiles="@(NativeLibs)" DestinationFolder="$(ProjectDir)$(OutDir)\" />
+    <Copy SourceFiles="@(NativeLibs)" DestinationFolder="$(ProjectDir)\" />
+  </Target>
+
+  <ItemGroup>
+    <None Update="*.so;*.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>preview</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EnableXlfLocalization>false</EnableXlfLocalization>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PInvoke.NativeInterface\PInvoke.NativeInterface.csproj" />
+  </ItemGroup>
+</Project>

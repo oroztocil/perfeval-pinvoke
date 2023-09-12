@@ -3,7 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PInvokeReport.Benchmarks", "PInvokeReport.Benchmarks\PInvokeReport.Benchmarks.csproj", "{EAFE2B11-F113-4983-8238-CC1FA6558979}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PInvoke.Benchmarks", "PInvoke.Benchmarks\PInvoke.Benchmarks.csproj", "{EAFE2B11-F113-4983-8238-CC1FA6558979}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Native", "Native", "{A7E7D538-083F-412C-8D6F-053D09CB4B8A}"
+	ProjectSection(SolutionItems) = preProject
+		Native\bench_lib.cpp = Native\bench_lib.cpp
+		Native\bench_lib.h = Native\bench_lib.h
+		Native\Makefile = Native\Makefile
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PInvoke.NativeInterface.DllImport", "PInvoke.NativeInterface.DllImport\PInvoke.NativeInterface.DllImport.csproj", "{11D4F18D-0965-4E0C-8ADF-3555FAF024C6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PInvoke.NativeInterface", "PInvoke.NativeInterface\PInvoke.NativeInterface.csproj", "{1FE36634-FB5D-49A7-A911-D254F82BE932}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PInvoke.NativeInterface.LibraryImport", "PInvoke.NativeInterface.LibraryImport\PInvoke.NativeInterface.LibraryImport.csproj", "{D2C3C89A-CE9D-49B1-9E8E-20B4C4B249C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PInvoke.Tests", "PInvoke.Tests\PInvoke.Tests.csproj", "{AA7D5F40-07F9-4F1E-9EFC-57DB4ECCCBAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +30,22 @@ Global
 		{EAFE2B11-F113-4983-8238-CC1FA6558979}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAFE2B11-F113-4983-8238-CC1FA6558979}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAFE2B11-F113-4983-8238-CC1FA6558979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11D4F18D-0965-4E0C-8ADF-3555FAF024C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D4F18D-0965-4E0C-8ADF-3555FAF024C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D4F18D-0965-4E0C-8ADF-3555FAF024C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D4F18D-0965-4E0C-8ADF-3555FAF024C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FE36634-FB5D-49A7-A911-D254F82BE932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE36634-FB5D-49A7-A911-D254F82BE932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE36634-FB5D-49A7-A911-D254F82BE932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE36634-FB5D-49A7-A911-D254F82BE932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2C3C89A-CE9D-49B1-9E8E-20B4C4B249C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2C3C89A-CE9D-49B1-9E8E-20B4C4B249C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2C3C89A-CE9D-49B1-9E8E-20B4C4B249C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2C3C89A-CE9D-49B1-9E8E-20B4C4B249C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA7D5F40-07F9-4F1E-9EFC-57DB4ECCCBAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7D5F40-07F9-4F1E-9EFC-57DB4ECCCBAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA7D5F40-07F9-4F1E-9EFC-57DB4ECCCBAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7D5F40-07F9-4F1E-9EFC-57DB4ECCCBAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
