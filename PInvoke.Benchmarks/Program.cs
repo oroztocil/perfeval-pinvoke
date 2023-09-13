@@ -17,6 +17,7 @@ namespace PInvoke.Benchmarks
                 .Run(args, ManualConfig
                     .Create(DefaultConfig.Instance)
                     .HideColumns(Column.Job, Column.Namespace)
+                    .AddColumn(CategoriesColumn.Default)
                     .WithOptions(ConfigOptions.JoinSummary));
 
             return IsSuccess(summaries) ? 0 : 1;

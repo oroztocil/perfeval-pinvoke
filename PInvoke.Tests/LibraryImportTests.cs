@@ -45,5 +45,14 @@ namespace PInvoke.Tests
 
             Assert.Equal(input.Length, result);
         }
+
+        [Theory]
+        [InlineData("evaluace")]
+        public void StringToUppercase(string input)
+        {
+            var result = NativeFunctions.StringToUppercase(input);
+
+            Assert.Equal(input.ToUpper(), result);
+        }
     }
 }

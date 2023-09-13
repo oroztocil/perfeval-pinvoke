@@ -48,9 +48,10 @@ int StringLength16(const char16_t *str) {
 	return (int)std::char_traits<char16_t>::length(str);
 }
 
-//void StringToUppercase(char *str) {
-//	std::transform(str.begin(), str.end(), str.begin(), ::toupper);
-//	return new 
-//}
+void StringToUppercase(char *str, int32_t length) {
+	for (int32_t i = 0; i < length; i++) {
+		str[i] = toupper(str[i]);
+	}
+}
 
 

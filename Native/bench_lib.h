@@ -17,7 +17,7 @@ extern "C" {
 	// String functions
 	int StringLength8(const char *str);
 	int StringLength16(const char16_t *str);
-	//const char *StringToUppercase(const char *str);
+	void StringToUppercase(char *str, int32_t length);
 
 	// Struct functions
 }

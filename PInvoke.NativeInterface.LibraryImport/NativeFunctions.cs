@@ -1,5 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.Marshalling;
+using System.Text;
 
 namespace PInvoke.NativeInterface.LibraryImport
 {
@@ -30,12 +31,21 @@ namespace PInvoke.NativeInterface.LibraryImport
 
         // String functions
 
-        [LibraryImport(BenchLibrary.Name, StringMarshalling = StringMarshalling.Utf8)]
+        [LibraryImport(BenchLibrary.Name, StringMarshallingCustomType = typeof(AnsiStringMarshaller))]
         public static partial int StringLength8(string str);
-        //public static partial int StringLength8([MarshalUsing(typeof(AnsiStringMarshaller))] string str);
 
         [LibraryImport(BenchLibrary.Name, StringMarshalling = StringMarshalling.Utf16)]
         public static partial int StringLength16(string str);
+
+        [LibraryImport(BenchLibrary.Name)]
+        internal static partial void StringToUppercase(byte[] str, int length);
+        
+        public static string StringToUppercase(string str)
+        {
+            var bytes = Encoding.UTF8.GetBytes(str);
+            StringToUppercase(bytes, bytes.Length);
+            return Encoding.UTF8.GetString(bytes);
+        }
 
         // Struct functions
     }

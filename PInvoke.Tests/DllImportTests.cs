@@ -1,4 +1,6 @@
-﻿using PInvoke.NativeInterface.DllImport;
+﻿using System.Text;
+
+using PInvoke.NativeInterface.DllImport;
 
 using Xunit;
 
@@ -44,6 +46,15 @@ namespace PInvoke.Tests
             var result = NativeFunctions.StringLength16(input);
 
             Assert.Equal(input.Length, result);
+        }
+
+        [Theory]
+        [InlineData("evaluace")]
+        public void StringToUppercase(string input)
+        {
+            var result = NativeFunctions.StringToUppercase(input);
+
+            Assert.Equal(input.ToUpper(), result);
         }
     }
 }

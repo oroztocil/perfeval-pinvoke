@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using System.Text;
 
 namespace PInvoke.NativeInterface.DllImport
 {
@@ -33,6 +34,24 @@ namespace PInvoke.NativeInterface.DllImport
 
         [DllImport(BenchLibrary.Name, CharSet = CharSet.Unicode)]
         public static extern int StringLength16(string str);
+
+        [DllImport(BenchLibrary.Name, CharSet = CharSet.Ansi)]
+        internal static extern void StringToUppercase(byte[] str, int length);
+        //internal static extern void StringToUppercase(StringBuilder str, int length);
+
+        public static string StringToUppercase(string str)
+        {
+            var bytes = Encoding.UTF8.GetBytes(str);
+            StringToUppercase(bytes, bytes.Length);
+            return Encoding.UTF8.GetString(bytes);
+        }
+
+        //public static string StringToUppercase2(string str)
+        //{
+        //    var sb = new StringBuilder(str);
+        //    StringToUppercase(sb, sb.Capacity);
+        //    return sb.ToString();
+        //}
 
         // Struct functions
     }
