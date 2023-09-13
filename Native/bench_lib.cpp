@@ -5,7 +5,11 @@
 
 #include "bench_lib.h"
 
-void Empty() {}
+void Empty_Void() {}
+
+void Empty_IntArray(int32_t *arr, int32_t count) {}
+
+void Empty_String(const char *str) {}
 
 int32_t ConstantInt() {
 	return 42;
@@ -19,7 +23,7 @@ bool NegateBool(bool value) {
 	return !value;
 }
 
-int SumIntArray(int32_t *arr, int32_t count) {
+int SumIntArray(const int32_t *arr, int32_t count) {
 	int32_t acc = 0;
 
 	for (int32_t i = 0; i < count; i++) {
@@ -29,14 +33,10 @@ int SumIntArray(int32_t *arr, int32_t count) {
 	return acc;
 }
 
-double SumDoubleArray(double *arr, int32_t count) {
-	double acc = 0;
-
+void FillIntArray(int32_t *arr, int32_t count) {
 	for (int32_t i = 0; i < count; i++) {
-		acc += arr[i];
+		arr[i] = i;
 	}
-
-	return acc;
 }
 
 int StringLength8(const char *str) {

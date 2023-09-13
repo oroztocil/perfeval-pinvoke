@@ -5,14 +5,16 @@
 
 extern "C" {
 	// Primitive-type functions
-	void Empty();
+	void Empty_Void();
+	void Empty_IntArray(int32_t *arr, int32_t count);
+	void Empty_String(const char *str);
 	int32_t ConstantInt();
 	int32_t MultiplyInt(int32_t a, int32_t b);
 	bool NegateBool(bool value);
 
 	// Array functions
-	int SumIntArray(int32_t *arr, int32_t count);
-	double SumDoubleArray(double *arr, int32_t count);
+	int SumIntArray(const int32_t *arr, int32_t count);
+	void FillIntArray(int32_t *arr, int32_t count);
 
 	// String functions
 	int StringLength8(const char *str);

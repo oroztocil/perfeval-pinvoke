@@ -1,4 +1,4 @@
-﻿using System.Text;
+﻿using System.Linq;
 
 using PInvoke.NativeInterface.LibraryImport;
 
@@ -31,31 +31,41 @@ namespace PInvoke.Tests
         [Theory]
         [InlineData("evaluace")]
         [InlineData("koníček")]
-        public void StringLength8(string input)
+        public void StringLength_MultiByte(string input)
         {
-            var result = NativeFunctions.StringLength8(input);
-            var utf8Bytes = Encoding.UTF8.GetBytes(input);
-
-            Assert.Equal(utf8Bytes.Length, result);
-        }
-
-        [Theory]
-        [InlineData("evaluace")]
-        [InlineData("koníček")]
-        public void StringLength16(string input)
-        {
-            var result = NativeFunctions.StringLength16(input);
+            var result = NativeFunctions.StringLength_MultiByte(input);
 
             Assert.Equal(input.Length, result);
         }
 
         [Theory]
         [InlineData("evaluace")]
-        public void StringToUppercase(string input)
+        [InlineData("koníček")]
+        public void StringLength_Utf16(string input)
         {
-            var result = NativeFunctions.StringToUppercase(input);
+            var result = NativeFunctions.StringLength_Utf16(input);
+
+            Assert.Equal(input.Length, result);
+        }
+
+        [Theory]
+        [InlineData("evaluace")]
+        public void StringToUppercase_ByteArray(string input)
+        {
+            var result = NativeFunctions.StringToUppercase_ByteArray(input);
 
             Assert.Equal(input.ToUpper(), result);
+        }
+
+        [Fact]
+        public void FillIntArray()
+        {
+            var buffer = new int[10];
+            NativeFunctions.FillIntArray(buffer, buffer.Length);
+
+            var expected = Enumerable.Range(0, 10).ToArray();
+
+            Assert.Equal(expected, buffer);
         }
     }
 }

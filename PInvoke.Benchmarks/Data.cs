@@ -8,10 +8,16 @@ namespace PInvoke.Benchmarks
     {
         private static readonly Random rng = new(42);
 
+        public static readonly IEnumerable<int[]> EmptyIntArrays = new[]
+{
+            new int[10],
+            new int[1000],
+        };
+
         public static readonly IEnumerable<int[]> RandomIntArrays = new[]
         {
             GetRandomIntArray(10),
-            GetRandomIntArray(1000)
+            GetRandomIntArray(1000),
         };
 
         private static int[] GetRandomIntArray(int size) =>
