@@ -9,7 +9,9 @@ using PInvoke.NativeInterface.DllImport;
 namespace PInvoke.Benchmarks.DllImport
 {
     // DllImport is supported in all .NET versions
+    #if WINDOWS
     [SimpleJob(RuntimeMoniker.Net48)]
+    #endif
     [SimpleJob(RuntimeMoniker.Net60)]
     [SimpleJob(RuntimeMoniker.Net70)]
     public class DllImport
@@ -21,7 +23,7 @@ namespace PInvoke.Benchmarks.DllImport
         [Benchmark]
         [BenchmarkCategory(Categories.ReturnInt)]
         public int ConstantInt() => NativeFunctions.ConstantInt();
-
+d
         [Benchmark]
         [BenchmarkCategory(Categories.InReturnInt)]
         public int MultiplyInt() => NativeFunctions.MultiplyInt(1234, 4321);

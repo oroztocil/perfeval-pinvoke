@@ -34,8 +34,9 @@ namespace PInvoke.Tests
         public void StringLength8(string input)
         {
             var result = NativeFunctions.StringLength8(input);
+            var utf8Bytes = Encoding.UTF8.GetBytes(input);
 
-            Assert.Equal(input.Length, result);
+            Assert.Equal(utf8Bytes.Length, result);
         }
 
         [Theory]
