@@ -19,11 +19,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PInvoke.NativeInterface.DllImport\PInvoke.NativeInterface.DllImport.csproj" />
+    <ProjectReference Include="..\PInvoke.NativeInterface.FuncPointers\PInvoke.NativeInterface.FuncPointers.csproj" Condition="('$(TargetFrameworkIdentifier)' == '.NETCoreApp' And '$(_TargetFrameworkVersionWithoutV)' &gt;= '5.0')" />
     <ProjectReference Include="..\PInvoke.NativeInterface.LibraryImport\PInvoke.NativeInterface.LibraryImport.csproj" Condition="('$(TargetFrameworkIdentifier)' == '.NETCoreApp' And '$(_TargetFrameworkVersionWithoutV)' &gt;= '7.0')" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework'">
-  </ItemGroup>
+	<ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' Or ('$(TargetFrameworkIdentifier)' == '.NETCoreApp' And '$(_TargetFrameworkVersionWithoutV)' &lt; '5.0')">
+		<Compile Remove="FuncPointers*.cs" />
+	</ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' Or ('$(TargetFrameworkIdentifier)' == '.NETCoreApp' And '$(_TargetFrameworkVersionWithoutV)' &lt; '7.0')">
     <Compile Remove="LibraryImport*.cs" />

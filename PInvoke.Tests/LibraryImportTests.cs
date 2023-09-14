@@ -28,6 +28,26 @@ namespace PInvoke.Tests
             Assert.Equal(!input, result);
         }
 
+        [Fact]
+        public void SumIntArray()
+        {
+            var arr = new int[] { 1, 2, 3, 4 };
+            var sum = NativeFunctions.SumIntArray(arr, arr.Length);
+
+            Assert.Equal(arr.Sum(), sum);
+        }
+
+        [Fact]
+        public void FillIntArray()
+        {
+            var buffer = new int[10];
+            NativeFunctions.FillIntArray(buffer, buffer.Length);
+
+            var expected = Enumerable.Range(0, 10).ToArray();
+
+            Assert.Equal(expected, buffer);
+        }
+
         [Theory]
         [InlineData("evaluace")]
         [InlineData("koníček")]
@@ -55,17 +75,6 @@ namespace PInvoke.Tests
             var result = NativeFunctions.StringToUppercase_ByteArray(input);
 
             Assert.Equal(input.ToUpper(), result);
-        }
-
-        [Fact]
-        public void FillIntArray()
-        {
-            var buffer = new int[10];
-            NativeFunctions.FillIntArray(buffer, buffer.Length);
-
-            var expected = Enumerable.Range(0, 10).ToArray();
-
-            Assert.Equal(expected, buffer);
         }
     }
 }

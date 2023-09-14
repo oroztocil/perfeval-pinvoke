@@ -7,7 +7,7 @@ using PInvoke.NativeInterface.DllImport;
 
 namespace PInvoke.Benchmarks
 {
-    // DllImport is supported in all .NET versions
+    // DllImport is supported in all .NET versions, .NET 4.8 is Windows-only
 #if OS_WINDOWS
     [SimpleJob(RuntimeMoniker.Net48)]
 #endif
@@ -31,7 +31,7 @@ namespace PInvoke.Benchmarks
         [Benchmark]
         [BenchmarkCategory(Categories.Empty, Categories.InArray)]
         [ArgumentsSource(nameof(RandomIntArrays))]
-        public void Empty_IntArray_FixedPtr(int[] array) => NativeFunctions.Empty_IntArray_FixedPtr(array, array.Length);
+        public void Empty_IntArray_Fixed(int[] array) => NativeFunctions.Empty_IntArray_Fixed(array, array.Length);
 
         [Benchmark]
         [BenchmarkCategory(Categories.Empty, Categories.InString)]
@@ -73,7 +73,7 @@ namespace PInvoke.Benchmarks
         [Benchmark]
         [BenchmarkCategory(Categories.OutArray)]
         [ArgumentsSource(nameof(EmptyIntArrays))]
-        public void FillIntArray_FixedPtr(int[] array) => NativeFunctions.FillIntArray_FixedPtr(array, array.Length);
+        public void FillIntArray_Fixed(int[] array) => NativeFunctions.FillIntArray_Fixed(array, array.Length);
 
         [Benchmark]
         [BenchmarkCategory(Categories.InString)]

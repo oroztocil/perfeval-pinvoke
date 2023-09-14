@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -7,7 +6,7 @@ namespace PInvoke.NativeInterface.DllImport
 {
     public static class NativeFunctions
     {
-        // Primitive-type functions
+        // Empty-bodied functions
 
         [DllImport(BenchLibrary.Name)]
         public static extern void Empty_Void();
@@ -18,7 +17,7 @@ namespace PInvoke.NativeInterface.DllImport
         [DllImport(BenchLibrary.Name, EntryPoint = "Empty_IntArray")]
         internal static extern void Empty_IntArray_Fixed(IntPtr arr, int count);
 
-        public static unsafe void Empty_IntArray_FixedPtr(int[] arr, int count)
+        public static unsafe void Empty_IntArray_Fixed(int[] arr, int count)
         {
             fixed (int* ptr = arr)
             {
@@ -28,6 +27,8 @@ namespace PInvoke.NativeInterface.DllImport
 
         [DllImport(BenchLibrary.Name, CharSet = CharSet.Ansi)]
         public static extern void Empty_String(string str);
+
+        // Simple functions with primitive arguments
 
         [DllImport(BenchLibrary.Name)]
         public static extern int ConstantInt();
@@ -62,7 +63,7 @@ namespace PInvoke.NativeInterface.DllImport
             pinnedArray.Free();
         }
 
-        public static unsafe void FillIntArray_FixedPtr(int[] arr, int count)
+        public static unsafe void FillIntArray_Fixed(int[] arr, int count)
         {
             fixed (int* ptr = arr)
             {

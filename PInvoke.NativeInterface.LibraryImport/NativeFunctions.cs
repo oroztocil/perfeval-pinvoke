@@ -18,7 +18,7 @@ namespace PInvoke.NativeInterface.LibraryImport
         [LibraryImport(BenchLibrary.Name, EntryPoint = "Empty_IntArray")]
         internal static partial void Empty_IntArray_FixedPtr(IntPtr arr, int count);
 
-        public static unsafe void Empty_IntArray_FixedPtr(int[] arr, int count)
+        public static unsafe void Empty_IntArray_Fixed(int[] arr, int count)
         {
             fixed (int* ptr = arr)
             {

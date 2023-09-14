@@ -1,10 +1,6 @@
 ### Abstract
 
-Evaluate common interop patterns:
-    - passing in and returning strings, arrays and structures
-    - mutating passed in data in native code
-    - in and out parameters
-
+Evaluate common interop patterns: - passing in and returning strings, arrays and structures - mutating passed in data in native code - in and out parameters
 
 ### Native method calls
 
@@ -12,7 +8,7 @@ Evaluate common interop patterns:
 - LibaryImport
 - function pointers
 - delegates?
-- C# method call (no inlining?)
+- C# method call (force no inlining?)
 
 ### SuppressGCTransitionAttribute
 
@@ -37,6 +33,16 @@ https://rendered-obsolete.github.io/2021/05/22/net_benchmark.html
 
 ### Marshal.PrelinkAll to preload DLL
 
-
-
 PInvoke has an overhead of between 10 and 30 x86 instructions per call. In addition to this fixed cost, marshaling creates additional overhead. There is no marshaling cost between blittable types that have the same representation in managed and unmanaged code. For example, there is no cost to translate between int and Int32.
+
+You can call LoadLibrary before using your DllImports and DllImport will use the Module you already loaded
+
+When we often call unmanaged code from our application we should think about amount of context switching from managed to unmanaged code because it is performance bottleneck. That's mainly due to security checks which .Net runtime performs before each call of unmanaged function. It goes through call stack and checks if every caller has appropriate rights. We can suppress this kind of behaviour by using SuppressUnmanagedCodeSecurity attribute. This can really help us improve performance when we need to do a lot of context switching.
+
+```csharp
+[SuppressUnmanagedCodeSecurity]
+[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+delegate void MyUnmanagedDelegate(float a, float b, float* result);
+```
+
+When you use [DllImport] (and for other scenarios), under the hood a 'stub' is generated to handle the interop/marshalling/error-handling/etc for you

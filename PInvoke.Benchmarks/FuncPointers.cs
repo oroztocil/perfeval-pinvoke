@@ -1,25 +1,23 @@
-﻿using System.Collections.Generic;
-
-using BenchmarkDotNet.Attributes;
+﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Jobs;
 
-using PInvoke.NativeInterface.LibraryImport;
+using PInvoke.NativeInterface.FuncPointers;
+using System.Collections.Generic;
 
 namespace PInvoke.Benchmarks
 {
-    // LibraryImport is only supported in .NET 7 and newer
+    // Function pointers are only supported in .NET 5 and newer
+    [SimpleJob(RuntimeMoniker.Net60)]
     [SimpleJob(RuntimeMoniker.Net70)]
     [MemoryDiagnoser]
-    public class LibraryImport
+    public class FuncPointers
     {
+        public static IEnumerable<int[]> RandomIntArrays => Data.RandomIntArrays;
+        public static IEnumerable<int[]> EmptyIntArrays => Data.EmptyIntArrays;
+
         [Benchmark]
         [BenchmarkCategory(Categories.Empty)]
         public void Empty_Void() => NativeFunctions.Empty_Void();
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.Empty, Categories.InArray)]
-        [ArgumentsSource(nameof(RandomIntArrays))]
-        public void Empty_IntArray(int[] array) => NativeFunctions.Empty_IntArray(array, array.Length);
 
         [Benchmark]
         [BenchmarkCategory(Categories.Empty, Categories.InArray)]
@@ -45,27 +43,11 @@ namespace PInvoke.Benchmarks
         [Benchmark]
         [BenchmarkCategory(Categories.InArray)]
         [ArgumentsSource(nameof(RandomIntArrays))]
-        public int SumIntArray(int[] array) => NativeFunctions.SumIntArray(array, array.Length);
-
-        public static IEnumerable<int[]> RandomIntArrays => Data.RandomIntArrays;
+        public int SumIntArray_Fixed(int[] array) => NativeFunctions.SumIntArray_Fixed(array, array.Length);
 
         [Benchmark]
         [BenchmarkCategory(Categories.OutArray)]
         [ArgumentsSource(nameof(EmptyIntArrays))]
-        public void FillIntArray(int[] array) => NativeFunctions.FillIntArray(array, array.Length);
-
-        public static IEnumerable<int[]> EmptyIntArrays => Data.EmptyIntArrays;
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.InString)]
-        public int StringLength_MultiByte() => NativeFunctions.StringLength_MultiByte("abraka dabra");
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.InString)]
-        public int StringLength_Utf16() => NativeFunctions.StringLength_Utf16("abraka dabra");
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.OutString)]
-        public string StringToUppercase_ByteArray() => NativeFunctions.StringToUppercase_ByteArray("abraka dabra");
+        public void FillIntArray_Fixed(int[] array) => NativeFunctions.FillIntArray_Fixed(array, array.Length);
     }
 }

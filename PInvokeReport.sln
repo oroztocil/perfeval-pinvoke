@@ -18,7 +18,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PInvoke.NativeInterface", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PInvoke.NativeInterface.LibraryImport", "PInvoke.NativeInterface.LibraryImport\PInvoke.NativeInterface.LibraryImport.csproj", "{D2C3C89A-CE9D-49B1-9E8E-20B4C4B249C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PInvoke.Tests", "PInvoke.Tests\PInvoke.Tests.csproj", "{AA7D5F40-07F9-4F1E-9EFC-57DB4ECCCBAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PInvoke.Tests", "PInvoke.Tests\PInvoke.Tests.csproj", "{AA7D5F40-07F9-4F1E-9EFC-57DB4ECCCBAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PInvoke.NativeInterface.FuncPointers", "PInvoke.NativeInterface.FuncPointers\PInvoke.NativeInterface.FuncPointers.csproj", "{C988BEF6-72C6-424F-B9EE-D66F6B3404F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +48,10 @@ Global
 		{AA7D5F40-07F9-4F1E-9EFC-57DB4ECCCBAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA7D5F40-07F9-4F1E-9EFC-57DB4ECCCBAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA7D5F40-07F9-4F1E-9EFC-57DB4ECCCBAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C988BEF6-72C6-424F-B9EE-D66F6B3404F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C988BEF6-72C6-424F-B9EE-D66F6B3404F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C988BEF6-72C6-424F-B9EE-D66F6B3404F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C988BEF6-72C6-424F-B9EE-D66F6B3404F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

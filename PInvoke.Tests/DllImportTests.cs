@@ -28,6 +28,59 @@ namespace PInvoke.Tests
             Assert.Equal(!input, result);
         }
 
+        [Fact]
+        public void SumIntArray()
+        {
+            var arr = new int[] { 1, 2, 3, 4 };
+            var sum = NativeFunctions.SumIntArray(arr, arr.Length);
+
+            Assert.Equal(arr.Sum(), sum);
+        }
+
+        [Fact]
+        public void FillIntArray()
+        {
+            var buffer = new int[10];
+            NativeFunctions.FillIntArray(buffer, buffer.Length);
+
+            var expected = Enumerable.Range(0, 10).ToArray();
+
+            Assert.Equal(expected, buffer);
+        }
+
+        [Fact]
+        public void FillIntArray_Out()
+        {
+            var buffer = new int[10];
+            NativeFunctions.FillIntArray_OutAttr(buffer, buffer.Length);
+
+            var expected = Enumerable.Range(0, 10).ToArray();
+
+            Assert.Equal(expected, buffer);
+        }
+
+        [Fact]
+        public void FillIntArray_PinnedHandle()
+        {
+            var buffer = new int[10];
+            NativeFunctions.FillIntArray_Pinned(buffer, buffer.Length);
+
+            var expected = Enumerable.Range(0, 10).ToArray();
+
+            Assert.Equal(expected, buffer);
+        }
+
+        [Fact]
+        public void FillIntArray_FixedPtr()
+        {
+            var buffer = new int[10];
+            NativeFunctions.FillIntArray_Fixed(buffer, buffer.Length);
+
+            var expected = Enumerable.Range(0, 10).ToArray();
+
+            Assert.Equal(expected, buffer);
+        }
+
         [Theory]
         [InlineData("evaluace")]
         [InlineData("koníček")]
@@ -78,50 +131,6 @@ namespace PInvoke.Tests
             var result = NativeFunctions.StringToUppercase_Pointer(input);
 
             Assert.Equal(input.ToUpper(), result);
-        }
-
-        [Fact]
-        public void FillIntArray()
-        {
-            var buffer = new int[10];
-            NativeFunctions.FillIntArray(buffer, buffer.Length);
-
-            var expected = Enumerable.Range(0, 10).ToArray();
-
-            Assert.Equal(expected, buffer);
-        }
-
-        [Fact]
-        public void FillIntArray_Out()
-        {
-            var buffer = new int[10];
-            NativeFunctions.FillIntArray_OutAttr(buffer, buffer.Length);
-
-            var expected = Enumerable.Range(0, 10).ToArray();
-
-            Assert.Equal(expected, buffer);
-        }
-
-        [Fact]
-        public void FillIntArray_PinnedHandle()
-        {
-            var buffer = new int[10];
-            NativeFunctions.FillIntArray_Pinned(buffer, buffer.Length);
-
-            var expected = Enumerable.Range(0, 10).ToArray();
-
-            Assert.Equal(expected, buffer);
-        }
-
-        [Fact]
-        public void FillIntArray_FixedPtr()
-        {
-            var buffer = new int[10];
-            NativeFunctions.FillIntArray_FixedPtr(buffer, buffer.Length);
-
-            var expected = Enumerable.Range(0, 10).ToArray();
-
-            Assert.Equal(expected, buffer);
         }
     }
 }

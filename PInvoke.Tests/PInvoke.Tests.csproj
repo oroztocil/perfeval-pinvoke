@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PInvoke.NativeInterface.DllImport\PInvoke.NativeInterface.DllImport.csproj" />
+    <ProjectReference Include="..\PInvoke.NativeInterface.FuncPointers\PInvoke.NativeInterface.FuncPointers.csproj" />
     <ProjectReference Include="..\PInvoke.NativeInterface.LibraryImport\PInvoke.NativeInterface.LibraryImport.csproj" />
   </ItemGroup>
 
