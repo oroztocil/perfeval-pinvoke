@@ -2,6 +2,8 @@
 using BenchmarkDotNet.Jobs;
 
 using PInvoke.NativeInterface.FuncPointers;
+using PInvoke.NativeInterface.Models;
+
 using System.Collections.Generic;
 
 namespace PInvoke.Benchmarks
@@ -12,8 +14,10 @@ namespace PInvoke.Benchmarks
     [MemoryDiagnoser]
     public class FuncPointers
     {
-        public static IEnumerable<int[]> RandomIntArrays => Data.RandomIntArrays;
         public static IEnumerable<int[]> EmptyIntArrays => Data.EmptyIntArrays;
+        public static IEnumerable<int[]> RandomIntArrays => Data.RandomIntArrays;
+        public static IEnumerable<BlittableStruct> BlittableStructs => Data.BlittableStructs;
+        public static IEnumerable<BlittableClass> BlittableClasses => Data.BlittableClasses;
 
         [Benchmark]
         [BenchmarkCategory(Categories.Empty)]

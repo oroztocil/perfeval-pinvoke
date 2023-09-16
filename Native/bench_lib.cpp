@@ -54,4 +54,25 @@ void StringToUppercase(char *str, int32_t length) {
 	}
 }
 
+BlittableStruct SumIntsInStruct_Return(BlittableStruct data) {
+	data.result = data.a + data.b;
+	return data;
+}
 
+
+void SumIntsInStruct_Pointer(BlittableStruct *data) {
+	data->result = data->a + data->b;
+}
+
+void UpdateStruct_Pointer(NonBlittableStruct *data) {
+	data->number++;
+	data->flag = !data->flag;
+	
+	if (data->text[0] != 0) {
+		data->text[0] = 'X';
+	}
+
+	for (int i = 0; i < data->numberArraySize; i++) {
+		data->numberArray[i]++;
+	}
+}

@@ -6,34 +6,16 @@ namespace PInvoke.NativeInterface.FuncPointers
 {
     public static class NativeFunctions
     {
-        private static readonly IntPtr libraryHandle;
+        private static readonly IntPtr lib = NativeLibrary.Load(BenchLibrary.Name);
 
-        private static readonly IntPtr ptr_Empty_Void;
-        private static readonly IntPtr ptr_Empty_IntArray;
-        private static readonly IntPtr ptr_Empty_String;
-
-        private static readonly IntPtr ptr_MultiplyInt;
-        private static readonly IntPtr ptr_ConstantInt;
-        private static readonly IntPtr ptr_NegateBool;
-
-        private static readonly IntPtr ptr_SumIntArray;
-        private static readonly IntPtr ptr_FillIntArray;
-
-        static NativeFunctions()
-        {
-            libraryHandle = NativeLibrary.Load(BenchLibrary.Name);
-
-            ptr_Empty_Void = NativeLibrary.GetExport(libraryHandle, nameof(Empty_Void));
-            ptr_Empty_IntArray = NativeLibrary.GetExport(libraryHandle, nameof(Empty_IntArray_Fixed));
-            ptr_Empty_String = NativeLibrary.GetExport(libraryHandle, nameof(Empty_String));
-
-            ptr_ConstantInt = NativeLibrary.GetExport(libraryHandle, nameof(ConstantInt));
-            ptr_MultiplyInt = NativeLibrary.GetExport(libraryHandle, nameof(MultiplyInt));
-            ptr_NegateBool = NativeLibrary.GetExport(libraryHandle, nameof(NegateBool));
-
-            ptr_SumIntArray = NativeLibrary.GetExport(libraryHandle, nameof(SumIntArray_Fixed));
-            ptr_FillIntArray = NativeLibrary.GetExport(libraryHandle, nameof(FillIntArray_Fixed));
-        }
+        private static readonly IntPtr ptr_Empty_Void = NativeLibrary.GetExport(lib, nameof(Empty_Void));
+        private static readonly IntPtr ptr_Empty_IntArray = NativeLibrary.GetExport(lib, "Empty_IntArray");
+        private static readonly IntPtr ptr_Empty_String = NativeLibrary.GetExport(lib, nameof(Empty_String));
+        private static readonly IntPtr ptr_ConstantInt = NativeLibrary.GetExport(lib, nameof(ConstantInt));
+        private static readonly IntPtr ptr_MultiplyInt = NativeLibrary.GetExport(lib, nameof(MultiplyInt));
+        private static readonly IntPtr ptr_NegateBool = NativeLibrary.GetExport(lib, nameof(NegateBool));
+        private static readonly IntPtr ptr_SumIntArray = NativeLibrary.GetExport(lib, "SumIntArray");
+        private static readonly IntPtr ptr_FillIntArray = NativeLibrary.GetExport(lib, "FillIntArray");
 
         // Empty-bodied functions
 
@@ -51,8 +33,12 @@ namespace PInvoke.NativeInterface.FuncPointers
 
         public static unsafe void Empty_String(string str)
         {
-            var ptr = (byte*)Marshal.StringToHGlobalAnsi(str);
-            ((delegate* unmanaged<byte*, void>)ptr_Empty_String)(ptr);
+            var bytes = Encoding.UTF8.GetBytes(str);
+
+            fixed (byte* ptr = bytes)
+            {
+                ((delegate* unmanaged<byte*, void>)ptr_Empty_String)(ptr);
+            }
         }
 
         // Simple functions with primitive arguments

@@ -4,6 +4,7 @@ using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Jobs;
 
 using PInvoke.NativeInterface.DllImport;
+using PInvoke.NativeInterface.Models;
 
 namespace PInvoke.Benchmarks
 {
@@ -18,6 +19,8 @@ namespace PInvoke.Benchmarks
     {
         public static IEnumerable<int[]> RandomIntArrays => Data.RandomIntArrays;
         public static IEnumerable<int[]> EmptyIntArrays => Data.EmptyIntArrays;
+        public static IEnumerable<BlittableStruct> BlittableStructs => Data.BlittableStructs;
+        public static IEnumerable<BlittableClass> BlittableClasses => Data.BlittableClasses;
 
         [Benchmark]
         [BenchmarkCategory(Categories.Empty)]
@@ -77,7 +80,7 @@ namespace PInvoke.Benchmarks
 
         [Benchmark]
         [BenchmarkCategory(Categories.InString)]
-        public int StringLength_MultiByte() => NativeFunctions.StringLength_MultiByte("abraka dabra");
+        public int StringLength_Utf8() => NativeFunctions.StringLength_Utf8("abraka dabra");
 
         [Benchmark]
         [BenchmarkCategory(Categories.InString)]
@@ -93,6 +96,24 @@ namespace PInvoke.Benchmarks
 
         [Benchmark]
         [BenchmarkCategory(Categories.OutString)]
-        public string StringToUppercase_Pointer() => NativeFunctions.StringToUppercase_Pointer("abraka dabra");
+        public string StringToUppercase_Pointer() => NativeFunctions.StringToUppercase_Fixed("abraka dabra");
+
+        [Benchmark]
+        [BenchmarkCategory(Categories.InStruct, Categories.OutStruct)]
+        [ArgumentsSource(nameof(BlittableStructs))]
+        public BlittableStruct SumIntsInStruct_Return(BlittableStruct data) =>
+            NativeFunctions.SumIntsInStruct_Return(data);
+
+        [Benchmark]
+        [BenchmarkCategory(Categories.InStruct, Categories.OutStruct)]
+        [ArgumentsSource(nameof(BlittableStructs))]
+        public void SumIntsInStruct_Ref(BlittableStruct data) =>
+            NativeFunctions.SumIntsInStruct_Ref(ref data);
+
+        [Benchmark]
+        [BenchmarkCategory(Categories.InStruct, Categories.OutStruct)]
+        [ArgumentsSource(nameof(BlittableClasses))]
+        public void SumIntsInClass_Ref(BlittableClass data) =>
+            NativeFunctions.SumIntsInClass_Ref(data);
     }
 }

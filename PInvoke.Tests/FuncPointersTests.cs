@@ -46,5 +46,13 @@ namespace PInvoke.Tests
 
             Assert.Equal(expected, buffer);
         }
+
+        [Fact]
+        public void Empty_String()
+        {
+            NativeFunctions.Empty_String("abraka dabra");
+
+            Assert.True(true);
+        }
     }
 }

@@ -11,4 +11,6 @@ internal static class Categories
     public const string InDoubleArray = nameof(InDoubleArray);
     public const string InString = nameof(InString);
     public const string OutString = nameof(OutString);
+    public const string InStruct = nameof(InStruct);
+    public const string OutStruct = nameof(OutStruct);
 }

@@ -3,6 +3,22 @@
 #include <cstdint>
 #include <uchar.h>
 
+struct BlittableStruct {
+	int a;
+	int b;
+	int result;
+};
+
+struct NonBlittableStruct {
+	int number;
+	bool flag;
+	char *text;
+	int* numberArray;
+	int numberArraySize;
+	//public string textArray;
+	//public BlittableStruct[] structArray;
+};
+
 extern "C" {
 	// Primitive-type functions
 	void Empty_Void();
@@ -23,4 +39,7 @@ extern "C" {
 	void StringToUppercase(char *str, int32_t length);
 
 	// Struct functions
+	BlittableStruct SumIntsInStruct_Return(BlittableStruct data);
+	void SumIntsInStruct_Pointer(BlittableStruct *data);
+	void UpdateStruct_Pointer(NonBlittableStruct *data);
 }

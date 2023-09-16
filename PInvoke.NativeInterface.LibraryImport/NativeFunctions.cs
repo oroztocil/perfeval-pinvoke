@@ -1,12 +1,20 @@
 ﻿using System;
+using System.Buffers;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.Marshalling;
 using System.Text;
+
+using PInvoke.NativeInterface.Models;
+
+[assembly: DisableRuntimeMarshalling]
 
 namespace PInvoke.NativeInterface.LibraryImport
 {
     public static partial class NativeFunctions
     {
+        // [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvSuppressGCTransition) })]
+
         // Primitive-type functions
 
         [LibraryImport(BenchLibrary.Name)]
@@ -26,7 +34,7 @@ namespace PInvoke.NativeInterface.LibraryImport
             }
         }
 
-        [LibraryImport(BenchLibrary.Name, StringMarshallingCustomType = typeof(AnsiStringMarshaller))]
+        [LibraryImport(BenchLibrary.Name, StringMarshalling = StringMarshalling.Utf8)]
         public static partial void Empty_String(string str);
 
         [LibraryImport(BenchLibrary.Name)]
@@ -49,8 +57,8 @@ namespace PInvoke.NativeInterface.LibraryImport
 
         // String functions
 
-        [LibraryImport(BenchLibrary.Name, EntryPoint = "StringLength8", StringMarshallingCustomType = typeof(AnsiStringMarshaller))]
-        public static partial int StringLength_MultiByte(string str);
+        [LibraryImport(BenchLibrary.Name, EntryPoint = "StringLength8", StringMarshalling = StringMarshalling.Utf8)]
+        public static partial int StringLength_Utf8(string str);
 
         [LibraryImport(BenchLibrary.Name, EntryPoint = "StringLength16", StringMarshalling = StringMarshalling.Utf16)]
         public static partial int StringLength_Utf16(string str);
@@ -65,6 +73,27 @@ namespace PInvoke.NativeInterface.LibraryImport
             return Encoding.UTF8.GetString(bytes);
         }
 
+        public static string StringToUppercase_PooledByteArray(string str)
+        {
+            var buffer = ArrayPool<byte>.Shared.Rent(str.Length);
+            var byteCount = Encoding.UTF8.GetBytes(str, buffer);
+            StringToUppercase_ByteArray(buffer, byteCount);
+            return Encoding.UTF8.GetString(buffer, 0, byteCount);
+        }
+
         // Struct functions
+
+        [LibraryImport(BenchLibrary.Name)]
+        public static partial BlittableStruct SumIntsInStruct_Return(BlittableStruct data);
+
+        [LibraryImport(BenchLibrary.Name)]
+        public static partial void SumIntsInStruct_Ref(ref BlittableStruct data);
+
+        //[LibraryImport(BenchLibrary.Name, EntryPoint = "SumIntsInStruct_Pointer")]
+        //public static partial void SumIntsInClass_Pointer(BlittableClass data);
+
+        [LibraryImport(BenchLibrary.Name)]
+        public static partial void UpdateStruct_Pointer(
+            [MarshalUsing(typeof(NonBlittableStructMarshaller))] ref NonBlittableStruct data);
     }
 }

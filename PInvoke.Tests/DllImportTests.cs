@@ -1,6 +1,8 @@
 ﻿using System.Linq;
+using System.Text;
 
 using PInvoke.NativeInterface.DllImport;
+using PInvoke.NativeInterface.Models;
 
 using Xunit;
 
@@ -84,16 +86,11 @@ namespace PInvoke.Tests
         [Theory]
         [InlineData("evaluace")]
         [InlineData("koníček")]
-        public void StringLength_MultiByte(string input)
+        public void StringLength_Utf8(string input)
         {
-            var result = NativeFunctions.StringLength_MultiByte(input);
-
-#if OS_WINDOWS // CharSet = CharSet.Ansi uses code pages on Windows
-            Assert.Equal(input.Length, result);
-#else // CharSet = CharSet.Ansi uses UTF-8 on Linux
+            var result = NativeFunctions.StringLength_Utf8(input);
             var utf8Bytes = Encoding.UTF8.GetBytes(input);
             Assert.Equal(utf8Bytes.Length, result);
-#endif
         }
 
         [Theory]
@@ -126,11 +123,29 @@ namespace PInvoke.Tests
 
         [Theory]
         [InlineData("evaluace")]
-        public void StringToUppercase_Pointer(string input)
+        public void StringToUppercase_Fixed(string input)
         {
-            var result = NativeFunctions.StringToUppercase_Pointer(input);
+            var result = NativeFunctions.StringToUppercase_Fixed(input);
 
             Assert.Equal(input.ToUpper(), result);
+        }
+
+        [Fact]
+        public void SumIntsInStruct_Return()
+        {
+            var input = new BlittableStruct { a = 3, b = 4 };
+            var result = NativeFunctions.SumIntsInStruct_Return(input);
+
+            Assert.Equal(7, result.result);
+        }
+
+        [Fact]
+        public void SumIntsInStruct_Pointer()
+        {
+            var input = new BlittableStruct { a = 3, b = 4 };
+            NativeFunctions.SumIntsInStruct_Ref(ref input);
+
+            Assert.Equal(7, input.result);
         }
     }
 }

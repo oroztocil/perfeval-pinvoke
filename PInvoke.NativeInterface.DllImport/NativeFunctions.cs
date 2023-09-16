@@ -2,6 +2,8 @@
 using System.Runtime.InteropServices;
 using System.Text;
 
+using PInvoke.NativeInterface.Models;
+
 namespace PInvoke.NativeInterface.DllImport
 {
     public static class NativeFunctions
@@ -25,8 +27,8 @@ namespace PInvoke.NativeInterface.DllImport
             }
         }
 
-        [DllImport(BenchLibrary.Name, CharSet = CharSet.Ansi)]
-        public static extern void Empty_String(string str);
+        [DllImport(BenchLibrary.Name)]
+        public static extern void Empty_String([MarshalAs(UnmanagedType.LPUTF8Str)] string str);
 
         // Simple functions with primitive arguments
 
@@ -73,13 +75,13 @@ namespace PInvoke.NativeInterface.DllImport
 
         // String functions
 
-        [DllImport(BenchLibrary.Name, EntryPoint = "StringLength8", CharSet = CharSet.Ansi)]
-        public static extern int StringLength_MultiByte(string str);
+        [DllImport(BenchLibrary.Name, EntryPoint = "StringLength8")]
+        public static extern int StringLength_Utf8([MarshalAs(UnmanagedType.LPUTF8Str)] string str);
 
         [DllImport(BenchLibrary.Name, EntryPoint = "StringLength16", CharSet = CharSet.Unicode)]
         public static extern int StringLength_Utf16(string str);
 
-        [DllImport(BenchLibrary.Name, EntryPoint = "StringToUppercase", CharSet = CharSet.Ansi)]
+        [DllImport(BenchLibrary.Name, EntryPoint = "StringToUppercase")]
         internal static extern void StringToUppercase_ByteArray(byte[] str, int length);
 
         public static string StringToUppercase_ByteArray(string str)
@@ -89,8 +91,8 @@ namespace PInvoke.NativeInterface.DllImport
             return Encoding.UTF8.GetString(bytes);
         }
 
-        [DllImport(BenchLibrary.Name, EntryPoint = "StringToUppercase", CharSet = CharSet.Ansi)]
-        internal static extern void StringToUppercase_StringBuilder(StringBuilder str, int length);
+        [DllImport(BenchLibrary.Name, EntryPoint = "StringToUppercase")]
+        internal static extern void StringToUppercase_StringBuilder([MarshalAs(UnmanagedType.LPUTF8Str)] StringBuilder str, int length);
 
         public static string StringToUppercase_StringBuilder(string str)
         {
@@ -99,36 +101,31 @@ namespace PInvoke.NativeInterface.DllImport
             return sb.ToString();
         }
 
-        [DllImport(BenchLibrary.Name, EntryPoint = "StringToUppercase", CharSet = CharSet.Ansi)]
-        internal static extern void StringToUppercase_Pointer(IntPtr str, int length);
+        [DllImport(BenchLibrary.Name, EntryPoint = "StringToUppercase")]
+        internal static extern void StringToUppercase_Fixed(IntPtr str, int length);
 
-        public static string StringToUppercase_Pointer(string str)
+        public static unsafe string StringToUppercase_Fixed(string str)
         {
             var utf8Buffer = Encoding.UTF8.GetBytes(str);
-            var ptr = IntPtr.Zero;
 
-            try
+            fixed (byte* ptr = utf8Buffer)
             {
-                ptr = Marshal.AllocHGlobal(utf8Buffer.Length);
-
-                Marshal.Copy(utf8Buffer, 0, ptr, utf8Buffer.Length);
-
-                StringToUppercase_Pointer(ptr, utf8Buffer.Length);
-
-                Marshal.Copy(ptr, utf8Buffer, 0,  utf8Buffer.Length);
-
-                return Encoding.UTF8.GetString(utf8Buffer);
+                StringToUppercase_Fixed((IntPtr)ptr, utf8Buffer.Length);
             }
-            finally
-            {
-                if (ptr != IntPtr.Zero)
-                {
-                    Marshal.FreeHGlobal(ptr);
-                }
-            }
+
+            return Encoding.UTF8.GetString(utf8Buffer);
         }
 
         // Struct functions
+
+        [DllImport(BenchLibrary.Name)]
+        public static extern BlittableStruct SumIntsInStruct_Return(BlittableStruct data);
+
+        [DllImport(BenchLibrary.Name)]
+        public static extern void SumIntsInStruct_Ref(ref BlittableStruct data);
+
+        [DllImport(BenchLibrary.Name, EntryPoint = "SumIntsInStruct_Pointer")]
+        public static extern void SumIntsInClass_Ref(BlittableClass data);
 
         // Pass in struct by value
 
