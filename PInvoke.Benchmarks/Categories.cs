@@ -2,6 +2,8 @@
 
 internal static class Categories
 {
+    public const string Managed = nameof(Managed);
+
     public const string Empty = nameof(Empty);
     public const string ReturnInt = nameof(ReturnInt);
     public const string InReturnInt = nameof(InReturnInt);
@@ -13,4 +15,6 @@ internal static class Categories
     public const string OutString = nameof(OutString);
     public const string InStruct = nameof(InStruct);
     public const string OutStruct = nameof(OutStruct);
+    public const string NonBlittable = nameof(NonBlittable);
+    public const string SGCT = nameof(SGCT);
 }

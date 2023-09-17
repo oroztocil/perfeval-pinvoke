@@ -15,15 +15,10 @@ namespace PInvoke.Benchmarks
     [SimpleJob(RuntimeMoniker.Net60)]
     [SimpleJob(RuntimeMoniker.Net70)]
     [MemoryDiagnoser]
-    public class DllImport
+    public class DllImport : BenchmarkBase
     {
-        public static IEnumerable<int[]> RandomIntArrays => Data.RandomIntArrays;
-        public static IEnumerable<int[]> EmptyIntArrays => Data.EmptyIntArrays;
-        public static IEnumerable<BlittableStruct> BlittableStructs => Data.BlittableStructs;
-        public static IEnumerable<BlittableClass> BlittableClasses => Data.BlittableClasses;
-
         [Benchmark]
-        [BenchmarkCategory(Categories.Empty)]
+        [BenchmarkCategory(Categories.Empty, "sgct")]
         public void Empty_Void() => NativeFunctions.Empty_Void();
 
         [Benchmark]
@@ -38,7 +33,7 @@ namespace PInvoke.Benchmarks
 
         [Benchmark]
         [BenchmarkCategory(Categories.Empty, Categories.InString)]
-        public void Empty_String() => NativeFunctions.Empty_String("abraka dabra");
+        public void Empty_String() => NativeFunctions.Empty_String(Data.NonAsciiString);
 
         [Benchmark]
         [BenchmarkCategory(Categories.ReturnInt)]
@@ -71,7 +66,7 @@ namespace PInvoke.Benchmarks
         [Benchmark]
         [BenchmarkCategory(Categories.OutArray)]
         [ArgumentsSource(nameof(EmptyIntArrays))]
-        public void FillIntArray_PinnedHandle(int[] array) => NativeFunctions.FillIntArray_Pinned(array, array.Length);
+        public void FillIntArray_Pinned(int[] array) => NativeFunctions.FillIntArray_Pinned(array, array.Length);
 
         [Benchmark]
         [BenchmarkCategory(Categories.OutArray)]
@@ -80,40 +75,46 @@ namespace PInvoke.Benchmarks
 
         [Benchmark]
         [BenchmarkCategory(Categories.InString)]
-        public int StringLength_Utf8() => NativeFunctions.StringLength_Utf8("abraka dabra");
+        public int StringLength_Utf8() => NativeFunctions.StringLength_Utf8(Data.NonAsciiString);
 
         [Benchmark]
         [BenchmarkCategory(Categories.InString)]
-        public int StringLength_Utf16() => NativeFunctions.StringLength_Utf16("abraka dabra");
+        public int StringLength_Utf16() => NativeFunctions.StringLength_Utf16(Data.NonAsciiString);
 
         [Benchmark]
         [BenchmarkCategory(Categories.OutString)]
-        public string StringToUppercase_ByteArray() => NativeFunctions.StringToUppercase_ByteArray("abraka dabra");
+        public string StringToUppercase_ByteArray() => NativeFunctions.StringToUppercase_ByteArray(Data.NonAsciiString);
 
         [Benchmark]
         [BenchmarkCategory(Categories.OutString)]
-        public string StringToUppercase_StringBuilder() => NativeFunctions.StringToUppercase_StringBuilder("abraka dabra");
+        public string StringToUppercase_StringBuilder() => NativeFunctions.StringToUppercase_StringBuilder(Data.NonAsciiString);
 
         [Benchmark]
         [BenchmarkCategory(Categories.OutString)]
-        public string StringToUppercase_Pointer() => NativeFunctions.StringToUppercase_Fixed("abraka dabra");
+        public string StringToUppercase_Fixed() => NativeFunctions.StringToUppercase_Fixed(Data.NonAsciiString);
 
         [Benchmark]
         [BenchmarkCategory(Categories.InStruct, Categories.OutStruct)]
         [ArgumentsSource(nameof(BlittableStructs))]
-        public BlittableStruct SumIntsInStruct_Return(BlittableStruct data) =>
-            NativeFunctions.SumIntsInStruct_Return(data);
+        public BlittableStruct SumIntsInStruct_Return(BlittableStruct input) =>
+            NativeFunctions.SumIntsInStruct_Return(input);
 
         [Benchmark]
         [BenchmarkCategory(Categories.InStruct, Categories.OutStruct)]
         [ArgumentsSource(nameof(BlittableStructs))]
-        public void SumIntsInStruct_Ref(BlittableStruct data) =>
-            NativeFunctions.SumIntsInStruct_Ref(ref data);
+        public void SumIntsInStruct_Ref(BlittableStruct input) =>
+            NativeFunctions.SumIntsInStruct_Ref(ref input);
 
         [Benchmark]
         [BenchmarkCategory(Categories.InStruct, Categories.OutStruct)]
         [ArgumentsSource(nameof(BlittableClasses))]
-        public void SumIntsInClass_Ref(BlittableClass data) =>
-            NativeFunctions.SumIntsInClass_Ref(data);
+        public void SumIntsInClass_Ref(BlittableClass input) =>
+            NativeFunctions.SumIntsInClass_Ref(input);
+
+        [Benchmark]
+        [BenchmarkCategory(Categories.InStruct, Categories.OutStruct, Categories.NonBlittable)]
+        [ArgumentsSource(nameof(NonBlittableStructs))]
+        public void UpdateNonBlittableStruct_Manual(NonBlittableStruct input) =>
+            NativeFunctions.UpdateNonBlittableStruct_Manual(ref input);
     }
 }

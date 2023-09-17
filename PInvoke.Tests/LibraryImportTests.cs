@@ -51,8 +51,8 @@ namespace PInvoke.Tests
         }
 
         [Theory]
-        [InlineData("evaluace")]
-        [InlineData("koníček")]
+        [InlineData(Data.AsciiString)]
+        [InlineData(Data.NonAsciiString)]
         public void StringLength_Utf8(string input)
         {
             var result = NativeFunctions.StringLength_Utf8(input);
@@ -62,8 +62,8 @@ namespace PInvoke.Tests
         }
 
         [Theory]
-        [InlineData("evaluace")]
-        [InlineData("koníček")]
+        [InlineData(Data.AsciiString)]
+        [InlineData(Data.NonAsciiString)]
         public void StringLength_Utf16(string input)
         {
             var result = NativeFunctions.StringLength_Utf16(input);
@@ -72,8 +72,7 @@ namespace PInvoke.Tests
         }
 
         [Theory]
-        [InlineData("evaluace")]
-        [InlineData("abraka dabra")]
+        [InlineData(Data.AsciiString)]
         public void StringToUppercase_ByteArray(string input)
         {
             var result = NativeFunctions.StringToUppercase_ByteArray(input);
@@ -82,8 +81,7 @@ namespace PInvoke.Tests
         }
 
         [Theory]
-        [InlineData("evaluace")]
-        [InlineData("abraka dabra")]
+        [InlineData(Data.AsciiString)]
         public void StringToUppercase_PooledByteArray(string input)
         {
             var result = NativeFunctions.StringToUppercase_PooledByteArray(input);
@@ -101,7 +99,7 @@ namespace PInvoke.Tests
         }
 
         [Fact]
-        public void SumIntsInStruct_Pointer()
+        public void SumIntsInStruct_Ref()
         {
             var input = new BlittableStruct { a = 3, b = 4 };
             NativeFunctions.SumIntsInStruct_Ref(ref input);
@@ -110,7 +108,7 @@ namespace PInvoke.Tests
         }
 
         [Fact]
-        public void UpdateStruct_Pointer()
+        public void UpdateNonBlittableStruct_Marshaller()
         {
             var input = new NonBlittableStruct
             {
@@ -120,7 +118,26 @@ namespace PInvoke.Tests
                 numberArray = new int[] { 1, 2, 3 },
             };
 
-            NativeFunctions.UpdateStruct_Pointer(ref input);
+            NativeFunctions.UpdateNonBlittableStruct_Marshaller(ref input);
+
+            Assert.Equal(42, input.number);
+            Assert.False(input.flag);
+            Assert.Equal("Xhoj", input.text);
+            Assert.Equal(new int[] { 2, 3, 4 }, input.numberArray);
+        }
+
+        [Fact]
+        public void UpdateNonBlittableStruct_Manual()
+        {
+            var input = new NonBlittableStruct
+            {
+                number = 41,
+                flag = true,
+                text = "ahoj",
+                numberArray = new int[] { 1, 2, 3 },
+            };
+
+            NativeFunctions.UpdateNonBlittableStruct_Manual(ref input);
 
             Assert.Equal(42, input.number);
             Assert.False(input.flag);

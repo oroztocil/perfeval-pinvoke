@@ -20,22 +20,34 @@ namespace PInvoke.NativeInterface.LibraryImport
         [LibraryImport(BenchLibrary.Name)]
         public static partial void Empty_Void();
 
+        [LibraryImport(BenchLibrary.Name, EntryPoint = "Empty_Void")]
+        [SuppressGCTransition]
+        public static partial void Empty_Void_SGCT();
+
         [LibraryImport(BenchLibrary.Name)]
         public static partial void Empty_IntArray(int[] arr, int count);
 
         [LibraryImport(BenchLibrary.Name, EntryPoint = "Empty_IntArray")]
-        internal static partial void Empty_IntArray_FixedPtr(IntPtr arr, int count);
+        [SuppressGCTransition]
+        public static partial void Empty_IntArray_SGCT(int[] arr, int count);
+
+        [LibraryImport(BenchLibrary.Name, EntryPoint = "Empty_IntArray")]
+        internal static partial void Empty_IntArray_Fixed(IntPtr arr, int count);
 
         public static unsafe void Empty_IntArray_Fixed(int[] arr, int count)
         {
             fixed (int* ptr = arr)
             {
-                Empty_IntArray_FixedPtr((IntPtr)ptr, count);
+                Empty_IntArray_Fixed((IntPtr)ptr, count);
             }
         }
 
         [LibraryImport(BenchLibrary.Name, StringMarshalling = StringMarshalling.Utf8)]
         public static partial void Empty_String(string str);
+
+        [LibraryImport(BenchLibrary.Name, EntryPoint = "Empty_String", StringMarshalling = StringMarshalling.Utf8)]
+        [SuppressGCTransition]
+        public static partial void Empty_String_SGCT(string str);
 
         [LibraryImport(BenchLibrary.Name)]
         public static partial int ConstantInt();
@@ -43,9 +55,13 @@ namespace PInvoke.NativeInterface.LibraryImport
         [LibraryImport(BenchLibrary.Name)]
         public static partial int MultiplyInt(int a, int b);
 
+        [LibraryImport(BenchLibrary.Name, EntryPoint = "MultiplyInt")]
+        [SuppressGCTransition]
+        public static partial int MultiplyInt_SGCT(int a, int b);
+
         [LibraryImport(BenchLibrary.Name)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        public static partial bool NegateBool([MarshalAs(UnmanagedType.Bool)] bool value);
+        [return: MarshalAs(UnmanagedType.U1)]
+        public static partial bool NegateBool([MarshalAs(UnmanagedType.U1)] bool value);
 
         // Array functions
 
@@ -54,6 +70,27 @@ namespace PInvoke.NativeInterface.LibraryImport
 
         [LibraryImport(BenchLibrary.Name)]
         public static partial void FillIntArray(int[] arr, int count);
+
+        [LibraryImport(BenchLibrary.Name, EntryPoint = "FillIntArray")]
+        internal static partial void FillIntArray_Ptr(IntPtr arr, int count);
+
+        public static void FillIntArray_Pinned(int[] arr, int count)
+        {
+            GCHandle pinnedArray = GCHandle.Alloc(arr, GCHandleType.Pinned);
+            IntPtr ptr = pinnedArray.AddrOfPinnedObject();
+
+            FillIntArray_Ptr(ptr, count);
+
+            pinnedArray.Free();
+        }
+
+        public static unsafe void FillIntArray_Fixed(int[] arr, int count)
+        {
+            fixed (int* ptr = arr)
+            {
+                FillIntArray_Ptr((IntPtr)ptr, count);
+            }
+        }
 
         // String functions
 
@@ -73,27 +110,68 @@ namespace PInvoke.NativeInterface.LibraryImport
             return Encoding.UTF8.GetString(bytes);
         }
 
+        [DllImport(BenchLibrary.Name, EntryPoint = "StringToUppercase")]
+        internal static extern void StringToUppercase_Fixed(IntPtr str, int length);
+
+        public static unsafe string StringToUppercase_Fixed(string str)
+        {
+            var utf8Buffer = Encoding.UTF8.GetBytes(str);
+
+            fixed (byte* ptr = utf8Buffer)
+            {
+                StringToUppercase_Fixed((IntPtr)ptr, utf8Buffer.Length);
+            }
+
+            return Encoding.UTF8.GetString(utf8Buffer);
+        }
+
         public static string StringToUppercase_PooledByteArray(string str)
         {
             var buffer = ArrayPool<byte>.Shared.Rent(str.Length);
             var byteCount = Encoding.UTF8.GetBytes(str, buffer);
             StringToUppercase_ByteArray(buffer, byteCount);
-            return Encoding.UTF8.GetString(buffer, 0, byteCount);
+            var result = Encoding.UTF8.GetString(buffer, 0, byteCount);
+            ArrayPool<byte>.Shared.Return(buffer);
+            return result;
         }
 
         // Struct functions
 
         [LibraryImport(BenchLibrary.Name)]
-        public static partial BlittableStruct SumIntsInStruct_Return(BlittableStruct data);
+        public static partial BlittableStruct SumIntsInStruct_Return(BlittableStruct input);
 
-        [LibraryImport(BenchLibrary.Name)]
-        public static partial void SumIntsInStruct_Ref(ref BlittableStruct data);
+        [LibraryImport(BenchLibrary.Name, EntryPoint = "SumIntsInStruct_Pointer")]
+        public static partial void SumIntsInStruct_Ref(ref BlittableStruct input);
 
-        //[LibraryImport(BenchLibrary.Name, EntryPoint = "SumIntsInStruct_Pointer")]
-        //public static partial void SumIntsInClass_Pointer(BlittableClass data);
+        [LibraryImport(BenchLibrary.Name, EntryPoint = "UpdateNonBlittableStruct")]
+        public static partial void UpdateNonBlittableStruct_Marshaller(
+            [MarshalUsing(typeof(NonBlittableStatetelessMarshaller))] ref NonBlittableStruct input);
 
-        [LibraryImport(BenchLibrary.Name)]
-        public static partial void UpdateStruct_Pointer(
-            [MarshalUsing(typeof(NonBlittableStructMarshaller))] ref NonBlittableStruct data);
+        [LibraryImport(BenchLibrary.Name, EntryPoint = "UpdateNonBlittableStruct")]
+        internal static partial void UpdateNonBlittableStruct_Manual(ref MarshalledNonBlittableStruct input);
+
+        public static unsafe void UpdateNonBlittableStruct_Manual(ref NonBlittableStruct input)
+        {
+            var utf8Buffer = Encoding.UTF8.GetBytes(input.text);
+
+            fixed (byte* textPtr = utf8Buffer)
+            fixed (int* numberArrayPtr = input.numberArray)
+            {
+                var marshalled = new MarshalledNonBlittableStruct
+                {
+                    number = input.number,
+                    flag = MarshalExtensions.BoolToByte(input.flag),
+                    numberArray = (IntPtr)numberArrayPtr,
+                    numberArraySize = input.numberArray.Length,
+                    text = (IntPtr)textPtr
+                };
+
+                UpdateNonBlittableStruct_Manual(ref marshalled);
+
+                input.number = marshalled.number;
+                input.flag = MarshalExtensions.ByteToBool(marshalled.flag);
+                input.text = Encoding.UTF8.GetString(utf8Buffer);
+            }
+        }
     }
 }

@@ -39,7 +39,8 @@ namespace PInvoke.NativeInterface.DllImport
         public static extern int MultiplyInt(int a, int b);
 
         [DllImport(BenchLibrary.Name)]
-        public static extern bool NegateBool(bool value);
+        [return: MarshalAs(UnmanagedType.U1)]
+        public static extern bool NegateBool([MarshalAs(UnmanagedType.U1)] bool value);
 
         // Array functions
 
@@ -53,14 +54,14 @@ namespace PInvoke.NativeInterface.DllImport
         public static extern void FillIntArray_OutAttr([Out] int[] arr, int count);
 
         [DllImport(BenchLibrary.Name, EntryPoint = "FillIntArray")]
-        internal static extern void FillIntArray_IntPtr(IntPtr arr, int count);
+        internal static extern void FillIntArray_Ptr(IntPtr arr, int count);
 
         public static void FillIntArray_Pinned(int[] arr, int count)
         {
             GCHandle pinnedArray = GCHandle.Alloc(arr, GCHandleType.Pinned);
             IntPtr ptr = pinnedArray.AddrOfPinnedObject();
 
-            FillIntArray_IntPtr(ptr, count);
+            FillIntArray_Ptr(ptr, count);
 
             pinnedArray.Free();
         }
@@ -69,7 +70,7 @@ namespace PInvoke.NativeInterface.DllImport
         {
             fixed (int* ptr = arr)
             {
-                FillIntArray_IntPtr((IntPtr)ptr, count);
+                FillIntArray_Ptr((IntPtr)ptr, count);
             }
         }
 
@@ -92,7 +93,7 @@ namespace PInvoke.NativeInterface.DllImport
         }
 
         [DllImport(BenchLibrary.Name, EntryPoint = "StringToUppercase")]
-        internal static extern void StringToUppercase_StringBuilder([MarshalAs(UnmanagedType.LPUTF8Str)] StringBuilder str, int length);
+        internal static extern void StringToUppercase_StringBuilder(StringBuilder str, int length);
 
         public static string StringToUppercase_StringBuilder(string str)
         {
@@ -119,18 +120,39 @@ namespace PInvoke.NativeInterface.DllImport
         // Struct functions
 
         [DllImport(BenchLibrary.Name)]
-        public static extern BlittableStruct SumIntsInStruct_Return(BlittableStruct data);
-
-        [DllImport(BenchLibrary.Name)]
-        public static extern void SumIntsInStruct_Ref(ref BlittableStruct data);
+        public static extern BlittableStruct SumIntsInStruct_Return(BlittableStruct input);
 
         [DllImport(BenchLibrary.Name, EntryPoint = "SumIntsInStruct_Pointer")]
-        public static extern void SumIntsInClass_Ref(BlittableClass data);
+        public static extern void SumIntsInStruct_Ref(ref BlittableStruct input);
 
-        // Pass in struct by value
+        [DllImport(BenchLibrary.Name, EntryPoint = "SumIntsInStruct_Pointer")]
+        public static extern void SumIntsInClass_Ref([In, Out] BlittableClass input);
 
-        // Pass struct by reference
+        [DllImport(BenchLibrary.Name, EntryPoint = "UpdateNonBlittableStruct")]
+        internal static extern void UpdateNonBlittableStruct_Manual(ref MarshalledNonBlittableStruct input);
 
-        // Return struct on stack?
+        public static unsafe void UpdateNonBlittableStruct_Manual(ref NonBlittableStruct input)
+        {
+            var utf8Buffer = Encoding.UTF8.GetBytes(input.text);
+
+            fixed (byte* textPtr = utf8Buffer)
+            fixed (int* numberArrayPtr = input.numberArray)
+            {
+                var marshalled = new MarshalledNonBlittableStruct
+                {
+                    number = input.number,
+                    flag = MarshalExtensions.BoolToByte(input.flag),
+                    numberArray = (IntPtr)numberArrayPtr,
+                    numberArraySize = input.numberArray.Length,
+                    text = (IntPtr)textPtr
+                };
+
+                UpdateNonBlittableStruct_Manual(ref marshalled);
+
+                input.number = marshalled.number;
+                input.flag = MarshalExtensions.ByteToBool(marshalled.flag);
+                input.text = Encoding.UTF8.GetString(utf8Buffer);
+            }
+        }
     }
 }

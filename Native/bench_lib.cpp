@@ -64,7 +64,7 @@ void SumIntsInStruct_Pointer(BlittableStruct *data) {
 	data->result = data->a + data->b;
 }
 
-void UpdateStruct_Pointer(NonBlittableStruct *data) {
+void UpdateNonBlittableStruct(NonBlittableStruct *data) {
 	data->number++;
 	data->flag = !data->flag;
 	

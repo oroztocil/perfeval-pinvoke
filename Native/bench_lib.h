@@ -11,12 +11,10 @@ struct BlittableStruct {
 
 struct NonBlittableStruct {
 	int number;
-	bool flag;
-	char *text;
-	int* numberArray;
 	int numberArraySize;
-	//public string textArray;
-	//public BlittableStruct[] structArray;
+	int *numberArray;
+	char *text;
+	bool flag;
 };
 
 extern "C" {
@@ -41,5 +39,5 @@ extern "C" {
 	// Struct functions
 	BlittableStruct SumIntsInStruct_Return(BlittableStruct data);
 	void SumIntsInStruct_Pointer(BlittableStruct *data);
-	void UpdateStruct_Pointer(NonBlittableStruct *data);
+	void UpdateNonBlittableStruct(NonBlittableStruct *data);
 }

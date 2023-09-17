@@ -1,4 +1,7 @@
-﻿namespace PInvoke.NativeInterface.Models
+﻿using System;
+using System.Runtime.InteropServices;
+
+namespace PInvoke.NativeInterface.Models
 {
     public struct NonBlittableStruct
     {
@@ -6,6 +9,15 @@
         public bool flag;
         public string text;
         public int[] numberArray;
-        //public BlittableStruct[] structArray;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public ref struct MarshalledNonBlittableStruct
+    {
+        public int number;
+        public int numberArraySize;
+        public IntPtr numberArray;
+        public IntPtr text;
+        public byte flag;
     }
 }

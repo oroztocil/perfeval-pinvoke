@@ -33,6 +33,8 @@ https://rendered-obsolete.github.io/2021/05/22/net_benchmark.html
 
 ### Marshal.PrelinkAll to preload DLL
 
+https://learn.microsoft.com/en-us/cpp/dotnet/calling-native-functions-from-managed-code?view=msvc-170&redirectedfrom=MSDN#performance-considerations
+
 PInvoke has an overhead of between 10 and 30 x86 instructions per call. In addition to this fixed cost, marshaling creates additional overhead. There is no marshaling cost between blittable types that have the same representation in managed and unmanaged code. For example, there is no cost to translate between int and Int32.
 
 You can call LoadLibrary before using your DllImports and DllImport will use the Module you already loaded

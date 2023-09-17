@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 using PInvoke.NativeInterface.DllImport;
@@ -62,7 +63,7 @@ namespace PInvoke.Tests
         }
 
         [Fact]
-        public void FillIntArray_PinnedHandle()
+        public void FillIntArray_Pinned()
         {
             var buffer = new int[10];
             NativeFunctions.FillIntArray_Pinned(buffer, buffer.Length);
@@ -73,7 +74,7 @@ namespace PInvoke.Tests
         }
 
         [Fact]
-        public void FillIntArray_FixedPtr()
+        public void FillIntArray_Fixed()
         {
             var buffer = new int[10];
             NativeFunctions.FillIntArray_Fixed(buffer, buffer.Length);
@@ -84,8 +85,8 @@ namespace PInvoke.Tests
         }
 
         [Theory]
-        [InlineData("evaluace")]
-        [InlineData("koníček")]
+        [InlineData(Data.AsciiString)]
+        [InlineData(Data.NonAsciiString)]
         public void StringLength_Utf8(string input)
         {
             var result = NativeFunctions.StringLength_Utf8(input);
@@ -94,8 +95,8 @@ namespace PInvoke.Tests
         }
 
         [Theory]
-        [InlineData("evaluace")]
-        [InlineData("koníček")]
+        [InlineData(Data.AsciiString)]
+        [InlineData(Data.NonAsciiString)]
         public void StringLength_Utf16(string input)
         {
             var result = NativeFunctions.StringLength_Utf16(input);
@@ -104,7 +105,7 @@ namespace PInvoke.Tests
         }
 
         [Theory]
-        [InlineData("evaluace")]
+        [InlineData(Data.AsciiString)]
         public void StringToUppercase_ByteArray(string input)
         {
             var result = NativeFunctions.StringToUppercase_ByteArray(input);
@@ -113,7 +114,7 @@ namespace PInvoke.Tests
         }
 
         [Theory]
-        [InlineData("evaluace")]
+        [InlineData(Data.AsciiString)]
         public void StringToUppercase_StringBuilder(string input)
         {
             var result = NativeFunctions.StringToUppercase_StringBuilder(input);
@@ -122,7 +123,7 @@ namespace PInvoke.Tests
         }
 
         [Theory]
-        [InlineData("evaluace")]
+        [InlineData(Data.AsciiString)]
         public void StringToUppercase_Fixed(string input)
         {
             var result = NativeFunctions.StringToUppercase_Fixed(input);
@@ -140,12 +141,40 @@ namespace PInvoke.Tests
         }
 
         [Fact]
-        public void SumIntsInStruct_Pointer()
+        public void SumIntsInStruct_Ref()
         {
             var input = new BlittableStruct { a = 3, b = 4 };
             NativeFunctions.SumIntsInStruct_Ref(ref input);
 
             Assert.Equal(7, input.result);
+        }
+
+        [Fact]
+        public void SumIntsInClass_Ref()
+        {
+            var input = new BlittableClass { a = 3, b = 4 };
+            NativeFunctions.SumIntsInClass_Ref(input);
+
+            Assert.Equal(7, input.result);
+        }
+
+        [Fact]
+        public void UpdateNonBlittableStruct_Manual()
+        {
+            var input = new NonBlittableStruct
+            {
+                number = 41,
+                flag = true,
+                text = "ahoj",
+                numberArray = new int[] { 1, 2, 3 },
+            };
+
+            NativeFunctions.UpdateNonBlittableStruct_Manual(ref input);
+
+            Assert.Equal(42, input.number);
+            Assert.False(input.flag);
+            Assert.Equal("Xhoj", input.text);
+            Assert.Equal(new int[] { 2, 3, 4 }, input.numberArray);
         }
     }
 }
