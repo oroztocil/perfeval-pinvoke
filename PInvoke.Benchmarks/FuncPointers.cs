@@ -4,16 +4,17 @@ using BenchmarkDotNet.Jobs;
 using PInvoke.NativeInterface.FuncPointers;
 using PInvoke.NativeInterface.Models;
 
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System.Security;
-
 namespace PInvoke.Benchmarks
 {
     // Function pointers are only supported in .NET 5 and newer
     [SimpleJob(RuntimeMoniker.Net60)]
     [SimpleJob(RuntimeMoniker.Net70)]
     [MemoryDiagnoser]
+    [KeepBenchmarkFiles]
+    [CsvExporter]
+    [CsvMeasurementsExporter]
+    [HtmlExporter]
+    [RPlotExporter]
     public class FuncPointers : BenchmarkBase
     {
         [Benchmark]
@@ -91,22 +92,5 @@ namespace PInvoke.Benchmarks
         [ArgumentsSource(nameof(NonBlittableStructs))]
         public void UpdateNonBlittableStruct_Manual(NonBlittableStruct input) =>
             NativeFunctions.UpdateNonBlittableStruct_Manual(ref input);
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.Managed)]
-        public bool QueryPerformanceCounter5() => QueryPerformanceCounter5(out long value);
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.Managed)]
-        public bool QueryPerformanceCounter6() => QueryPerformanceCounter6(out long value);
-
-        [SuppressGCTransition]
-        [DllImport("Kernel32.dll", EntryPoint = "QueryPerformanceCounter", SetLastError = false, ExactSpelling = true)]
-        private static extern bool QueryPerformanceCounter5(out long value);
-
-        [SuppressUnmanagedCodeSecurity]
-        [SuppressGCTransition]
-        [DllImport("Kernel32.dll", EntryPoint = "QueryPerformanceCounter", SetLastError = false, ExactSpelling = true)]
-        private static extern bool QueryPerformanceCounter6(out long value);
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using System.Runtime.InteropServices;
-using System.Security;
+﻿using System.Runtime.CompilerServices;
 
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Jobs;
@@ -14,39 +12,66 @@ namespace PInvoke.Benchmarks
     [SimpleJob(RuntimeMoniker.Net60)]
     [SimpleJob(RuntimeMoniker.Net70)]
     [MemoryDiagnoser]
+    [KeepBenchmarkFiles]
+    [CsvExporter]
+    [CsvMeasurementsExporter]
+    [HtmlExporter]
+    [RPlotExporter]
     public class Managed : BenchmarkBase
     {
         [Benchmark]
-        [BenchmarkCategory(Categories.Managed)]
-        public long GetTimestamp() => Stopwatch.GetTimestamp();
+        [BenchmarkCategory(Categories.Empty, Categories.Managed)]
+        public void Empty_Void() => ManagedFunctions.Empty_Void();
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Managed)]
-        public bool QueryPerformanceCounter() => QueryPerformanceCounter(out long value);
+        [BenchmarkCategory(Categories.Empty, Categories.Managed)]
+        [ArgumentsSource(nameof(RandomIntArrays))]
+        public void Empty_IntArray(int[] array) => ManagedFunctions.Empty_IntArray(array, array.Length);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Managed)]
-        public bool QueryPerformanceCounter2() => QueryPerformanceCounter2(out long value);
+        [BenchmarkCategory(Categories.Empty, Categories.InString, Categories.Managed)]
+        public void Empty_String() => ManagedFunctions.Empty_String(Data.NonAsciiString);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Managed)]
-        public bool QueryPerformanceCounter3() => QueryPerformanceCounter3(out long value);
+        [BenchmarkCategory(Categories.ReturnInt, Categories.Managed)]
+        public int ConstantInt() => ManagedFunctions.ConstantInt();
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Managed)]
-        public bool QueryPerformanceCounter4() => QueryPerformanceCounter4(out long value);
+        [BenchmarkCategory(Categories.InReturnInt, Categories.Managed)]
+        public int MultiplyInt() => ManagedFunctions.MultiplyInt(1234, 4321);
 
-        [DllImport("Kernel32.dll", EntryPoint = "QueryPerformanceCounter")]
-        private static extern bool QueryPerformanceCounter(out long value);
+        [Benchmark]
+        [BenchmarkCategory(Categories.InReturnBool, Categories.Managed)]
+        public bool NegateBool() => ManagedFunctions.NegateBool(false);
+    }
 
-        [DllImport("Kernel32.dll", EntryPoint = "QueryPerformanceCounter", SetLastError = false)]
-        private static extern bool QueryPerformanceCounter2(out long value);
+    internal static class ManagedFunctions
+    {
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public static void Empty_Void()
+        {
+            // Method intentionally left empty.
+        }
 
-        [DllImport("Kernel32.dll", EntryPoint = "QueryPerformanceCounter", SetLastError = false, ExactSpelling = true)]
-        private static extern bool QueryPerformanceCounter3(out long value);
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public static void Empty_IntArray(int[] array, int length)
+        {
+            // Method intentionally left empty.
+        }
 
-        [SuppressUnmanagedCodeSecurity]
-        [DllImport("Kernel32.dll", EntryPoint = "QueryPerformanceCounter", SetLastError = false, ExactSpelling = true)]
-        private static extern bool QueryPerformanceCounter4(out long value);
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public static void Empty_String(string str)
+        {
+            // Method intentionally left empty.
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public static int ConstantInt() => 42;
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public static int MultiplyInt(int a, int b) => a * b;
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public static bool NegateBool(bool value) => !value;
     }
 }

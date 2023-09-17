@@ -4,15 +4,15 @@
 #include <uchar.h>
 
 struct BlittableStruct {
-	int a;
-	int b;
-	int result;
+	int32_t a;
+	int32_t b;
+	int32_t result;
 };
 
 struct NonBlittableStruct {
-	int number;
-	int numberArraySize;
-	int *numberArray;
+	int32_t number;
+	int32_t numberArraySize;
+	int32_t *numberArray;
 	char *text;
 	bool flag;
 };

@@ -11,6 +11,11 @@ namespace PInvoke.Benchmarks
     // LibraryImport is only supported in .NET 7 and newer
     [SimpleJob(RuntimeMoniker.Net70)]
     [MemoryDiagnoser]
+    [KeepBenchmarkFiles]
+    [CsvExporter]
+    [CsvMeasurementsExporter]
+    [HtmlExporter]
+    [RPlotExporter]
     public class LibraryImport : BenchmarkBase
     {
         [Benchmark]
