@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-using BenchmarkDotNet.Attributes;
+﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Jobs;
 
 using PInvoke.NativeInterface.DllImport;
@@ -8,10 +6,14 @@ using PInvoke.NativeInterface.Models;
 
 namespace PInvoke.Benchmarks
 {
-    // DllImport is supported in all .NET versions, .NET 4.8 is Windows-only
 #if OS_WINDOWS
+    // .NET 4.8 is Windows-only
+    // ETW profiler is only available on Windows
+    using BenchmarkDotNet.Diagnostics.Windows.Configs;
     [SimpleJob(RuntimeMoniker.Net48)]
+    [NativeMemoryProfiler]
 #endif
+    // DllImport is supported in all .NET versions
     [SimpleJob(RuntimeMoniker.Net60)]
     [SimpleJob(RuntimeMoniker.Net70)]
     [MemoryDiagnoser]

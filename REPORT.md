@@ -1,31 +1,113 @@
 # .NET Native Interop Performance Report
 
-The following report evaluates the performance overhead of calling native C/C++ functions from managed C# code using the built-in interoperability capabilities of .NET known as P/Invoke (short for Platform Invocation Services). The report presents benchmarks of common interop scenarios that invole marshalling and passing values of primitive types, strings, arrays, and structures, in both directions (i.e. as both function parameters and return values or out parameters). Several ways of implementing the interop calls that have been added to the .NET framework throughout the years, namely the `DllImport` attribute, the source-generator backed `LibraryImport` attribute, and unmanaged function pointers are compared.
+The following report evaluates the performance overhead of calling native C/C++ functions from managed C# code using the built-in interoperability capabilities of .NET known as P/Invoke. The report presents benchmarks of common interop scenarios that involve marshalling and passing values of primitive types, strings, arrays, and structures, in both directions (i.e. as both function parameters and return values or out parameters). Several ways of implementing the interop calls that have been added to the .NET framework throughout the years, namely the `DllImport` attribute, the source-generator backed `LibraryImport` attribute, and unmanaged function pointers are compared.
 
 The benchmarks were executed on three .NET runtime versions as permitted by their respective supported feature sets: .NET Framework 4.8 (the last major version of the classic Windows-only runtime), .NET 6 (current LTS version of the portable .NET Core runtime) and the latest .NET 8 Preview. Results from Windows and Linux (x64) platforms are compared for the latter two runtimes.
 
+## Related work
+
+To our knowledge, there are not many comparable studies publicly available.
+
+- This [article](https://dev.to/jeikabu/native-code-in-net-5-0-and-c-9-0-39h7) compares performance of a single interop call implemented via `DllImport`, managed delegates and function pointers on .NET 5. It shows `DllImport` and function pointers to have comparable performance with the latter having ~1ns lesser overhead. Managed delegates are roughly twice as slow.
+- This [article](https://medium.com/p/c008e4da54db#8cec) compares two interop scenarios implemented via `DllImport`, delegates and directly emitting the `calli` IL [instruction](https://learn.microsoft.com/en-us/dotnet/api/system.reflection.emit.opcodes.calli?view=net-7.0). `DllImport` and the `calli`-based calls are shown to have similar performance with the latter being 1-2 ns faster. Delegates are almost two orders of magnitude slower in the measured scenarios. We opted not to include
+- There are also older articles ([see](https://www.codeproject.com/Articles/253444/PInvoke-Performance) and [see](https://xinterop1.rssing.com/chan-55440957/latest.php))  containing benchmarking results focused on particular comparisons between P/Invoke and C++/CLI interop. 
+- The .NET runtime team maintains a public repository of benchmarks used to measure changes in performance between runtime versions, however, the benchmark suite does not include almost any [interop-related scenarios](https://github.com/dotnet/performance/tree/ea52574a828cd8740a716978331f8ff8bfeeb472/src/benchmarks/micro/runtime/Interop).
+
 ## Overview of P/Invoke
 
-Data type is called blittable if it has the same representation in managed and unmanaged memory. Such types therefore do not need conversion when passed between .NET and native code. In the case of reference types (or value types passed as `ref` parameters) this means that instead of copying the value to the unmanaged memory a pointer to the value's location in the managed memory can be passed where it can be accessed by the native code directly. This saves one copy for *in* parameters and up to two copies for *out copies *
+In this section we provide a brief introduction to the .NET capabilities covered by the report. We describe the basic interop concepts and several APIs for declaring interop calls available in .NET under the umbrella term P/Invoke (short for *Platform Invocation Services*).
 
-Non-blittable types are conversely types that do need special marshalling during interop. These types include:
+### Basic concepts and the `DllImport` attribute
 
-- Strings
-- Bools
-- Arrays other than one-dimensional arrays of blittable types
-- Structures and classes containing any non-blittable field, including array fields (with the exception of arrays with compile-time constant size) 
+The original P/Invoke API available since .NET 1.1 is using the `DllImport` attribute. This attribute is added to a declaration of a `static extern` (i.e. body-less) method like this:
 
-### LibraryImport attribute
+```csharp
+[DllImport("kernel32.dll")]
+public static extern bool QueryPerformanceCounter(out long counter);
+```
+
+Such method can be called from the user code as a regular C# method. However, its implementation is generated during run-time based on the method signature and the configuration provided in the`DllImport` attribute (and several related attributes). For example, for the declaration above the built-in interop service of the .NET runtime generates code that tries to load the *kernel32.dll* native library (using the standard OS dynamic library resolution mechanism), get the address of the *QueryPerformanceCounter* function in the library and calls it using special Intermediate Language instruction `calli` for calling unmanaged callsites.
+
+The actual execution process is more complex and involves resolving a series of IL stubs ([see](https://www.devops.lol/pinvoke-beyond-the-magic/)). However, this is beyond the scope of this report. What is more important is that, depending on the method signature and the `DllImport` configuration, the call may also include several safety related operations (see section TODO) and, more importantly, perform *marshalling* of the function's arguments and return value.
+
+What happens during interop marshalling depends on whether the function's return value and arguments have blittable types or not. Data type is called **blittable** if it has the same representation in managed and unmanaged memory. Such types therefore do not need conversion when passed between .NET and native code. The following types are blittable:
+
+- Primitive types such as `byte`, `int`, `float`, and `double`.
+- Structs with fixed layout that contain only blittable fields (excluding array fields).
+- One-dimensional arrays of blittable types.
+
+Primitive blittable arguments and return values can be passed on the stack or in registers as-is (depending on the calling convention). In the case of reference types (or value types passed as `ref` parameters) being blittable means that instead of copying the value to the unmanaged memory, a pointer to the value's location in the managed memory can be passed to the native code. This saves one copy for *in* parameters and up to two copies for *out* parameters.
+
+Conversely, **non-blittable** types are types that do need to be appropriately transformed during interop. These types include:
+
+- `char` .NET characters are represented as 2-byte UTF-16 code units. By default, `DllImport` converts these to single-byte ANSI characters on Windows and UTF-8 characters on other platforms. The marshaller can be configured using attribute option to pass chars in the UTF-16 format.
+- `string`  Strings need to be converted to null-terminated character arrays and passed as pointers. Similarly to individual characters, `DllImport` supports either UTF-16 or ANSI/UTF-8 strings.
+- `bool`  Bools have historically multiple representations in different environments, ranging from 1 to 4 bytes, possibly with different mappings of numeric to boolean values. Attributes can be used to configure which format is used by the marshaller.
+- Arrays other than one-dimensional arrays of blittable types. 
+- Structures and classes containing any non-blittable fields, including array fields (with the exception of blittable arrays with compile-time constant size)
+
+For convenience, the built-in `DllImport` marshaller handles several common scenarios involving non-blittable types automatically. This includes passing strings and bools (with optional configuration as mentioned) and also handling *out* parameters whose value needs to be provided back to the caller (such as the `out long counter` parameter of the `QueryPerformanceCounter` method above). In more complex cases (e.g. when passing non-blittable structures) the marshalling needs to be done by the user manually.
+
+### `LibraryImport` attribute
+
+- Source generators
+- DisableRuntimeMarshalling
+- Custom marshallers
+- Limitations compared ot DllImport
+
+In comparison to `DllImport` the `LibraryImport` declarations handle automatically only smaller range of non-blittable types.
 
 ### Function pointers
 
+- Loading assemblies and reading exports manually.
+- Completely manual marshalling.
+
+### Other methods
+
+We omit use of managed delegates as these have shown to be significantly slower (see *Related work*) while not providing benefits over the other methods. We also not included implementation based on emitting the `calli` IL [instruction](https://learn.microsoft.com/en-us/dotnet/api/system.reflection.emit.opcodes.calli?view=net-7.0) during run-time as we wanted to focus on standard .NET APIs intended for general developer audience.
+
 ### Interop settings
+
+There are a few options available for `DllImport` and `LibraryImport` declarations that modify run-time behavior of the interop call.
+
+- `SetLastError`
+- `SuppressUmmanagedCodeSecurity`
+- `SuppressGCTransition`
+
+We evaluate effect of enabling or disabling these options in section TODO.
 
 ## Benchmark platform
 
-## Running the benchmarks
+All tests were performed on a desktop computer with the following hardware  and software specifications.
+
+**Hardware platform**
+
+- CPU: Intel Core i5 10400F, 6 physical cores, 12 hyper-threads, running at fixed 2900 MHz frequency
+- RAM: 64 GB DDR4, running at 3200 Mhz frequency
+- Storage: Samsung 970 1 TB NVMe SSD
+
+**Operation systems**
+
+- Windows 10 22H2 (Build 19045.3448)
+- Debian 13 TODO kernel
+
+**.NET SDKs and runtimes**
+
+- .NET Framework 4.8 (Windows only)
+- .NET 6.0.414
+- .NET 8.0.100-preview.7.23376.3
+
+**C++ compiler**
+
+- g++ 13.2.0 (MSYS distribution on Windows)
+- Compiler options: `-std=c++17 -O2 -Wall`
 
 ## Experiments
+
+We implemented the benchmarks using the [BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet) library which is the [de-facto standard](https://github.com/dotnet/BenchmarkDotNet/network/dependents) for micro-benchmarking .NET code. The library provides API for declaring benchmark jobs (similarly to unit testing frameworks), handles benchmark execution a
+
+- BenchmarkDotNet intro
+- througput tests vs cold start tests
 
 ### Overhead baseline
 

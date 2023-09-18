@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-using BenchmarkDotNet.Attributes;
+﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Jobs;
 
 using PInvoke.NativeInterface.LibraryImport;
@@ -8,6 +6,11 @@ using PInvoke.NativeInterface.Models;
 
 namespace PInvoke.Benchmarks
 {
+#if OS_WINDOWS
+    // ETW profiler is only available on Windows
+    using BenchmarkDotNet.Diagnostics.Windows.Configs;
+    [NativeMemoryProfiler]
+#endif
     // LibraryImport is only supported in .NET 7 and newer
     [SimpleJob(RuntimeMoniker.Net70)]
     [MemoryDiagnoser]

@@ -48,3 +48,9 @@ delegate void MyUnmanagedDelegate(float a, float b, float* result);
 ```
 
 When you use [DllImport] (and for other scenarios), under the hood a 'stub' is generated to handle the interop/marshalling/error-handling/etc for you
+
+
+
+
+
+Structures that are returned from platform invoke calls must be  blittable types. Platform invoke does not support non-blittable  structures as return types.

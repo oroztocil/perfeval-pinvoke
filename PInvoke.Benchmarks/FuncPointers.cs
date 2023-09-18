@@ -6,6 +6,11 @@ using PInvoke.NativeInterface.Models;
 
 namespace PInvoke.Benchmarks
 {
+#if OS_WINDOWS
+    // ETW profiler is only available on Windows
+    using BenchmarkDotNet.Diagnostics.Windows.Configs;
+    [NativeMemoryProfiler]
+#endif
     // Function pointers are only supported in .NET 5 and newer
     [SimpleJob(RuntimeMoniker.Net60)]
     [SimpleJob(RuntimeMoniker.Net70)]

@@ -1,5 +1,5 @@
 CXX ?= g++
-CXXFLAGS = -Wall -std=c++17 #-fPIC
+CXXFLAGS = -O2 -Wall -std=c++17
 LDFLAGS = -shared
 
 SRC = bench_lib.cpp
