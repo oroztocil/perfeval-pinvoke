@@ -26,7 +26,7 @@ The original P/Invoke API available since .NET 1.1 is using the `DllImport` attr
 public static extern bool QueryPerformanceCounter(out long counter);
 ```
 
-Such method can be called from the user code as a regular C# method. However, its implementation is generated during run-time based on the method signature and the configuration provided in the`DllImport` attribute (and several related attributes). For example, for the declaration above the built-in interop service of the .NET runtime generates code that tries to load the *kernel32.dll* native library (using the standard OS dynamic library resolution mechanism), get the address of the *QueryPerformanceCounter* function in the library and calls it using special Intermediate Language instruction `calli` for calling unmanaged callsites.
+Such method can be called from the user code as a regular C# method. However, its implementation is generated during run-time based on the method signature and the configuration provided in the`DllImport` attribute (and several related attributes). For example, for the declaration above the built-in interop service of the .NET runtime generates code that tries to load the *kernel32.dll* native library (using the standard OS dynamic library resolution mechanism), get the address of the `QueryPerformanceCounter` function in the library and calls it using special Intermediate Language instruction `calli` for calling unmanaged callsites.
 
 The actual execution process is more complex and involves resolving a series of IL stubs ([see](https://www.devops.lol/pinvoke-beyond-the-magic/)). However, this is beyond the scope of this report. What is more important is that, depending on the method signature and the `DllImport` configuration, the call may also include several safety related operations (see section TODO) and, more importantly, perform *marshalling* of the function's arguments and return value.
 
@@ -48,19 +48,61 @@ Conversely, **non-blittable** types are types whose representation needs to be a
 
 For convenience, the built-in `DllImport` marshaller handles several common scenarios involving non-blittable types automatically. This includes passing strings and bools (with optional configuration as mentioned) and also handling *out* parameters whose value needs to be provided back to the caller (such as the `out long counter` parameter of the `QueryPerformanceCounter` method above). In more complex cases (e.g. when passing non-blittable structures) the marshalling needs to be done by the user manually.
 
-### `LibraryImport` attribute
+### Marshalling code generation and the `LibraryImport` attribute
 
-- Source generators
-- DisableRuntimeMarshalling
-- Custom marshallers
-- Limitations compared ot DllImport
+Recently, the [`LibraryImport`](https://learn.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke-source-generation) attribute has been added in .NET 7 as a replacement of `DllImport` for declaring P/Invoke methods. Apart from API changes that were made to remove the historical Windows-specific features and to unify the behavior on different platforms the most interesting difference is that the marshalling code (at least for non-trivial marshalling) is generated during compile-time instead of at run-time. This feature is enabled by the source generator mechanism which analyzes the user's code using the Roslyn compiler API and generates additional C# (not IL) code as part of the compilation (or on the fly in an IDE).
 
-In comparison to `DllImport` the `LibraryImport` declarations handle automatically only smaller range of non-blittable types.
+For example, when user declares a method such as:
 
-### Function pointers
+```csharp
+struct Timespec { public long tv_sec;  public long tv_nsec; }
 
-- Loading assemblies and reading exports manually.
+[LibraryImport("libc", EntryPoint = "clock_gettime")]
+private static partial int GetTime(int clk_id, ref Timespec tp);
+```
+
+Then the interop source generator provides the implementation of the `partial` method similar to this (code modified for readability):
+
+```csharp
+private static partial int GetTime(int clk_id, ref Timespec tp)
+{
+    int __retVal;
+    
+    fixed (Timespec* __tp_native = &tp)
+    {
+        __retVal = __PInvoke(clk_id, __tp_native);
+    }
+    
+    return __retVal;
+
+    [DllImport("libc", EntryPoint = "clock_gettime")]
+    static extern unsafe int __PInvoke(int clk_id, Timespec* tp);
+}
+```
+
+Notice that the implementation internally still uses the `DllImport` attribute (and therefore the run-time interop service). However, the generated code handles non-trivial marshalling, in this case pinning the *out* parameter struct in memory and passing pointer to it to the native call. In this way the `LibraryImport` attribute converts the interop call to the which involves only passing primitive values on stack.
+
+This has several ramifications for performance:
+
+- Any inherent overhead of `DllImport` pertaining to calling the native method (marshalling excluded) also applies to `LibraryImport`.
+- On the other hand, no run-time reflection and IL emission is needed to construct the marshalling code. This might lead to better cold start performance in particular.
+- The pre-generated marshalling code can be inlined already by the C# compiler, not just the JIT compiler.
+- The source generated interop is compatible with the Native AOT compilation available since .NET 7 (outside of the scope of this report).
+
+### Unmanaged function pointers
+
+- Loading assemblies using `NativeLibrary.Load` and reading exports manually.
 - Completely manual marshalling.
+
+```csharp
+IntPtr kernelLib = NativeLibrary.Load("kernel32.dll");
+IntPtr qpcPtr = NativeLibrary.GetExport(kernelLib, "QueryPerformanceCounter");
+unsafe
+{
+    var qpc = (delegate* unmanaged<out long, bool>)qpcPtr;
+    bool isSuccess = qpc(out long timestamp);
+}
+```
 
 ### Other methods
 
