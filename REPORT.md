@@ -38,7 +38,7 @@ What happens during interop marshalling depends on whether the function's return
 
 Primitive blittable arguments and return values can be passed on the stack or in registers as-is (depending on the calling convention). In the case of reference types (or value types passed as `ref` parameters) being blittable means that instead of copying the value to the unmanaged memory, a pointer to the value's location in the managed memory can be passed to the native code. This saves one copy for *in* parameters and up to two copies for *out* parameters.
 
-Conversely, **non-blittable** types are types that do need to be appropriately transformed during interop. These types include:
+Conversely, **non-blittable** types are types whose representation needs to be appropriately converted during interop. These types include:
 
 - `char` .NET characters are represented as 2-byte UTF-16 code units. By default, `DllImport` converts these to single-byte ANSI characters on Windows and UTF-8 characters on other platforms. The marshaller can be configured using attribute option to pass chars in the UTF-16 format.
 - `string`  Strings need to be converted to null-terminated character arrays and passed as pointers. Similarly to individual characters, `DllImport` supports either UTF-16 or ANSI/UTF-8 strings.
@@ -68,13 +68,21 @@ We omit use of managed delegates as these have shown to be significantly slower 
 
 ### Interop settings
 
-There are a few options available for `DllImport` and `LibraryImport` declarations that modify run-time behavior of the interop call.
+There are a few options available for `DllImport` and `LibraryImport` declarations that modify run-time behavior of the interop call. We evaluate effect of enabling or disabling these options in section TODO. Here we briefly describe their effect.
 
-- `SetLastError`
-- `SuppressUmmanagedCodeSecurity`
-- `SuppressGCTransition`
+#### `SetLastError`
 
-We evaluate effect of enabling or disabling these options in section TODO.
+When the `SetLastError` attribute is added to the P/Invoke method declaration the marshaller retrieves the error code set by the called function (using `GetLastError` on Windows or `errno` on Linux) and stores it in a thread static variable for the managed code to use. Since .NET 5 the error variable is also cleared before each call. Enabling this option might incur minor performance overhead.
+
+#### `SuppressUnmanagedCodeSecurity`
+
+In the original .NET Framework each P/Invoke call involved a check for a permission to call unmanaged code (depending on the properties of the .NET assembly and the user that executed it). This check had to perform a stack walk to determine if the entire call chain conformed to the relevant security policy, causing a performance overhead for each interop call. This behavior can be disabled by adding the `SuppressUnmanagedCodeSecurity` attribute to the `DllImport` method declaration. The rewritten .NET Core [abandoned](https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/5.0/code-access-security-apis-obsolete) the mechanism of Code Access Security and this attribute does nothing when executed on Core runtimes.
+
+#### `SuppressGCTransition`
+
+Each P/Invoke call causes the garbage collector to switch for the duration of the call from the default cooperative mode (where GC can only start once all threads reach a safe point) to the preemptive mode. This is done so that a blocking native call does not prevent GC for too long or indefinitely. Unsurprisingly, the mode switch incurs an performance overhead for each interop call.
+
+The `SuppressGCTransition` attribute, which was previously used only internally in .NET base libraries and has been made available to users in .NET 5, allows to skip the GC mode transition. It should be noted, however, that this option is safe to use only for a restricted class of interop calls (see [list of conditions](https://learn.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.suppressgctransitionattribute?view=net-7.0#remarks)).
 
 ## Benchmark platform
 
@@ -129,6 +137,11 @@ We implemented the benchmarks using the [BenchmarkDotNet](https://github.com/dot
 
 - blittable arrays
 - pinning managed arrays
+
+```csharp
+[DllImport("MyNativeLibrary")]
+public static extern void SquareNumbers([In, Out] int[] numbers);
+```
 
 ### Marshalling structures
 
