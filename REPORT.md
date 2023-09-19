@@ -171,6 +171,8 @@ We implemented the benchmarks using the [BenchmarkDotNet](https://github.com/dot
 - empty void functions
 - compare with managed call
 
+
+
 ### Passing primitive types
 
 - int input params

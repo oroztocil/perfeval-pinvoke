@@ -6,124 +6,113 @@ using PInvoke.NativeInterface.Models;
 
 namespace PInvoke.Benchmarks
 {
-#if OS_WINDOWS
-    // ETW profiler is only available on Windows
-    using BenchmarkDotNet.Diagnostics.Windows.Configs;
-    [NativeMemoryProfiler]
-#endif
     // LibraryImport is only supported in .NET 7 and newer
-    [SimpleJob(RuntimeMoniker.Net70)]
-    [MemoryDiagnoser]
-    [KeepBenchmarkFiles]
-    [CsvExporter]
-    [CsvMeasurementsExporter]
-    [HtmlExporter]
-    [RPlotExporter]
+    [SimpleJob(RuntimeMoniker.Net80)]
     public class LibraryImport : BenchmarkBase
     {
         [Benchmark]
-        [BenchmarkCategory(Categories.Empty, Categories.SGCT)]
+        [BenchmarkCategory(Categories.Void_Empty)]
         public void Empty_Void() => NativeFunctions.Empty_Void();
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Empty, Categories.SGCT)]
+        [BenchmarkCategory(Categories.SGCT)]
         public void Empty_Void_SGCT() => NativeFunctions.Empty_Void_SGCT();
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Empty, Categories.InArray)]
+        [BenchmarkCategory(Categories.Arrays_Empty_In)]
         [ArgumentsSource(nameof(RandomIntArrays))]
         public void Empty_IntArray(int[] array) => NativeFunctions.Empty_IntArray(array, array.Length);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Empty, Categories.InArray, Categories.SGCT)]
+        [BenchmarkCategory(Categories.SGCT)]
         [ArgumentsSource(nameof(RandomIntArrays))]
         public void Empty_IntArray_SGCT(int[] array) => NativeFunctions.Empty_IntArray_SGCT(array, array.Length);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Empty, Categories.InArray)]
+        [BenchmarkCategory(Categories.Arrays_Empty_In)]
         [ArgumentsSource(nameof(RandomIntArrays))]
         public void Empty_IntArray_Fixed(int[] array) => NativeFunctions.Empty_IntArray_Fixed(array, array.Length);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Empty, Categories.InString)]
+        [BenchmarkCategory(Categories.Strings_Empty_In)]
         public void Empty_String() => NativeFunctions.Empty_String(Data.NonAsciiString);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Empty, Categories.InString, Categories.SGCT)]
+        [BenchmarkCategory(Categories.SGCT)]
         public void Empty_String_SGCT() => NativeFunctions.Empty_String_SGCT(Data.NonAsciiString);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.ReturnInt)]
+        [BenchmarkCategory(Categories.Primitive_Int_Out)]
         public int ConstantInt() => NativeFunctions.ConstantInt();
 
         [Benchmark]
-        [BenchmarkCategory(Categories.InReturnInt)]
+        [BenchmarkCategory(Categories.Primitive_Int_InOut)]
         public int MultiplyInt() => NativeFunctions.MultiplyInt(1234, 4321);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.InReturnInt, Categories.SGCT)]
+        [BenchmarkCategory(Categories.SGCT)]
         public int MultiplyInt_SGCT() => NativeFunctions.MultiplyInt_SGCT(1234, 4321);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.InReturnBool)]
+        [BenchmarkCategory(Categories.Primitive_Bool_InOut)]
         public bool NegateBool() => NativeFunctions.NegateBool(false);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.InArray)]
+        [BenchmarkCategory(Categories.Arrays_In)]
         [ArgumentsSource(nameof(RandomIntArrays))]
         public int SumIntArray(int[] array) => NativeFunctions.SumIntArray(array, array.Length);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.OutArray)]
+        [BenchmarkCategory(Categories.Arrays_InOut)]
         [ArgumentsSource(nameof(EmptyIntArrays))]
         public void FillIntArray(int[] array) => NativeFunctions.FillIntArray(array, array.Length);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.OutArray)]
+        [BenchmarkCategory(Categories.Arrays_InOut)]
         [ArgumentsSource(nameof(EmptyIntArrays))]
         public void FillIntArray_PinnedHandle(int[] array) => NativeFunctions.FillIntArray_Pinned(array, array.Length);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.OutArray)]
+        [BenchmarkCategory(Categories.Arrays_InOut)]
         [ArgumentsSource(nameof(EmptyIntArrays))]
         public void FillIntArray_Fixed(int[] array) => NativeFunctions.FillIntArray_Fixed(array, array.Length);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.InString)]
+        [BenchmarkCategory(Categories.Strings_In)]
         public int StringLength_Utf8() => NativeFunctions.StringLength_Utf8(Data.NonAsciiString);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.InString)]
+        [BenchmarkCategory(Categories.Strings_In)]
         public int StringLength_Utf16() => NativeFunctions.StringLength_Utf16(Data.NonAsciiString);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.OutString)]
+        [BenchmarkCategory(Categories.Strings_InOut)]
         public string StringToUppercase_ByteArray() => NativeFunctions.StringToUppercase_ByteArray(Data.NonAsciiString);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.OutString)]
+        [BenchmarkCategory(Categories.Strings_InOut)]
         public string StringToUppercase_Fixed() => NativeFunctions.StringToUppercase_Fixed(Data.NonAsciiString);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.InStruct, Categories.OutStruct)]
+        [BenchmarkCategory(Categories.Structs_Blittable)]
         [ArgumentsSource(nameof(BlittableStructs))]
         public BlittableStruct SumIntsInStruct_Return(BlittableStruct input) =>
             NativeFunctions.SumIntsInStruct_Return(input);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.InStruct, Categories.OutStruct)]
+        [BenchmarkCategory(Categories.Structs_Blittable)]
         [ArgumentsSource(nameof(BlittableStructs))]
         public void SumIntsInStruct_Ref(BlittableStruct input) =>
             NativeFunctions.SumIntsInStruct_Ref(ref input);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.InStruct, Categories.OutStruct, Categories.NonBlittable)]
+        [BenchmarkCategory(Categories.Structs_NonBlittable)]
         [ArgumentsSource(nameof(NonBlittableStructs))]
         public void UpdateNonBlittableStruct_Manual(NonBlittableStruct input) =>
             NativeFunctions.UpdateNonBlittableStruct_Manual(ref input);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.InStruct, Categories.OutStruct, Categories.NonBlittable)]
+        [BenchmarkCategory(Categories.Structs_NonBlittable)]
         [ArgumentsSource(nameof(NonBlittableStructs))]
         public void UpdateNonBlittableStruct_Marshaller(NonBlittableStruct input) =>
             NativeFunctions.UpdateNonBlittableStruct_Marshaller(ref input);

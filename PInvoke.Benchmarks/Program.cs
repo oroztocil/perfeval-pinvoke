@@ -1,10 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 using BenchmarkDotNet.Columns;
 using BenchmarkDotNet.Configs;
+using BenchmarkDotNet.Exporters;
+using BenchmarkDotNet.Exporters.Csv;
+using BenchmarkDotNet.Order;
 using BenchmarkDotNet.Reports;
 using BenchmarkDotNet.Running;
+
+using Microsoft.Extensions.Configuration;
 
 namespace PInvoke.Benchmarks
 {
@@ -12,12 +18,33 @@ namespace PInvoke.Benchmarks
     {
         static int Main(string[] args)
         {
+            var configuration = new ConfigurationBuilder()
+                .AddCommandLine(args)
+                .Build();
+
+            var runCategory = configuration["anyCategories"] ?? "Complete";
+
+            Console.WriteLine((configuration as IConfigurationRoot).GetDebugView());
+
+            var csvExporter = new FilteredCsvExporter(
+                CsvSeparator.Semicolon,
+                new SummaryStyle(
+                    cultureInfo: System.Globalization.CultureInfo.CurrentCulture,
+                    printUnitsInHeader: true,
+                    printUnitsInContent: false,
+                    timeUnit: Perfolizer.Horology.TimeUnit.Nanosecond,
+                    sizeUnit: SizeUnit.B                    
+                ));
+
             var summaries = BenchmarkSwitcher
                 .FromAssembly(typeof(Program).Assembly)
                 .Run(args, ManualConfig
                     .Create(DefaultConfig.Instance)
+                    .AddExporter(csvExporter)
+                    .AddColumn(StatisticColumn.Median, StatisticColumn.Min, StatisticColumn.Max)
                     .HideColumns(Column.Job, Column.Namespace)
-                    .AddColumn(CategoriesColumn.Default)
+                    .WithArtifactsPath($"./{runCategory}_" + DateTime.Now.ToString("s").Replace(":", "_"))
+                    .WithOrderer(new DefaultOrderer(SummaryOrderPolicy.Declared, MethodOrderPolicy.Alphabetical))
                     .WithOptions(ConfigOptions.JoinSummary));
 
             return IsSuccess(summaries) ? 0 : 1;

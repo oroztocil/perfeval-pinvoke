@@ -1,0 +1,564 @@
+Target_Type;Target_Method;Job_Runtime;Params;Measurement_IterationMode;Measurement_IterationStage;Measurement_IterationIndex;Measurement_Operations;Measurement_Value
+Managed;ConstantInt;.NET 6.0;;Overhead;Jitting;1;1;304400
+Managed;ConstantInt;.NET 6.0;;Workload;Jitting;1;1;224800
+Managed;ConstantInt;.NET 6.0;;Overhead;Jitting;2;16;28912.5
+Managed;ConstantInt;.NET 6.0;;Workload;Jitting;2;16;28606.25
+Managed;ConstantInt;.NET 6.0;;Workload;Pilot;1;16;31.25
+Managed;ConstantInt;.NET 6.0;;Workload;Pilot;2;9600000;3.7
+Managed;ConstantInt;.NET 6.0;;Workload;Pilot;3;81005376;3.27
+Managed;ConstantInt;.NET 6.0;;Workload;Pilot;4;91627936;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Pilot;5;108350208;2.79
+Managed;ConstantInt;.NET 6.0;;Workload;Pilot;6;107448928;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Pilot;7;108232720;2.83
+Managed;ConstantInt;.NET 6.0;;Workload;Pilot;8;105965760;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Pilot;9;108233072;2.83
+Managed;ConstantInt;.NET 6.0;;Overhead;Warmup;1;108233072;2.57
+Managed;ConstantInt;.NET 6.0;;Overhead;Warmup;2;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Warmup;3;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Warmup;4;108233072;2.1
+Managed;ConstantInt;.NET 6.0;;Overhead;Warmup;5;108233072;2.1
+Managed;ConstantInt;.NET 6.0;;Overhead;Warmup;6;108233072;2.1
+Managed;ConstantInt;.NET 6.0;;Overhead;Warmup;7;108233072;2.1
+Managed;ConstantInt;.NET 6.0;;Overhead;Warmup;8;108233072;2.13
+Managed;ConstantInt;.NET 6.0;;Overhead;Warmup;9;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Warmup;10;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Actual;1;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Actual;2;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Actual;3;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Actual;4;108233072;2.15
+Managed;ConstantInt;.NET 6.0;;Overhead;Actual;5;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Actual;6;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Actual;7;108233072;2.14
+Managed;ConstantInt;.NET 6.0;;Overhead;Actual;8;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Actual;9;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Actual;10;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Actual;11;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Actual;12;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Actual;13;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Actual;14;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Overhead;Actual;15;108233072;2.09
+Managed;ConstantInt;.NET 6.0;;Workload;Warmup;1;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Warmup;2;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Warmup;3;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Warmup;4;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Warmup;5;108233072;2.83
+Managed;ConstantInt;.NET 6.0;;Workload;Actual;1;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Actual;2;108233072;2.84
+Managed;ConstantInt;.NET 6.0;;Workload;Actual;3;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Actual;4;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Actual;5;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Actual;6;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Actual;7;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Actual;8;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Actual;9;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Actual;10;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Actual;11;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Actual;12;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Actual;13;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Actual;14;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Actual;15;108233072;2.77
+Managed;ConstantInt;.NET 6.0;;Workload;Result;1;108233072;0.68
+Managed;ConstantInt;.NET 6.0;;Workload;Result;2;108233072;0.68
+Managed;ConstantInt;.NET 6.0;;Workload;Result;3;108233072;0.68
+Managed;ConstantInt;.NET 6.0;;Workload;Result;4;108233072;0.68
+Managed;ConstantInt;.NET 6.0;;Workload;Result;5;108233072;0.68
+Managed;ConstantInt;.NET 6.0;;Workload;Result;6;108233072;0.68
+Managed;ConstantInt;.NET 6.0;;Workload;Result;7;108233072;0.68
+Managed;ConstantInt;.NET 6.0;;Workload;Result;8;108233072;0.68
+Managed;ConstantInt;.NET 6.0;;Workload;Result;9;108233072;0.68
+Managed;ConstantInt;.NET 6.0;;Workload;Result;10;108233072;0.68
+Managed;ConstantInt;.NET 6.0;;Workload;Result;11;108233072;0.68
+Managed;ConstantInt;.NET 6.0;;Workload;Result;12;108233072;0.68
+Managed;ConstantInt;.NET 6.0;;Workload;Result;13;108233072;0.68
+DllImport;ConstantInt;.NET 6.0;;Overhead;Jitting;1;1;315800
+DllImport;ConstantInt;.NET 6.0;;Workload;Jitting;1;1;19764600
+DllImport;ConstantInt;.NET 6.0;;Overhead;Jitting;2;16;50318.75
+DllImport;ConstantInt;.NET 6.0;;Workload;Jitting;2;16;35975
+DllImport;ConstantInt;.NET 6.0;;Workload;Pilot;1;16;56.25
+DllImport;ConstantInt;.NET 6.0;;Workload;Pilot;2;5333344;10.93
+DllImport;ConstantInt;.NET 6.0;;Workload;Pilot;3;27442064;10.3
+DllImport;ConstantInt;.NET 6.0;;Workload;Pilot;4;29136304;9.78
+DllImport;ConstantInt;.NET 6.0;;Workload;Pilot;5;30664576;9.87
+DllImport;ConstantInt;.NET 6.0;;Workload;Pilot;6;30394256;9.57
+DllImport;ConstantInt;.NET 6.0;;Workload;Pilot;7;31354480;9.96
+DllImport;ConstantInt;.NET 6.0;;Workload;Pilot;8;30132816;9.81
+DllImport;ConstantInt;.NET 6.0;;Workload;Pilot;9;30594176;9.57
+DllImport;ConstantInt;.NET 6.0;;Workload;Pilot;10;31334432;9.71
+DllImport;ConstantInt;.NET 6.0;;Overhead;Warmup;1;31334432;2.66
+DllImport;ConstantInt;.NET 6.0;;Overhead;Warmup;2;31334432;2.62
+DllImport;ConstantInt;.NET 6.0;;Overhead;Warmup;3;31334432;2.41
+DllImport;ConstantInt;.NET 6.0;;Overhead;Warmup;4;31334432;2.13
+DllImport;ConstantInt;.NET 6.0;;Overhead;Warmup;5;31334432;2.1
+DllImport;ConstantInt;.NET 6.0;;Overhead;Warmup;6;31334432;2.1
+DllImport;ConstantInt;.NET 6.0;;Overhead;Warmup;7;31334432;2.11
+DllImport;ConstantInt;.NET 6.0;;Overhead;Warmup;8;31334432;2.24
+DllImport;ConstantInt;.NET 6.0;;Overhead;Warmup;9;31334432;2.2
+DllImport;ConstantInt;.NET 6.0;;Overhead;Warmup;10;31334432;2.1
+DllImport;ConstantInt;.NET 6.0;;Overhead;Actual;1;31334432;2.12
+DllImport;ConstantInt;.NET 6.0;;Overhead;Actual;2;31334432;2.1
+DllImport;ConstantInt;.NET 6.0;;Overhead;Actual;3;31334432;2.09
+DllImport;ConstantInt;.NET 6.0;;Overhead;Actual;4;31334432;2.07
+DllImport;ConstantInt;.NET 6.0;;Overhead;Actual;5;31334432;2.09
+DllImport;ConstantInt;.NET 6.0;;Overhead;Actual;6;31334432;2.12
+DllImport;ConstantInt;.NET 6.0;;Overhead;Actual;7;31334432;2.1
+DllImport;ConstantInt;.NET 6.0;;Overhead;Actual;8;31334432;2.1
+DllImport;ConstantInt;.NET 6.0;;Overhead;Actual;9;31334432;2.09
+DllImport;ConstantInt;.NET 6.0;;Overhead;Actual;10;31334432;2.29
+DllImport;ConstantInt;.NET 6.0;;Overhead;Actual;11;31334432;2.1
+DllImport;ConstantInt;.NET 6.0;;Overhead;Actual;12;31334432;2.1
+DllImport;ConstantInt;.NET 6.0;;Overhead;Actual;13;31334432;2.32
+DllImport;ConstantInt;.NET 6.0;;Overhead;Actual;14;31334432;2.09
+DllImport;ConstantInt;.NET 6.0;;Overhead;Actual;15;31334432;2.12
+DllImport;ConstantInt;.NET 6.0;;Workload;Warmup;1;31334432;9.74
+DllImport;ConstantInt;.NET 6.0;;Workload;Warmup;2;31334432;9.75
+DllImport;ConstantInt;.NET 6.0;;Workload;Warmup;3;31334432;9.73
+DllImport;ConstantInt;.NET 6.0;;Workload;Warmup;4;31334432;9.69
+DllImport;ConstantInt;.NET 6.0;;Workload;Warmup;5;31334432;9.55
+DllImport;ConstantInt;.NET 6.0;;Workload;Actual;1;31334432;9.63
+DllImport;ConstantInt;.NET 6.0;;Workload;Actual;2;31334432;9.71
+DllImport;ConstantInt;.NET 6.0;;Workload;Actual;3;31334432;9.76
+DllImport;ConstantInt;.NET 6.0;;Workload;Actual;4;31334432;9.62
+DllImport;ConstantInt;.NET 6.0;;Workload;Actual;5;31334432;9.6
+DllImport;ConstantInt;.NET 6.0;;Workload;Actual;6;31334432;9.75
+DllImport;ConstantInt;.NET 6.0;;Workload;Actual;7;31334432;9.69
+DllImport;ConstantInt;.NET 6.0;;Workload;Actual;8;31334432;9.74
+DllImport;ConstantInt;.NET 6.0;;Workload;Actual;9;31334432;9.68
+DllImport;ConstantInt;.NET 6.0;;Workload;Actual;10;31334432;9.6
+DllImport;ConstantInt;.NET 6.0;;Workload;Actual;11;31334432;9.46
+DllImport;ConstantInt;.NET 6.0;;Workload;Actual;12;31334432;9.47
+DllImport;ConstantInt;.NET 6.0;;Workload;Actual;13;31334432;9.51
+DllImport;ConstantInt;.NET 6.0;;Workload;Actual;14;31334432;9.53
+DllImport;ConstantInt;.NET 6.0;;Workload;Actual;15;31334432;9.59
+DllImport;ConstantInt;.NET 6.0;;Workload;Result;1;31334432;7.53
+DllImport;ConstantInt;.NET 6.0;;Workload;Result;2;31334432;7.61
+DllImport;ConstantInt;.NET 6.0;;Workload;Result;3;31334432;7.66
+DllImport;ConstantInt;.NET 6.0;;Workload;Result;4;31334432;7.52
+DllImport;ConstantInt;.NET 6.0;;Workload;Result;5;31334432;7.49
+DllImport;ConstantInt;.NET 6.0;;Workload;Result;6;31334432;7.64
+DllImport;ConstantInt;.NET 6.0;;Workload;Result;7;31334432;7.58
+DllImport;ConstantInt;.NET 6.0;;Workload;Result;8;31334432;7.64
+DllImport;ConstantInt;.NET 6.0;;Workload;Result;9;31334432;7.58
+DllImport;ConstantInt;.NET 6.0;;Workload;Result;10;31334432;7.49
+DllImport;ConstantInt;.NET 6.0;;Workload;Result;11;31334432;7.36
+DllImport;ConstantInt;.NET 6.0;;Workload;Result;12;31334432;7.36
+DllImport;ConstantInt;.NET 6.0;;Workload;Result;13;31334432;7.4
+DllImport;ConstantInt;.NET 6.0;;Workload;Result;14;31334432;7.42
+DllImport;ConstantInt;.NET 6.0;;Workload;Result;15;31334432;7.49
+FuncPointers;ConstantInt;.NET 6.0;;Overhead;Jitting;1;1;322200
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Jitting;1;1;32345000
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Pilot;1;4;200
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Pilot;2;1500000;12.17
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Pilot;3;24659831;10.75
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Pilot;4;27898461;9.16
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Pilot;5;32735541;9.26
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Pilot;6;32408988;9.1
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Pilot;7;32956975;9.27
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Pilot;8;32366152;9.14
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Pilot;9;32806181;9.13
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Pilot;10;32875219;9.1
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Pilot;11;32976258;9.09
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Pilot;12;33005402;9.1
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Warmup;1;33005402;9.09
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Warmup;2;33005402;9.1
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Warmup;3;33005402;9.09
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Warmup;4;33005402;9.09
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Warmup;5;33005402;9.09
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Actual;1;33005402;9.09
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Actual;2;33005402;9.1
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Actual;3;33005402;9.11
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Actual;4;33005402;9.12
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Actual;5;33005402;9.12
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Actual;6;33005402;9.15
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Actual;7;33005402;9.09
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Actual;8;33005402;9.09
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Actual;9;33005402;9.18
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Actual;10;33005402;9.38
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Actual;11;33005402;9.32
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Actual;12;33005402;9.27
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Actual;13;33005402;9.16
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Actual;14;33005402;9.26
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Actual;15;33005402;9.16
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Result;1;33005402;9.09
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Result;2;33005402;9.1
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Result;3;33005402;9.11
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Result;4;33005402;9.12
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Result;5;33005402;9.12
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Result;6;33005402;9.15
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Result;7;33005402;9.09
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Result;8;33005402;9.09
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Result;9;33005402;9.18
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Result;10;33005402;9.38
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Result;11;33005402;9.32
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Result;12;33005402;9.27
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Result;13;33005402;9.16
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Result;14;33005402;9.26
+FuncPointers;ConstantInt;.NET 6.0;;Workload;Result;15;33005402;9.16
+Managed;ConstantInt;.NET 8.0;;Overhead;Jitting;1;1;294100
+Managed;ConstantInt;.NET 8.0;;Workload;Jitting;1;1;241400
+Managed;ConstantInt;.NET 8.0;;Overhead;Jitting;2;16;28800
+Managed;ConstantInt;.NET 8.0;;Workload;Jitting;2;16;27356.25
+Managed;ConstantInt;.NET 8.0;;Workload;Pilot;1;16;43.75
+Managed;ConstantInt;.NET 8.0;;Workload;Pilot;2;6857152;3.71
+Managed;ConstantInt;.NET 8.0;;Workload;Pilot;3;80862656;3.41
+Managed;ConstantInt;.NET 8.0;;Workload;Pilot;4;87928128;2.98
+Managed;ConstantInt;.NET 8.0;;Workload;Pilot;5;100639968;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Pilot;6;101039120;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Pilot;7;100973696;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Pilot;8;101029568;3.01
+Managed;ConstantInt;.NET 8.0;;Workload;Pilot;9;99711584;2.99
+Managed;ConstantInt;.NET 8.0;;Workload;Pilot;10;100495856;3
+Managed;ConstantInt;.NET 8.0;;Overhead;Warmup;1;100495856;2.79
+Managed;ConstantInt;.NET 8.0;;Overhead;Warmup;2;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Overhead;Warmup;3;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Overhead;Warmup;4;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Overhead;Warmup;5;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Overhead;Warmup;6;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Overhead;Warmup;7;100495856;2.28
+Managed;ConstantInt;.NET 8.0;;Overhead;Warmup;8;100495856;2.34
+Managed;ConstantInt;.NET 8.0;;Overhead;Warmup;9;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Overhead;Actual;1;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Overhead;Actual;2;100495856;2.31
+Managed;ConstantInt;.NET 8.0;;Overhead;Actual;3;100495856;2.31
+Managed;ConstantInt;.NET 8.0;;Overhead;Actual;4;100495856;2.28
+Managed;ConstantInt;.NET 8.0;;Overhead;Actual;5;100495856;2.28
+Managed;ConstantInt;.NET 8.0;;Overhead;Actual;6;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Overhead;Actual;7;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Overhead;Actual;8;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Overhead;Actual;9;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Overhead;Actual;10;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Overhead;Actual;11;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Overhead;Actual;12;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Overhead;Actual;13;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Overhead;Actual;14;100495856;2.28
+Managed;ConstantInt;.NET 8.0;;Overhead;Actual;15;100495856;2.27
+Managed;ConstantInt;.NET 8.0;;Workload;Warmup;1;100495856;3.01
+Managed;ConstantInt;.NET 8.0;;Workload;Warmup;2;100495856;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Warmup;3;100495856;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Warmup;4;100495856;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Warmup;5;100495856;3.01
+Managed;ConstantInt;.NET 8.0;;Workload;Actual;1;100495856;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Actual;2;100495856;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Actual;3;100495856;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Actual;4;100495856;3.01
+Managed;ConstantInt;.NET 8.0;;Workload;Actual;5;100495856;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Actual;6;100495856;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Actual;7;100495856;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Actual;8;100495856;3.01
+Managed;ConstantInt;.NET 8.0;;Workload;Actual;9;100495856;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Actual;10;100495856;2.99
+Managed;ConstantInt;.NET 8.0;;Workload;Actual;11;100495856;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Actual;12;100495856;2.99
+Managed;ConstantInt;.NET 8.0;;Workload;Actual;13;100495856;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Actual;14;100495856;3.01
+Managed;ConstantInt;.NET 8.0;;Workload;Actual;15;100495856;2.97
+Managed;ConstantInt;.NET 8.0;;Workload;Result;1;100495856;0.7
+Managed;ConstantInt;.NET 8.0;;Workload;Result;2;100495856;0.7
+Managed;ConstantInt;.NET 8.0;;Workload;Result;3;100495856;0.7
+Managed;ConstantInt;.NET 8.0;;Workload;Result;4;100495856;0.73
+Managed;ConstantInt;.NET 8.0;;Workload;Result;5;100495856;0.7
+Managed;ConstantInt;.NET 8.0;;Workload;Result;6;100495856;0.7
+Managed;ConstantInt;.NET 8.0;;Workload;Result;7;100495856;0.7
+Managed;ConstantInt;.NET 8.0;;Workload;Result;8;100495856;0.74
+Managed;ConstantInt;.NET 8.0;;Workload;Result;9;100495856;0.7
+Managed;ConstantInt;.NET 8.0;;Workload;Result;10;100495856;0.72
+Managed;ConstantInt;.NET 8.0;;Workload;Result;11;100495856;0.7
+Managed;ConstantInt;.NET 8.0;;Workload;Result;12;100495856;0.72
+Managed;ConstantInt;.NET 8.0;;Workload;Result;13;100495856;0.7
+Managed;ConstantInt;.NET 8.0;;Workload;Result;14;100495856;0.74
+Managed;ConstantInt;.NET 8.0;;Workload;Result;15;100495856;0.7
+DllImport;ConstantInt;.NET 8.0;;Overhead;Jitting;1;1;310300
+DllImport;ConstantInt;.NET 8.0;;Workload;Jitting;1;1;18423000
+DllImport;ConstantInt;.NET 8.0;;Overhead;Jitting;2;16;29162.5
+DllImport;ConstantInt;.NET 8.0;;Workload;Jitting;2;16;29681.25
+DllImport;ConstantInt;.NET 8.0;;Workload;Pilot;1;16;75
+DllImport;ConstantInt;.NET 8.0;;Workload;Pilot;2;4000000;10.63
+DllImport;ConstantInt;.NET 8.0;;Workload;Pilot;3;28208880;10.3
+DllImport;ConstantInt;.NET 8.0;;Workload;Pilot;4;29128816;9.49
+DllImport;ConstantInt;.NET 8.0;;Workload;Pilot;5;31609648;9.44
+DllImport;ConstantInt;.NET 8.0;;Workload;Pilot;6;31781744;9.45
+DllImport;ConstantInt;.NET 8.0;;Workload;Pilot;7;31761248;9.49
+DllImport;ConstantInt;.NET 8.0;;Workload;Pilot;8;31617824;9.47
+DllImport;ConstantInt;.NET 8.0;;Workload;Pilot;9;31687888;9.5
+DllImport;ConstantInt;.NET 8.0;;Overhead;Warmup;1;31687888;2.96
+DllImport;ConstantInt;.NET 8.0;;Overhead;Warmup;2;31687888;2.93
+DllImport;ConstantInt;.NET 8.0;;Overhead;Warmup;3;31687888;2.47
+DllImport;ConstantInt;.NET 8.0;;Overhead;Warmup;4;31687888;2.24
+DllImport;ConstantInt;.NET 8.0;;Overhead;Warmup;5;31687888;2.22
+DllImport;ConstantInt;.NET 8.0;;Overhead;Warmup;6;31687888;2.25
+DllImport;ConstantInt;.NET 8.0;;Overhead;Warmup;7;31687888;2.25
+DllImport;ConstantInt;.NET 8.0;;Overhead;Warmup;8;31687888;2.21
+DllImport;ConstantInt;.NET 8.0;;Overhead;Warmup;9;31687888;2.22
+DllImport;ConstantInt;.NET 8.0;;Overhead;Warmup;10;31687888;2.21
+DllImport;ConstantInt;.NET 8.0;;Overhead;Actual;1;31687888;2.21
+DllImport;ConstantInt;.NET 8.0;;Overhead;Actual;2;31687888;2.22
+DllImport;ConstantInt;.NET 8.0;;Overhead;Actual;3;31687888;2.21
+DllImport;ConstantInt;.NET 8.0;;Overhead;Actual;4;31687888;2.21
+DllImport;ConstantInt;.NET 8.0;;Overhead;Actual;5;31687888;2.21
+DllImport;ConstantInt;.NET 8.0;;Overhead;Actual;6;31687888;2.21
+DllImport;ConstantInt;.NET 8.0;;Overhead;Actual;7;31687888;2.21
+DllImport;ConstantInt;.NET 8.0;;Overhead;Actual;8;31687888;2.41
+DllImport;ConstantInt;.NET 8.0;;Overhead;Actual;9;31687888;2.21
+DllImport;ConstantInt;.NET 8.0;;Overhead;Actual;10;31687888;2.24
+DllImport;ConstantInt;.NET 8.0;;Overhead;Actual;11;31687888;2.21
+DllImport;ConstantInt;.NET 8.0;;Overhead;Actual;12;31687888;2.21
+DllImport;ConstantInt;.NET 8.0;;Overhead;Actual;13;31687888;2.21
+DllImport;ConstantInt;.NET 8.0;;Overhead;Actual;14;31687888;2.21
+DllImport;ConstantInt;.NET 8.0;;Overhead;Actual;15;31687888;2.21
+DllImport;ConstantInt;.NET 8.0;;Workload;Warmup;1;31687888;9.44
+DllImport;ConstantInt;.NET 8.0;;Workload;Warmup;2;31687888;9.53
+DllImport;ConstantInt;.NET 8.0;;Workload;Warmup;3;31687888;9.52
+DllImport;ConstantInt;.NET 8.0;;Workload;Warmup;4;31687888;9.69
+DllImport;ConstantInt;.NET 8.0;;Workload;Warmup;5;31687888;9.55
+DllImport;ConstantInt;.NET 8.0;;Workload;Actual;1;31687888;9.45
+DllImport;ConstantInt;.NET 8.0;;Workload;Actual;2;31687888;9.51
+DllImport;ConstantInt;.NET 8.0;;Workload;Actual;3;31687888;9.44
+DllImport;ConstantInt;.NET 8.0;;Workload;Actual;4;31687888;9.48
+DllImport;ConstantInt;.NET 8.0;;Workload;Actual;5;31687888;9.47
+DllImport;ConstantInt;.NET 8.0;;Workload;Actual;6;31687888;9.48
+DllImport;ConstantInt;.NET 8.0;;Workload;Actual;7;31687888;9.46
+DllImport;ConstantInt;.NET 8.0;;Workload;Actual;8;31687888;9.44
+DllImport;ConstantInt;.NET 8.0;;Workload;Actual;9;31687888;9.46
+DllImport;ConstantInt;.NET 8.0;;Workload;Actual;10;31687888;9.46
+DllImport;ConstantInt;.NET 8.0;;Workload;Actual;11;31687888;9.44
+DllImport;ConstantInt;.NET 8.0;;Workload;Actual;12;31687888;9.44
+DllImport;ConstantInt;.NET 8.0;;Workload;Actual;13;31687888;9.46
+DllImport;ConstantInt;.NET 8.0;;Workload;Actual;14;31687888;9.5
+DllImport;ConstantInt;.NET 8.0;;Workload;Actual;15;31687888;9.66
+DllImport;ConstantInt;.NET 8.0;;Workload;Result;1;31687888;7.25
+DllImport;ConstantInt;.NET 8.0;;Workload;Result;2;31687888;7.3
+DllImport;ConstantInt;.NET 8.0;;Workload;Result;3;31687888;7.24
+DllImport;ConstantInt;.NET 8.0;;Workload;Result;4;31687888;7.27
+DllImport;ConstantInt;.NET 8.0;;Workload;Result;5;31687888;7.26
+DllImport;ConstantInt;.NET 8.0;;Workload;Result;6;31687888;7.27
+DllImport;ConstantInt;.NET 8.0;;Workload;Result;7;31687888;7.25
+DllImport;ConstantInt;.NET 8.0;;Workload;Result;8;31687888;7.24
+DllImport;ConstantInt;.NET 8.0;;Workload;Result;9;31687888;7.25
+DllImport;ConstantInt;.NET 8.0;;Workload;Result;10;31687888;7.25
+DllImport;ConstantInt;.NET 8.0;;Workload;Result;11;31687888;7.24
+DllImport;ConstantInt;.NET 8.0;;Workload;Result;12;31687888;7.24
+DllImport;ConstantInt;.NET 8.0;;Workload;Result;13;31687888;7.26
+DllImport;ConstantInt;.NET 8.0;;Workload;Result;14;31687888;7.29
+FuncPointers;ConstantInt;.NET 8.0;;Overhead;Jitting;1;1;355600
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Jitting;1;1;31982700
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Pilot;1;4;200
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Pilot;2;1500000;11.94
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Pilot;3;25127031;10.46
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Pilot;4;28672184;9.29
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Pilot;5;32280583;9.23
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Pilot;6;32505838;9.15
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Pilot;7;32801191;9.11
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Pilot;8;32927622;9.31
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Pilot;9;32207159;9.12
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Pilot;10;32907037;9.14
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Pilot;11;32810421;9.15
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Warmup;1;32810421;9.19
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Warmup;2;32810421;9.38
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Warmup;3;32810421;9.44
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Warmup;4;32810421;9.4
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Warmup;5;32810421;9.15
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Actual;1;32810421;9.34
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Actual;2;32810421;9.1
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Actual;3;32810421;9.1
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Actual;4;32810421;9.19
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Actual;5;32810421;9.11
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Actual;6;32810421;9.33
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Actual;7;32810421;9.33
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Actual;8;32810421;9.22
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Actual;9;32810421;9.15
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Actual;10;32810421;9.17
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Actual;11;32810421;9.11
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Actual;12;32810421;9.1
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Actual;13;32810421;9.11
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Actual;14;32810421;9.1
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Actual;15;32810421;9.17
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Result;1;32810421;9.34
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Result;2;32810421;9.1
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Result;3;32810421;9.1
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Result;4;32810421;9.19
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Result;5;32810421;9.11
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Result;6;32810421;9.33
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Result;7;32810421;9.33
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Result;8;32810421;9.22
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Result;9;32810421;9.15
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Result;10;32810421;9.17
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Result;11;32810421;9.11
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Result;12;32810421;9.1
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Result;13;32810421;9.11
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Result;14;32810421;9.1
+FuncPointers;ConstantInt;.NET 8.0;;Workload;Result;15;32810421;9.17
+LibraryImport;ConstantInt;.NET 8.0;;Overhead;Jitting;1;1;305600
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Jitting;1;1;40121400
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Pilot;1;4;375
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Pilot;2;800000;10.94
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Pilot;3;27412594;10.41
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Pilot;4;28831043;9.49
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Pilot;5;31596321;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Pilot;6;31764535;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Pilot;7;31780690;9.45
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Pilot;8;31752874;9.6
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Pilot;9;31242958;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Pilot;10;31763627;9.47
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Warmup;1;31763627;9.45
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Warmup;2;31763627;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Warmup;3;31763627;9.46
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Warmup;4;31763627;9.65
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Warmup;5;31763627;9.45
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Actual;1;31763627;9.6
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Actual;2;31763627;9.45
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Actual;3;31763627;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Actual;4;31763627;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Actual;5;31763627;9.6
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Actual;6;31763627;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Actual;7;31763627;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Actual;8;31763627;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Actual;9;31763627;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Actual;10;31763627;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Actual;11;31763627;9.45
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Actual;12;31763627;9.47
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Actual;13;31763627;9.58
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Actual;14;31763627;9.45
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Actual;15;31763627;9.47
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Result;1;31763627;9.45
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Result;2;31763627;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Result;3;31763627;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Result;4;31763627;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Result;5;31763627;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Result;6;31763627;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Result;7;31763627;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Result;8;31763627;9.44
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Result;9;31763627;9.45
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Result;10;31763627;9.47
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Result;11;31763627;9.45
+LibraryImport;ConstantInt;.NET 8.0;;Workload;Result;12;31763627;9.47
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Jitting;1;1;362300
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Jitting;1;1;255400
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Jitting;2;16;35856.25
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Jitting;2;16;33631.25
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Pilot;1;16;100
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Pilot;2;3000000;3.06
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Pilot;3;98191104;3.06
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Pilot;4;98158912;3.07
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Pilot;5;97772032;3.06
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Pilot;6;98130112;3.14
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Warmup;1;98130112;2.06
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Warmup;2;98130112;2.05
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Warmup;3;98130112;2.06
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Warmup;4;98130112;2.06
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Warmup;5;98130112;2.05
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Warmup;6;98130112;2.06
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Warmup;7;98130112;2.05
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Actual;1;98130112;2.06
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Actual;2;98130112;2.12
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Actual;3;98130112;2.06
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Actual;4;98130112;2.06
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Actual;5;98130112;2.05
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Actual;6;98130112;2.05
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Actual;7;98130112;2.05
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Actual;8;98130112;2.05
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Actual;9;98130112;2.05
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Actual;10;98130112;2.05
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Actual;11;98130112;2.05
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Actual;12;98130112;2.05
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Actual;13;98130112;2.05
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Actual;14;98130112;2.06
+Managed;ConstantInt;.NET Framework 4.8;;Overhead;Actual;15;98130112;2.05
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Warmup;1;98130112;3.06
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Warmup;2;98130112;3.06
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Warmup;3;98130112;3.08
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Warmup;4;98130112;3.08
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Warmup;5;98130112;3.06
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Actual;1;98130112;3.06
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Actual;2;98130112;3.07
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Actual;3;98130112;3.06
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Actual;4;98130112;3.06
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Actual;5;98130112;3.07
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Actual;6;98130112;3.13
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Actual;7;98130112;3.06
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Actual;8;98130112;3.13
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Actual;9;98130112;3.07
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Actual;10;98130112;3.06
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Actual;11;98130112;3.06
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Actual;12;98130112;3.06
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Actual;13;98130112;3.06
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Actual;14;98130112;3.06
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Actual;15;98130112;3.1
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Result;1;98130112;1.01
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Result;2;98130112;1.02
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Result;3;98130112;1.01
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Result;4;98130112;1
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Result;5;98130112;1.02
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Result;6;98130112;1
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Result;7;98130112;1.01
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Result;8;98130112;1
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Result;9;98130112;1.01
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Result;10;98130112;1.01
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Result;11;98130112;1
+Managed;ConstantInt;.NET Framework 4.8;;Workload;Result;12;98130112;1.01
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Jitting;1;1;368300
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Jitting;1;1;18998500
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Jitting;2;16;33818.75
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Jitting;2;16;33556.25
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Pilot;1;16;181.25
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Pilot;2;1655184;19.36
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Pilot;3;15494112;14.78
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Pilot;4;20300272;14.82
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Pilot;5;20249616;14.8
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Pilot;6;20271776;14.79
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Pilot;7;20290688;14.78
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Pilot;8;20295776;15.13
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Pilot;9;19828496;14.79
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Pilot;10;20290336;14.77
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Pilot;11;20310000;14.77
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Warmup;1;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Warmup;2;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Warmup;3;20310000;2.04
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Warmup;4;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Warmup;5;20310000;2.12
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Warmup;6;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Actual;1;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Actual;2;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Actual;3;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Actual;4;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Actual;5;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Actual;6;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Actual;7;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Actual;8;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Actual;9;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Actual;10;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Actual;11;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Actual;12;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Actual;13;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Actual;14;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Overhead;Actual;15;20310000;2.03
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Warmup;1;20310000;14.78
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Warmup;2;20310000;15.11
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Warmup;3;20310000;14.77
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Warmup;4;20310000;14.79
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Warmup;5;20310000;14.96
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Actual;1;20310000;14.78
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Actual;2;20310000;14.77
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Actual;3;20310000;14.81
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Actual;4;20310000;14.88
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Actual;5;20310000;14.86
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Actual;6;20310000;14.78
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Actual;7;20310000;15.14
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Actual;8;20310000;14.77
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Actual;9;20310000;14.78
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Actual;10;20310000;14.77
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Actual;11;20310000;15.11
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Actual;12;20310000;14.79
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Actual;13;20310000;15.12
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Actual;14;20310000;14.78
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Actual;15;20310000;14.77
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Result;1;20310000;12.75
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Result;2;20310000;12.74
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Result;3;20310000;12.78
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Result;4;20310000;12.85
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Result;5;20310000;12.83
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Result;6;20310000;12.75
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Result;7;20310000;12.74
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Result;8;20310000;12.75
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Result;9;20310000;12.74
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Result;10;20310000;12.76
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Result;11;20310000;12.75
+DllImport;ConstantInt;.NET Framework 4.8;;Workload;Result;12;20310000;12.74

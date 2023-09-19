@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BenchmarkRun-joined-2023-09-20-00-17-55</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.8, Windows 10 (10.0.19045.3448/22H2/2022Update)
+Intel Core i5-10400F CPU 2.90GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 8.0.100-preview.7.23376.3
+  [Host]     : .NET 8.0.0 (8.0.23.37506), X64 RyuJIT AVX2
+  Job-DYOXOY : .NET 6.0.22 (6.0.2223.42425), X64 RyuJIT AVX2
+  Job-VFQQKA : .NET 8.0.0 (8.0.23.37506), X64 RyuJIT AVX2
+  Job-DEOSBA : .NET Framework 4.8.1 (4.8.9181.0), X64 RyuJIT VectorSize=256
+</code></pre>
+<pre><code>IterationTime=300.0000 ms  WarmupCount=5  
+</code></pre>
+
+<table>
+<thead><tr><th>Type   </th><th>Method</th><th>Runtime     </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Min </th><th>Max </th>
+</tr>
+</thead><tbody><tr><td>DllImport</td><td>ConstantInt</td><td>.NET 6.0</td><td>7.3103 ns</td><td>0.0096 ns</td><td>0.0085 ns</td><td>7.3075 ns</td><td>7.3028 ns</td><td>7.3302 ns</td>
+</tr><tr><td>DllImport</td><td>ConstantInt</td><td>.NET 8.0</td><td>7.2467 ns</td><td>0.0751 ns</td><td>0.0703 ns</td><td>7.2274 ns</td><td>7.1528 ns</td><td>7.3749 ns</td>
+</tr><tr><td>DllImport</td><td>ConstantInt</td><td>.NET Framework 4.8</td><td>14.5498 ns</td><td>0.2053 ns</td><td>0.1921 ns</td><td>14.4467 ns</td><td>14.3575 ns</td><td>14.9757 ns</td>
+</tr><tr><td>FuncPointers</td><td>ConstantInt</td><td>.NET 6.0</td><td>9.0043 ns</td><td>0.0188 ns</td><td>0.0167 ns</td><td>8.9958 ns</td><td>8.9905 ns</td><td>9.0430 ns</td>
+</tr><tr><td>FuncPointers</td><td>ConstantInt</td><td>.NET 8.0</td><td>9.0182 ns</td><td>0.0101 ns</td><td>0.0084 ns</td><td>9.0159 ns</td><td>9.0068 ns</td><td>9.0323 ns</td>
+</tr><tr><td>LibraryImport</td><td>ConstantInt</td><td>.NET 8.0</td><td>9.3577 ns</td><td>0.0355 ns</td><td>0.0297 ns</td><td>9.3441 ns</td><td>9.3373 ns</td><td>9.4374 ns</td>
+</tr><tr><td>Managed</td><td>ConstantInt</td><td>.NET 6.0</td><td>0.7161 ns</td><td>0.0038 ns</td><td>0.0032 ns</td><td>0.7146 ns</td><td>0.7132 ns</td><td>0.7242 ns</td>
+</tr><tr><td>Managed</td><td>ConstantInt</td><td>.NET 8.0</td><td>0.7563 ns</td><td>0.0492 ns</td><td>0.0736 ns</td><td>0.7308 ns</td><td>0.6894 ns</td><td>0.9347 ns</td>
+</tr><tr><td>Managed</td><td>ConstantInt</td><td>.NET Framework 4.8</td><td>0.9928 ns</td><td>0.0015 ns</td><td>0.0011 ns</td><td>0.9933 ns</td><td>0.9910 ns</td><td>0.9943 ns</td>
+</tr></tbody></table>
+</body>
+</html>
