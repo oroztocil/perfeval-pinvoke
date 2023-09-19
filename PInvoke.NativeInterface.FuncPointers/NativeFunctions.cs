@@ -30,12 +30,23 @@ namespace PInvoke.NativeInterface.FuncPointers
         public static void Empty_Void() =>
             ((delegate* unmanaged<void>)ptr_Empty_Void)();
 
+        public static void Empty_Void_SGCT() =>
+            ((delegate* unmanaged[SuppressGCTransition]<void>)ptr_Empty_Void)();
+
 
         public static void Empty_IntArray(int[] arr, int count)
         {
             fixed (int* arrPtr = arr)
             {
                 ((delegate* unmanaged<int*, int, void>)ptr_Empty_IntArray)(arrPtr, count);
+            }
+        }
+
+        public static void Empty_IntArray_SGCT(int[] arr, int count)
+        {
+            fixed (int* arrPtr = arr)
+            {
+                ((delegate* unmanaged[SuppressGCTransition]<int*, int, void>)ptr_Empty_IntArray)(arrPtr, count);
             }
         }
 
@@ -49,6 +60,16 @@ namespace PInvoke.NativeInterface.FuncPointers
             }
         }
 
+        public static void Empty_String_SGCT(string str)
+        {
+            var bytes = Encoding.UTF8.GetBytes(str);
+
+            fixed (byte* ptr = bytes)
+            {
+                ((delegate* unmanaged[SuppressGCTransition]<byte*, void>)ptr_Empty_String)(ptr);
+            }
+        }
+
         // Simple functions with primitive arguments
 
         public static int ConstantInt() =>
@@ -57,6 +78,9 @@ namespace PInvoke.NativeInterface.FuncPointers
 
         public static unsafe int MultiplyInt(int a, int b) =>
             ((delegate* unmanaged<int, int, int>)ptr_MultiplyInt)(a, b);
+
+        public static unsafe int MultiplyInt_SGCT(int a, int b) =>
+            ((delegate* unmanaged[SuppressGCTransition]<int, int, int>)ptr_MultiplyInt)(a, b);
 
         public static bool NegateBool(bool value)
         {

@@ -23,8 +23,12 @@ namespace PInvoke.Benchmarks
     public class FuncPointers : BenchmarkBase
     {
         [Benchmark]
-        [BenchmarkCategory(Categories.Empty)]
+        [BenchmarkCategory(Categories.Empty, Categories.SGCT)]
         public void Empty_Void() => NativeFunctions.Empty_Void();
+
+        [Benchmark]
+        [BenchmarkCategory(Categories.Empty, Categories.SGCT)]
+        public void Empty_Void_SGCT() => NativeFunctions.Empty_Void_SGCT();
 
         [Benchmark]
         [BenchmarkCategory(Categories.Empty, Categories.InArray)]
@@ -32,8 +36,17 @@ namespace PInvoke.Benchmarks
         public void Empty_IntArray(int[] array) => NativeFunctions.Empty_IntArray(array, array.Length);
 
         [Benchmark]
+        [BenchmarkCategory(Categories.Empty, Categories.InArray, Categories.SGCT)]
+        [ArgumentsSource(nameof(RandomIntArrays))]
+        public void Empty_IntArray_SGCT(int[] array) => NativeFunctions.Empty_IntArray_SGCT(array, array.Length);
+
+        [Benchmark]
         [BenchmarkCategory(Categories.Empty, Categories.InString)]
         public void Empty_String() => NativeFunctions.Empty_String(Data.NonAsciiString);
+
+        [Benchmark]
+        [BenchmarkCategory(Categories.Empty, Categories.InString, Categories.SGCT)]
+        public void Empty_String_SGCT() => NativeFunctions.Empty_String_SGCT(Data.NonAsciiString);
 
         [Benchmark]
         [BenchmarkCategory(Categories.ReturnInt)]
@@ -42,6 +55,10 @@ namespace PInvoke.Benchmarks
         [Benchmark]
         [BenchmarkCategory(Categories.InReturnInt)]
         public int MultiplyInt() => NativeFunctions.MultiplyInt(1234, 4321);
+
+        [Benchmark]
+        [BenchmarkCategory(Categories.InReturnInt, Categories.SGCT)]
+        public int MultiplyInt_SGCT() => NativeFunctions.MultiplyInt_SGCT(1234, 4321);
 
         [Benchmark]
         [BenchmarkCategory(Categories.InReturnBool)]
