@@ -55,7 +55,11 @@ Recently, the [`LibraryImport`](https://learn.microsoft.com/en-us/dotnet/standar
 For example, when user declares a method such as:
 
 ```csharp
-struct Timespec { public long tv_sec;  public long tv_nsec; }
+struct Timespec
+{
+    public long tv_sec;
+    public long tv_nsec;
+}
 
 [LibraryImport("libc", EntryPoint = "clock_gettime")]
 private static partial int GetTime(int clk_id, ref Timespec tp);
@@ -89,10 +93,9 @@ This has several ramifications for performance:
 - The pre-generated marshalling code can be inlined already by the C# compiler, not just the JIT compiler.
 - The source generated interop is compatible with the Native AOT compilation available since .NET 7 (outside of the scope of this report).
 
-### Unmanaged function pointers
+### Unsafe function pointers
 
-- Loading assemblies using `NativeLibrary.Load` and reading exports manually.
-- Completely manual marshalling.
+.NET 5 added another way of calling native functions using function pointers. This involves manually loading the native library and acquiring address to the exported function using the `NativeLibrary` API. The address (represented as an untyped `IntPtr` handle) can than be in an `unsafe` context cast to a typed function pointer using a special `delegate*` syntax. This pointer can be then invoked as a regular C# function.  For example:
 
 ```csharp
 IntPtr kernelLib = NativeLibrary.Load("kernel32.dll");
@@ -104,9 +107,13 @@ unsafe
 }
 ```
 
+There is a very little documentation on the internal implementation of interop via function pointers. Apparently (see [discussion](https://github.com/dotnet/runtime/issues/46858#issuecomment-758810968)), the feature uses the same runtime interop service as traditional P/Invoke with `DllImport`, including basic marshalling capabilities. However, there is no support for marshalling most non-blittable types and the user is expected to convert any such values manually.
+
+Without the knowledge of internals it is difficult to predict whether function pointers differ in performance from `DllImport` methods.
+
 ### Other methods
 
-We omit use of managed delegates as these have shown to be significantly slower (see *Related work*) while not providing benefits over the other methods. We also not included implementation based on emitting the `calli` IL [instruction](https://learn.microsoft.com/en-us/dotnet/api/system.reflection.emit.opcodes.calli?view=net-7.0) during run-time as we wanted to focus on standard .NET APIs intended for general developer audience.
+We omit use of managed delegates as these have shown to be significantly slower (see *Related work*) while not providing benefits over the other methods. We also not included implementation based on emitting the `calli` IL [instruction](https://learn.microsoft.com/en-us/dotnet/api/system.reflection.emit.opcodes.calli?view=net-7.0) during run-time as we wanted to focus on more standard .NET APIs intended for general developer audience.
 
 ### Interop settings
 
