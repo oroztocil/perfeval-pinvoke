@@ -71,7 +71,12 @@ namespace PInvoke.Benchmarks
             {
                 new MeasurementColumn("Category", (Summary summary, BenchmarkReport report, Measurement m) => report.BenchmarkCase.Descriptor.Categories[0]),
                 new MeasurementColumn("OS", (Summary summary, BenchmarkReport report, Measurement m) => Environment.OSVersion.Platform.ToString()),
-                new MeasurementColumn("Target_Type", (Summary summary, BenchmarkReport report, Measurement m) => report.BenchmarkCase.Descriptor.Type.Name),
+                new MeasurementColumn("Target_Type", (Summary summary, BenchmarkReport report, Measurement m) =>
+                {
+                    var type = report.BenchmarkCase.Descriptor.Type.Name;
+                    if (type.EndsWith("CS")) return type.Substring(0,  type.Length - 2);
+                    else return type;
+                }),
                 new MeasurementColumn("Target_Method", (Summary summary, BenchmarkReport report, Measurement m) => report.BenchmarkCase.Descriptor.WorkloadMethodDisplayInfo)
             };
 
