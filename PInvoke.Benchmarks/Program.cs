@@ -6,6 +6,7 @@ using BenchmarkDotNet.Columns;
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Exporters;
 using BenchmarkDotNet.Exporters.Csv;
+using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Order;
 using BenchmarkDotNet.Reports;
 using BenchmarkDotNet.Running;
@@ -24,8 +25,6 @@ namespace PInvoke.Benchmarks
 
             var runCategory = configuration["anyCategories"] ?? "Complete";
 
-            Console.WriteLine((configuration as IConfigurationRoot).GetDebugView());
-
             var csvExporter = new FilteredCsvExporter(
                 CsvSeparator.Semicolon,
                 new SummaryStyle(
@@ -36,16 +35,18 @@ namespace PInvoke.Benchmarks
                     sizeUnit: SizeUnit.B                    
                 ));
 
-            var summaries = BenchmarkSwitcher
-                .FromAssembly(typeof(Program).Assembly)
-                .Run(args, ManualConfig
+            var config = ManualConfig
                     .Create(DefaultConfig.Instance)
                     .AddExporter(csvExporter)
                     .AddColumn(StatisticColumn.Median, StatisticColumn.Min, StatisticColumn.Max)
                     .HideColumns(Column.Job, Column.Namespace)
-                    .WithArtifactsPath($"./{runCategory}_" + DateTime.Now.ToString("s").Replace(":", "_"))
+                    .WithArtifactsPath($"./Results/{runCategory}_" + DateTime.Now.ToString("s").Replace(":", "_"))
                     .WithOrderer(new DefaultOrderer(SummaryOrderPolicy.Declared, MethodOrderPolicy.Alphabetical))
-                    .WithOptions(ConfigOptions.JoinSummary));
+                    .WithOptions(ConfigOptions.JoinSummary);
+
+            var summaries = BenchmarkSwitcher
+                .FromAssembly(typeof(Program).Assembly)
+                .Run(args, config);
 
             return IsSuccess(summaries) ? 0 : 1;
         }

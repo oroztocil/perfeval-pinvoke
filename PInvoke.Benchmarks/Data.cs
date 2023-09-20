@@ -12,6 +12,16 @@ namespace PInvoke.Benchmarks
 
         public static readonly string NonAsciiString = "zazáří v září";
 
+        public static IEnumerable<int[]> EmptyIntArray => new[]
+        {
+            new int[10],
+        };
+
+        public static IEnumerable<int[]> RandomIntArray => new[]
+        {
+            GetRandomIntArray(10),
+        };
+
         public static IEnumerable<int[]> EmptyIntArrays => new[]
         {
             new int[10],

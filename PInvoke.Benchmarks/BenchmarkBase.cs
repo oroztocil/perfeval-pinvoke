@@ -13,15 +13,16 @@ namespace PInvoke.Benchmarks
     //[NativeMemoryProfiler]
 #endif
     //[MemoryDiagnoser]
-    [WarmupCount(5)]
-    [IterationTime(300)]
-    //[Orderer(SummaryOrderPolicy.Declared, MethodOrderPolicy.Alphabetical)]
+    [WarmupCount(Settings.ThroughputWarmupCount)]
+    [IterationTime(Settings.ThroughputTargetIterationTime)]
     public abstract class BenchmarkBase
     {
-        public static IEnumerable<int[]> RandomIntArrays => Data.RandomIntArrays;
+        public static IEnumerable<int[]> EmptyIntArray => Data.EmptyIntArray;
         public static IEnumerable<int[]> EmptyIntArrays => Data.EmptyIntArrays;
-        public static IEnumerable<BlittableStruct> BlittableStructs => Data.BlittableStructs;
+        public static IEnumerable<int[]> RandomIntArray => Data.RandomIntArray;
+        public static IEnumerable<int[]> RandomIntArrays => Data.RandomIntArrays;
+        public static IEnumerable<BlittableStruct> BlittableStruct => Data.BlittableStructs;
         public static IEnumerable<BlittableClass> BlittableClasses => Data.BlittableClasses;
-        public static IEnumerable<NonBlittableStruct> NonBlittableStructs => Data.NonBlittableStructs;
+        public static IEnumerable<NonBlittableStruct> NonBlittableStruct => Data.NonBlittableStructs;
     }
 }

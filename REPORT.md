@@ -161,16 +161,22 @@ All tests were performed on a desktop computer with the following hardware  and 
 
 ## Experiments
 
-We implemented the benchmarks using the [BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet) library which is the [de-facto standard](https://github.com/dotnet/BenchmarkDotNet/network/dependents) for micro-benchmarking .NET code. The library provides API for declaring benchmark jobs (similarly to unit testing frameworks), handles benchmark execution a
+We implemented the benchmarks using the [BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet) library which is the [de-facto standard](https://github.com/dotnet/BenchmarkDotNet/network/dependents) for micro-benchmarking .NET code. The library provides API for declaring benchmark jobs (similarly to unit testing frameworks), handles benchmark execution and 
 
 - BenchmarkDotNet intro
 - througput tests vs cold start tests
+- steady state
 
 ### Overhead baseline
 
 - empty void functions
 - compare with managed call
 
+### Effect of interop settings
+
+- `SetLastError`
+- `SuppressUnmanagedCodeSecurity`
+- `SuppressGCTransition`
 
 
 ### Passing primitive types
@@ -200,12 +206,6 @@ public static extern void SquareNumbers([In, Out] int[] numbers);
 - manual marshalling
 - custom marshaller
 - unions
-
-### Effect of interop settings
-
-- `SetLastError`
-- `SuppressUnmanagedCodeSecurity`
-- `SuppressGCTransition`
 
 ### Cold start performance
 

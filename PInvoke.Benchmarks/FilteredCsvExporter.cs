@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection.PortableExecutable;
 
 using BenchmarkDotNet.Characteristics;
+using BenchmarkDotNet.Engines;
 using BenchmarkDotNet.Exporters.Csv;
 using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Loggers;
@@ -30,7 +31,7 @@ namespace PInvoke.Benchmarks
             while (enumerator.MoveNext())
             {
                 BenchmarkReport current = enumerator.Current;
-                foreach (Measurement allMeasurement in current.AllMeasurements)
+                foreach (Measurement allMeasurement in current.AllMeasurements.Where(m => m.IterationStage == IterationStage.Result))
                 {
                     int num = 0;
                     while (num < columns.Length)
@@ -68,6 +69,7 @@ namespace PInvoke.Benchmarks
         {
             List<MeasurementColumn> list = new List<MeasurementColumn>
             {
+                new MeasurementColumn("Category", (Summary summary, BenchmarkReport report, Measurement m) => report.BenchmarkCase.Descriptor.Categories[0]),
                 new MeasurementColumn("OS", (Summary summary, BenchmarkReport report, Measurement m) => Environment.OSVersion.Platform.ToString()),
                 new MeasurementColumn("Target_Type", (Summary summary, BenchmarkReport report, Measurement m) => report.BenchmarkCase.Descriptor.Type.Name),
                 new MeasurementColumn("Target_Method", (Summary summary, BenchmarkReport report, Measurement m) => report.BenchmarkCase.Descriptor.WorkloadMethodDisplayInfo)

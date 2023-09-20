@@ -1,3 +1,5 @@
+Scripts/Results/
+
 *.so
 *.dll
 bin/

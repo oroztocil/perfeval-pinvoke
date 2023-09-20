@@ -14,6 +14,6 @@ internal static class Categories
     public const string Strings_InOut = nameof(Strings_InOut);
     public const string Structs_Blittable = nameof(Structs_Blittable);
     public const string Structs_NonBlittable = nameof(Structs_NonBlittable);
-
     public const string SGCT = nameof(SGCT);
+    public const string CS = nameof(CS);
 }
