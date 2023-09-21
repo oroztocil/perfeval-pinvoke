@@ -120,7 +120,7 @@ namespace PInvoke.NativeInterface.LibraryImport
 
         [LibraryImport(BenchLibrary.Name, EntryPoint = "UpdateNonBlittableStruct")]
         public static partial void UpdateNonBlittableStruct_Marshaller(
-            [MarshalUsing(typeof(NonBlittableStatetelessMarshaller))] ref NonBlittableStruct input);
+            [MarshalUsing(typeof(NonBlittableStatelessMarshaller))] ref NonBlittableStruct input);
 
         [LibraryImport(BenchLibrary.Name, EntryPoint = "UpdateNonBlittableStruct")]
         internal static partial void UpdateNonBlittableStruct_Manual(ref MarshalledNonBlittableStruct input);
