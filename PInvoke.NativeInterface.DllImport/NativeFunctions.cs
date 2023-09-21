@@ -21,31 +21,6 @@ namespace PInvoke.NativeInterface.DllImport
         [DllImport(BenchLibrary.Name, EntryPoint = "Empty_Void", SetLastError = true)]
         public static extern void Empty_VoidSLE();
 
-        [DllImport(BenchLibrary.Name)]
-        public static extern void Empty_IntArray(int[] arr, int count);
-
-        [DllImport(BenchLibrary.Name, EntryPoint = "Empty_IntArray")]
-        [SuppressUnmanagedCodeSecurity]
-        public static extern void Empty_IntArraySUCS(int[] arr, int count);
-
-        [DllImport(BenchLibrary.Name, EntryPoint = "Empty_IntArray")]
-        internal static extern void Empty_IntArray_Fixed(IntPtr arr, int count);
-
-        public static unsafe void Empty_IntArray_Fixed(int[] arr, int count)
-        {
-            fixed (int* ptr = arr)
-            {
-                Empty_IntArray_Fixed((IntPtr)ptr, count);
-            }
-        }
-
-        [DllImport(BenchLibrary.Name)]
-        public static extern void Empty_String([MarshalAs(UnmanagedType.LPUTF8Str)] string str);
-
-        [DllImport(BenchLibrary.Name, EntryPoint = "Empty_String")]
-        [SuppressUnmanagedCodeSecurity]
-        public static extern void Empty_StringSUCS([MarshalAs(UnmanagedType.LPUTF8Str)] string str);
-
         // Simple functions with primitive arguments
 
         [DllImport(BenchLibrary.Name)]

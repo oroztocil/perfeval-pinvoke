@@ -145,7 +145,6 @@ namespace PInvoke.Benchmarks
         public string Mixed()
         {
             NativeFunctions.Empty_Void();
-            NativeFunctions.Empty_String(Data.NonAsciiString);
 
             var flag = NativeFunctions.NegateBool(false);
             var num = NativeFunctions.ConstantInt();
@@ -155,7 +154,6 @@ namespace PInvoke.Benchmarks
 
             NativeFunctions.FillIntArray(arr, arr.Length);
             NativeFunctions.SumIntArray(arr, arr.Length);
-            NativeFunctions.Empty_IntArray(arr, arr.Length);
 
             var len8 = NativeFunctions.StringLength_Utf8(Data.NonAsciiString);
             var len16 = NativeFunctions.StringLength_Utf16(Data.NonAsciiString);

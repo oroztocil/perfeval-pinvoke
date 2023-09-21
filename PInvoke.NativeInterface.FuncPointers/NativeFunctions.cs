@@ -11,8 +11,6 @@ namespace PInvoke.NativeInterface.FuncPointers
         private static readonly IntPtr lib = NativeLibrary.Load(BenchLibrary.Name);
 
         private static readonly IntPtr ptr_Empty_Void = NativeLibrary.GetExport(lib, nameof(Empty_Void));
-        private static readonly IntPtr ptr_Empty_IntArray = NativeLibrary.GetExport(lib, "Empty_IntArray");
-        private static readonly IntPtr ptr_Empty_String = NativeLibrary.GetExport(lib, nameof(Empty_String));
         private static readonly IntPtr ptr_ConstantInt = NativeLibrary.GetExport(lib, nameof(ConstantInt));
         private static readonly IntPtr ptr_MultiplyInt = NativeLibrary.GetExport(lib, nameof(MultiplyInt));
         private static readonly IntPtr ptr_NegateBool = NativeLibrary.GetExport(lib, nameof(NegateBool));
@@ -33,42 +31,6 @@ namespace PInvoke.NativeInterface.FuncPointers
         public static void Empty_VoidSGCT() =>
             ((delegate* unmanaged[SuppressGCTransition]<void>)ptr_Empty_Void)();
 
-
-        public static void Empty_IntArray(int[] arr, int count)
-        {
-            fixed (int* arrPtr = arr)
-            {
-                ((delegate* unmanaged<int*, int, void>)ptr_Empty_IntArray)(arrPtr, count);
-            }
-        }
-
-        public static void Empty_IntArraySGCT(int[] arr, int count)
-        {
-            fixed (int* arrPtr = arr)
-            {
-                ((delegate* unmanaged[SuppressGCTransition]<int*, int, void>)ptr_Empty_IntArray)(arrPtr, count);
-            }
-        }
-
-        public static void Empty_String(string str)
-        {
-            var bytes = Encoding.UTF8.GetBytes(str);
-
-            fixed (byte* ptr = bytes)
-            {
-                ((delegate* unmanaged<byte*, void>)ptr_Empty_String)(ptr);
-            }
-        }
-
-        public static void Empty_StringSGCT(string str)
-        {
-            var bytes = Encoding.UTF8.GetBytes(str);
-
-            fixed (byte* ptr = bytes)
-            {
-                ((delegate* unmanaged[SuppressGCTransition]<byte*, void>)ptr_Empty_String)(ptr);
-            }
-        }
 
         // Simple functions with primitive arguments
 

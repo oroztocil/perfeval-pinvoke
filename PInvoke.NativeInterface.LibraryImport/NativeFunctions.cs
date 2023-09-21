@@ -26,31 +26,6 @@ namespace PInvoke.NativeInterface.LibraryImport
         public static partial void Empty_VoidSLE();
 
         [LibraryImport(BenchLibrary.Name)]
-        public static partial void Empty_IntArray(int[] arr, int count);
-
-        [LibraryImport(BenchLibrary.Name, EntryPoint = "Empty_IntArray")]
-        [SuppressGCTransition]
-        public static partial void Empty_IntArraySGCT(int[] arr, int count);
-
-        [LibraryImport(BenchLibrary.Name, EntryPoint = "Empty_IntArray")]
-        internal static partial void Empty_IntArray_Fixed(IntPtr arr, int count);
-
-        public static unsafe void Empty_IntArray_Fixed(int[] arr, int count)
-        {
-            fixed (int* ptr = arr)
-            {
-                Empty_IntArray_Fixed((IntPtr)ptr, count);
-            }
-        }
-
-        [LibraryImport(BenchLibrary.Name, StringMarshalling = StringMarshalling.Utf8)]
-        public static partial void Empty_String(string str);
-
-        [LibraryImport(BenchLibrary.Name, EntryPoint = "Empty_String", StringMarshalling = StringMarshalling.Utf8)]
-        [SuppressGCTransition]
-        public static partial void Empty_StringSGCT(string str);
-
-        [LibraryImport(BenchLibrary.Name)]
         public static partial int ConstantInt();
 
         [LibraryImport(BenchLibrary.Name)]

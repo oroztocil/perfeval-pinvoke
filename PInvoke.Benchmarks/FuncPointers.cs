@@ -20,15 +20,6 @@ namespace PInvoke.Benchmarks
         public void EmptyVoid_SGCT() => NativeFunctions.Empty_VoidSGCT();
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Arrays_Empty_In)]
-        [ArgumentsSource(nameof(RandomIntArrays))]
-        public void Empty_IntArray_Fixed(int[] input) => NativeFunctions.Empty_IntArray(input, input.Length);
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.Strings_Empty_In)]
-        public void EmptyString() => NativeFunctions.Empty_String(Data.NonAsciiString);
-
-        [Benchmark]
         [BenchmarkCategory(Categories.Primitive_Int_Out)]
         public int ConstantInt() => NativeFunctions.ConstantInt();
 
@@ -101,10 +92,6 @@ namespace PInvoke.Benchmarks
         public void EmptyVoid() => NativeFunctions.Empty_Void();
 
         [Benchmark]
-        [BenchmarkCategory($"{Categories.CS}_{Categories.Strings_Empty_In}")]
-        public void EmptyString() => NativeFunctions.Empty_String(Data.NonAsciiString);
-
-        [Benchmark]
         [BenchmarkCategory($"{Categories.CS}_{Categories.Arrays_InOut}")]
         [ArgumentsSource(nameof(EmptyIntArray))]
         public void FillIntArray_ByValue(int[] input) => NativeFunctions.FillIntArray(input, input.Length);
@@ -126,7 +113,6 @@ namespace PInvoke.Benchmarks
         public string Mixed()
         {
             NativeFunctions.Empty_Void();
-            NativeFunctions.Empty_String(Data.NonAsciiString);
 
             var flag = NativeFunctions.NegateBool(false);
             var num = NativeFunctions.ConstantInt();
@@ -136,7 +122,6 @@ namespace PInvoke.Benchmarks
 
             NativeFunctions.FillIntArray(arr, arr.Length);
             NativeFunctions.SumIntArray(arr, arr.Length);
-            NativeFunctions.Empty_IntArray(arr, arr.Length);
 
             var len8 = NativeFunctions.StringLength_Utf8(Data.NonAsciiString);
             var len16 = NativeFunctions.StringLength_Utf16(Data.NonAsciiString);

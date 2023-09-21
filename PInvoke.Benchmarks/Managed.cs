@@ -24,15 +24,6 @@ namespace PInvoke.Benchmarks
         public void EmptyVoid() => ManagedFunctions.Empty_Void();
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Arrays_Empty_In)]
-        [ArgumentsSource(nameof(RandomIntArrays))]
-        public void EmptyIntArrayManaged(int[] input) => ManagedFunctions.Empty_IntArray(input, input.Length);
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.Strings_Empty_In)]
-        public void EmptyString() => ManagedFunctions.Empty_String(Data.NonAsciiString);
-
-        [Benchmark]
         [BenchmarkCategory(Categories.Primitive_Int_Out)]
         public int ConstantInt() => ManagedFunctions.ConstantInt();
 
@@ -79,10 +70,6 @@ namespace PInvoke.Benchmarks
         public void Empty_Void() => ManagedFunctions.Empty_Void();
 
         [Benchmark]
-        [BenchmarkCategory($"{Categories.CS}_{Categories.Strings_Empty_In}")]
-        public void Empty_String() => ManagedFunctions.Empty_String(Data.NonAsciiString);
-
-        [Benchmark]
         [BenchmarkCategory($"{Categories.CS}_{Categories.Arrays_InOut}")]
         [ArgumentsSource(nameof(EmptyIntArray))]
         public void FillIntArray(int[] input) => ManagedFunctions.FillIntArray(input, input.Length);
@@ -104,18 +91,6 @@ namespace PInvoke.Benchmarks
     {
         [MethodImpl(MethodImplOptions.NoInlining)]
         public static void Empty_Void()
-        {
-            // Method intentionally left empty.
-        }
-
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        public static void Empty_IntArray(int[] array, int length)
-        {
-            // Method intentionally left empty.
-        }
-
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        public static void Empty_String(string str)
         {
             // Method intentionally left empty.
         }
