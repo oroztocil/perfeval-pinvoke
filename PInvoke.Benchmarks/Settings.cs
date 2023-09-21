@@ -6,7 +6,7 @@
         public const int ThroughputTargetIterationTime = 250;
         public const double ThroughputMaxRelativeError = 0.01;
 
-        public const int ColdStartLaunchCount = 100;
+        public const int ColdStartLaunchCount = 1;
         public const int ColdStartIterationCount = 1;
         public const int ColdStartInvocationCount = 1;
     }

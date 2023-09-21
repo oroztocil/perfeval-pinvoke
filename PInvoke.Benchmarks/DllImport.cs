@@ -27,14 +27,9 @@ namespace PInvoke.Benchmarks
         public void Empty_VoidSLE() => NativeFunctions.Empty_VoidSLE();
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Arrays_Empty_In, Categories.SUCS)]
+        [BenchmarkCategory(Categories.Arrays_Empty_In)]
         [ArgumentsSource(nameof(RandomIntArrays))]
         public void Empty_IntArray_ByValue(int[] input) => NativeFunctions.Empty_IntArray(input, input.Length);
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.SUCS)]
-        [ArgumentsSource(nameof(RandomIntArrays))]
-        public void Empty_IntArraySUCS(int[] input) => NativeFunctions.Empty_IntArraySUCS(input, input.Length);
 
         [Benchmark]
         [BenchmarkCategory(Categories.Arrays_Empty_In)]
@@ -42,24 +37,16 @@ namespace PInvoke.Benchmarks
         public void Empty_IntArray_Fixed(int[] input) => NativeFunctions.Empty_IntArray_Fixed(input, input.Length);
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Strings_Empty_In, Categories.SUCS)]
+        [BenchmarkCategory(Categories.Strings_Empty_In)]
         public void Empty_String() => NativeFunctions.Empty_String(Data.NonAsciiString);
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.SUCS)]
-        public void Empty_StringSUCS() => NativeFunctions.Empty_StringSUCS(Data.NonAsciiString);
 
         [Benchmark]
         [BenchmarkCategory(Categories.Primitive_Int_Out)]
         public int ConstantInt() => NativeFunctions.ConstantInt();
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Primitive_Int_InOut, Categories.SLE)]
+        [BenchmarkCategory(Categories.Primitive_Int_InOut)]
         public int MultiplyInt() => NativeFunctions.MultiplyInt(1234, 4321);
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.SLE)]
-        public void MultiplyIntSLE() => NativeFunctions.MultiplyIntSLE(1234, 4321);
 
         [Benchmark]
         [BenchmarkCategory(Categories.Primitive_Bool_InOut)]

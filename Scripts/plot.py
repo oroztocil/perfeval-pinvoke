@@ -21,7 +21,16 @@ def load_results_file(run_dir: str) -> pd.DataFrame:
     df = pd.read_csv(file, delimiter=";")
     return df
 
-def make_barplot(input_df: pd.DataFrame, category: str | None, unit: str, title: str, param: str | None):
+def merge_results_files(root_dir: str) -> pd.DataFrame:
+    files = glob.glob(root_dir + "*/results/*measurements.csv")
+    print(files)
+    result = pd.DataFrame()
+    for file in files:
+        df = pd.read_csv(file, delimiter=";")
+        result = pd.concat([result, df])
+    return result
+
+def make_barplot(input_df: pd.DataFrame, title, unit, category = None, param = None, figsize = (14, 6)):
     category_df = input_df if category is None else input_df.query(f"Category == '{category}'")
     grouped_df = category_df.groupby(["Target_Type", "Target_Method", "Job_Runtime"])
 
@@ -54,7 +63,7 @@ def make_barplot(input_df: pd.DataFrame, category: str | None, unit: str, title:
 
     input_df = pd.DataFrame(items)
 
-    fig, ax = plt.subplots(1, 3, sharey=True, gridspec_kw={'width_ratios': method_ratios})
+    fig, ax = plt.subplots(1, 3, figsize=figsize, sharey=True, gridspec_kw={'width_ratios': method_ratios})
     fig.suptitle(title, fontsize=16, fontweight="bold")
     fig.supylabel(f"Mean execution time ({unit})", fontsize=12)
 
@@ -77,12 +86,13 @@ def make_barplot(input_df: pd.DataFrame, category: str | None, unit: str, title:
 
 
 def main(args):    
-    input_df = load_results_file(args[0])
-    unit = args[1]
-    title = args[2]
-    category = None if len(args) < 4 else args[3]
-    make_barplot(input_df, category, unit, title)
-
+    # input_df = load_results_file(args[0])
+    # unit = args[1]
+    # title = args[2]
+    # category = None if len(args) < 4 else args[3]
+    # make_barplot(input_df, category, unit, title)
+    df = merge_results_files("ColdResults/CS_Mixed1")
+    make_barplot(df, "Cold start time", "ms")
 
 if __name__ == "__main__":
     main(sys.argv[1:])

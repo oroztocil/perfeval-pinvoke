@@ -12,7 +12,7 @@ namespace PInvoke.Benchmarks
     public class FuncPointers : BenchmarkBase
     {
         [Benchmark]
-        [BenchmarkCategory(Categories.Void_Empty)]
+        [BenchmarkCategory(Categories.Void_Empty, Categories.SGCT)]
         public void Empty_Void() => NativeFunctions.Empty_Void();
 
         [Benchmark]
@@ -20,14 +20,9 @@ namespace PInvoke.Benchmarks
         public void Empty_VoidSGCT() => NativeFunctions.Empty_VoidSGCT();
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Arrays_Empty_In, Categories.SGCT)]
+        [BenchmarkCategory(Categories.Arrays_Empty_In)]
         [ArgumentsSource(nameof(RandomIntArrays))]
         public void Empty_IntArray_Fixed(int[] input) => NativeFunctions.Empty_IntArray(input, input.Length);
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.SGCT)]
-        [ArgumentsSource(nameof(RandomIntArrays))]
-        public void Empty_IntArray_FixedSGCT(int[] input) => NativeFunctions.Empty_IntArraySGCT(input, input.Length);
 
         [Benchmark]
         [BenchmarkCategory(Categories.Strings_Empty_In)]

@@ -16,6 +16,7 @@ namespace PInvoke.Benchmarks
     [WarmupCount(Settings.ThroughputWarmupCount)]
     //[IterationTime(Settings.ThroughputTargetIterationTime)]
     [MaxRelativeError(Settings.ThroughputMaxRelativeError)]
+    //[Orderer(SummaryOrderPolicy.FastestToSlowest)]
     public abstract class BenchmarkBase
     {
         public static IEnumerable<int[]> EmptyIntArray => Data.EmptyIntArray;

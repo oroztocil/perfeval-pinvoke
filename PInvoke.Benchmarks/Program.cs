@@ -23,7 +23,7 @@ namespace PInvoke.Benchmarks
                 .AddCommandLine(args)
                 .Build();
 
-            var runCategory = configuration["anyCategories"] ?? "Complete";
+            var runCategory = configuration.GetValue("anyCategories", "Complete");
 
             var csvExporter = new FilteredCsvExporter(
                 CsvSeparator.Semicolon,
@@ -41,7 +41,7 @@ namespace PInvoke.Benchmarks
                     .AddColumn(StatisticColumn.Median, StatisticColumn.Min, StatisticColumn.Max)
                     .HideColumns(Column.Job, Column.Namespace)
                     .WithArtifactsPath($"./Results/{runCategory}_" + DateTime.Now.ToString("s").Replace(":", "_"))
-                    .WithOrderer(new DefaultOrderer(SummaryOrderPolicy.Declared, MethodOrderPolicy.Alphabetical))
+                    .WithOrderer(new DefaultOrderer(SummaryOrderPolicy.FastestToSlowest, MethodOrderPolicy.Alphabetical))
                     .WithOptions(ConfigOptions.JoinSummary);
 
             var summaries = BenchmarkSwitcher
