@@ -12,9 +12,10 @@ namespace PInvoke.Benchmarks
     //using BenchmarkDotNet.Diagnostics.Windows.Configs;
     //[NativeMemoryProfiler]
 #endif
-    //[MemoryDiagnoser]
+    [MemoryDiagnoser]
     [WarmupCount(Settings.ThroughputWarmupCount)]
-    [IterationTime(Settings.ThroughputTargetIterationTime)]
+    //[IterationTime(Settings.ThroughputTargetIterationTime)]
+    [MaxRelativeError(Settings.ThroughputMaxRelativeError)]
     public abstract class BenchmarkBase
     {
         public static IEnumerable<int[]> EmptyIntArray => Data.EmptyIntArray;

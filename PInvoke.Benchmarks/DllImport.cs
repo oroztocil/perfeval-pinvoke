@@ -57,6 +57,7 @@ namespace PInvoke.Benchmarks
         [BenchmarkCategory(Categories.Primitive_Int_InOut, Categories.SLE)]
         public int MultiplyInt() => NativeFunctions.MultiplyInt(1234, 4321);
 
+        [Benchmark]
         [BenchmarkCategory(Categories.SLE)]
         public void MultiplyIntSLE() => NativeFunctions.MultiplyIntSLE(1234, 4321);
 

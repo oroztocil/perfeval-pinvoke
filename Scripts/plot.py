@@ -21,7 +21,7 @@ def load_results_file(run_dir: str) -> pd.DataFrame:
     df = pd.read_csv(file, delimiter=";")
     return df
 
-def make_barplot(input_df: pd.DataFrame, category: str | None, unit: str, title: str):
+def make_barplot(input_df: pd.DataFrame, category: str | None, unit: str, title: str, param: str | None):
     category_df = input_df if category is None else input_df.query(f"Category == '{category}'")
     grouped_df = category_df.groupby(["Target_Type", "Target_Method", "Job_Runtime"])
 
@@ -76,9 +76,12 @@ def make_barplot(input_df: pd.DataFrame, category: str | None, unit: str, title:
     plt.show()
 
 
-def main(argv):
-    input_df = load_results_file(argv[0])
-    make_barplot(input_df, argv[1], argv[2], argv[3])
+def main(args):    
+    input_df = load_results_file(args[0])
+    unit = args[1]
+    title = args[2]
+    category = None if len(args) < 4 else args[3]
+    make_barplot(input_df, category, unit, title)
 
 
 if __name__ == "__main__":
