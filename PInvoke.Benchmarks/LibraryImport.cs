@@ -26,20 +26,6 @@ namespace PInvoke.Benchmarks
         public void EmptyVoid_SLE() => NativeFunctions.Empty_VoidSLE();
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Arrays_Empty_In)]
-        [ArgumentsSource(nameof(RandomIntArrays))]
-        public void Empty_IntArray_ByValue(int[] input) => NativeFunctions.Empty_IntArray(input, input.Length);
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.Arrays_Empty_In)]
-        [ArgumentsSource(nameof(RandomIntArrays))]
-        public void Empty_IntArray_Fixed(int[] input) => NativeFunctions.Empty_IntArray_Fixed(input, input.Length);
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.Strings_Empty_In)]
-        public void EmptyString() => NativeFunctions.Empty_String(Data.NonAsciiString);
-
-        [Benchmark]
         [BenchmarkCategory(Categories.Primitive_Int_Out)]
         public int ConstantInt() => NativeFunctions.ConstantInt();
 
@@ -118,10 +104,6 @@ namespace PInvoke.Benchmarks
         [Benchmark]
         [BenchmarkCategory($"{Categories.CS}_{Categories.Void_Empty}")]
         public void EmptyVoid() => NativeFunctions.Empty_Void();
-
-        [Benchmark]
-        [BenchmarkCategory($"{Categories.CS}_{Categories.Strings_Empty_In}")]
-        public void EmptyString() => NativeFunctions.Empty_String(Data.NonAsciiString);
 
         [Benchmark]
         [BenchmarkCategory($"{Categories.CS}_{Categories.Arrays_InOut}")]
