@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BenchmarkRun-joined-2023-09-21-15-05-20</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.8, Windows 10 (10.0.19045.3448/22H2/2022Update)
+Intel Core i5-10400F CPU 2.90GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 8.0.100-preview.7.23376.3
+  [Host]     : .NET 8.0.0 (8.0.23.37506), X64 RyuJIT AVX2
+  Job-PSYAIB : .NET 8.0.0 (8.0.23.37506), X64 RyuJIT AVX2
+  Job-QCGQZJ : .NET 6.0.22 (6.0.2223.42425), X64 RyuJIT AVX2
+  Job-ISITMA : .NET Framework 4.8.1 (4.8.9181.0), X64 RyuJIT VectorSize=256
+</code></pre>
+<pre><code>MaxRelativeError=0.01  WarmupCount=5  
+</code></pre>
+
+<table>
+<thead><tr><th>Type   </th><th>Method        </th><th>Runtime     </th><th>input</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Min </th><th>Max </th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Managed</td><td>FillIntArray</td><td>.NET 8.0</td><td>Int32[10]</td><td>4.969 ns</td><td>0.0012 ns</td><td>0.0010 ns</td><td>4.969 ns</td><td>4.968 ns</td><td>4.972 ns</td><td>-</td>
+</tr><tr><td>Managed</td><td>FillIntArray</td><td>.NET 6.0</td><td>Int32[10]</td><td>5.653 ns</td><td>0.0043 ns</td><td>0.0038 ns</td><td>5.653 ns</td><td>5.647 ns</td><td>5.659 ns</td><td>-</td>
+</tr><tr><td>Managed</td><td>FillIntArray</td><td>.NET Framework 4.8</td><td>Int32[10]</td><td>6.366 ns</td><td>0.0031 ns</td><td>0.0026 ns</td><td>6.366 ns</td><td>6.361 ns</td><td>6.371 ns</td><td>-</td>
+</tr><tr><td>FuncPointers</td><td>FillIntArray_Fixed</td><td>.NET 8.0</td><td>Int32[10]</td><td>11.196 ns</td><td>0.0098 ns</td><td>0.0092 ns</td><td>11.190 ns</td><td>11.187 ns</td><td>11.210 ns</td><td>-</td>
+</tr><tr><td>LibraryImport</td><td>FillIntArray_ByValue</td><td>.NET 8.0</td><td>Int32[10]</td><td>11.471 ns</td><td>0.0036 ns</td><td>0.0034 ns</td><td>11.470 ns</td><td>11.467 ns</td><td>11.478 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_Fixed</td><td>.NET 8.0</td><td>Int32[10]</td><td>11.576 ns</td><td>0.0019 ns</td><td>0.0016 ns</td><td>11.576 ns</td><td>11.574 ns</td><td>11.579 ns</td><td>-</td>
+</tr><tr><td>LibraryImport</td><td>FillIntArray_Fixed</td><td>.NET 8.0</td><td>Int32[10]</td><td>11.623 ns</td><td>0.0036 ns</td><td>0.0030 ns</td><td>11.622 ns</td><td>11.620 ns</td><td>11.629 ns</td><td>-</td>
+</tr><tr><td>FuncPointers</td><td>FillIntArray_Fixed</td><td>.NET 6.0</td><td>Int32[10]</td><td>11.729 ns</td><td>0.0069 ns</td><td>0.0064 ns</td><td>11.728 ns</td><td>11.722 ns</td><td>11.743 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_ByValue</td><td>.NET 8.0</td><td>Int32[10]</td><td>12.039 ns</td><td>0.0139 ns</td><td>0.0130 ns</td><td>12.041 ns</td><td>12.011 ns</td><td>12.058 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_Fixed</td><td>.NET 6.0</td><td>Int32[10]</td><td>12.129 ns</td><td>0.0055 ns</td><td>0.0049 ns</td><td>12.130 ns</td><td>12.119 ns</td><td>12.136 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_ByValue</td><td>.NET 6.0</td><td>Int32[10]</td><td>12.312 ns</td><td>0.0043 ns</td><td>0.0038 ns</td><td>12.311 ns</td><td>12.308 ns</td><td>12.322 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_ByValue</td><td>.NET Framework 4.8</td><td>Int32[10]</td><td>17.263 ns</td><td>0.0080 ns</td><td>0.0067 ns</td><td>17.259 ns</td><td>17.258 ns</td><td>17.279 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_Fixed</td><td>.NET Framework 4.8</td><td>Int32[10]</td><td>18.176 ns</td><td>0.0205 ns</td><td>0.0191 ns</td><td>18.169 ns</td><td>18.144 ns</td><td>18.214 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_Pinned</td><td>.NET 8.0</td><td>Int32[10]</td><td>55.152 ns</td><td>0.0199 ns</td><td>0.0166 ns</td><td>55.155 ns</td><td>55.128 ns</td><td>55.184 ns</td><td>-</td>
+</tr><tr><td>FuncPointers</td><td>FillIntArray_Pinned</td><td>.NET 8.0</td><td>Int32[10]</td><td>55.228 ns</td><td>0.0085 ns</td><td>0.0075 ns</td><td>55.227 ns</td><td>55.212 ns</td><td>55.242 ns</td><td>-</td>
+</tr><tr><td>LibraryImport</td><td>FillIntArray_Pinned</td><td>.NET 8.0</td><td>Int32[10]</td><td>55.381 ns</td><td>0.0205 ns</td><td>0.0182 ns</td><td>55.386 ns</td><td>55.352 ns</td><td>55.412 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_Pinned</td><td>.NET 6.0</td><td>Int32[10]</td><td>62.098 ns</td><td>0.0261 ns</td><td>0.0231 ns</td><td>62.093 ns</td><td>62.063 ns</td><td>62.152 ns</td><td>-</td>
+</tr><tr><td>FuncPointers</td><td>FillIntArray_Pinned</td><td>.NET 6.0</td><td>Int32[10]</td><td>62.184 ns</td><td>0.0279 ns</td><td>0.0261 ns</td><td>62.168 ns</td><td>62.161 ns</td><td>62.249 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_Pinned</td><td>.NET Framework 4.8</td><td>Int32[10]</td><td>111.590 ns</td><td>0.0823 ns</td><td>0.0729 ns</td><td>111.556 ns</td><td>111.532 ns</td><td>111.782 ns</td><td>-</td>
+</tr><tr><td>Managed</td><td>FillIntArray</td><td>.NET 8.0</td><td>Int32[1000]</td><td>358.394 ns</td><td>0.1292 ns</td><td>0.1209 ns</td><td>358.368 ns</td><td>358.226 ns</td><td>358.646 ns</td><td>-</td>
+</tr><tr><td>LibraryImport</td><td>FillIntArray_Fixed</td><td>.NET 8.0</td><td>Int32[1000]</td><td>387.815 ns</td><td>0.1010 ns</td><td>0.0843 ns</td><td>387.835 ns</td><td>387.659 ns</td><td>387.919 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_Fixed</td><td>.NET 8.0</td><td>Int32[1000]</td><td>388.279 ns</td><td>0.3016 ns</td><td>0.2821 ns</td><td>388.133 ns</td><td>388.001 ns</td><td>388.938 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_Fixed</td><td>.NET 6.0</td><td>Int32[1000]</td><td>389.723 ns</td><td>0.2248 ns</td><td>0.1877 ns</td><td>389.638 ns</td><td>389.564 ns</td><td>390.116 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_ByValue</td><td>.NET 8.0</td><td>Int32[1000]</td><td>391.488 ns</td><td>0.2152 ns</td><td>0.2013 ns</td><td>391.401 ns</td><td>391.290 ns</td><td>391.885 ns</td><td>-</td>
+</tr><tr><td>FuncPointers</td><td>FillIntArray_Fixed</td><td>.NET 6.0</td><td>Int32[1000]</td><td>392.143 ns</td><td>0.1776 ns</td><td>0.1574 ns</td><td>392.226 ns</td><td>391.874 ns</td><td>392.318 ns</td><td>-</td>
+</tr><tr><td>FuncPointers</td><td>FillIntArray_Fixed</td><td>.NET 8.0</td><td>Int32[1000]</td><td>392.270 ns</td><td>0.0415 ns</td><td>0.0368 ns</td><td>392.262 ns</td><td>392.217 ns</td><td>392.350 ns</td><td>-</td>
+</tr><tr><td>LibraryImport</td><td>FillIntArray_ByValue</td><td>.NET 8.0</td><td>Int32[1000]</td><td>392.346 ns</td><td>1.0702 ns</td><td>1.0011 ns</td><td>391.764 ns</td><td>391.476 ns</td><td>394.275 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_ByValue</td><td>.NET 6.0</td><td>Int32[1000]</td><td>393.126 ns</td><td>0.0753 ns</td><td>0.0667 ns</td><td>393.121 ns</td><td>392.991 ns</td><td>393.233 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_Fixed</td><td>.NET Framework 4.8</td><td>Int32[1000]</td><td>395.629 ns</td><td>0.1045 ns</td><td>0.0873 ns</td><td>395.632 ns</td><td>395.473 ns</td><td>395.815 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_ByValue</td><td>.NET Framework 4.8</td><td>Int32[1000]</td><td>397.229 ns</td><td>0.0595 ns</td><td>0.0557 ns</td><td>397.232 ns</td><td>397.112 ns</td><td>397.313 ns</td><td>-</td>
+</tr><tr><td>FuncPointers</td><td>FillIntArray_Pinned</td><td>.NET 8.0</td><td>Int32[1000]</td><td>420.244 ns</td><td>0.1437 ns</td><td>0.1274 ns</td><td>420.198 ns</td><td>420.078 ns</td><td>420.510 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_Pinned</td><td>.NET 8.0</td><td>Int32[1000]</td><td>420.323 ns</td><td>0.2543 ns</td><td>0.2379 ns</td><td>420.327 ns</td><td>419.767 ns</td><td>420.666 ns</td><td>-</td>
+</tr><tr><td>LibraryImport</td><td>FillIntArray_Pinned</td><td>.NET 8.0</td><td>Int32[1000]</td><td>421.031 ns</td><td>0.2517 ns</td><td>0.2355 ns</td><td>421.030 ns</td><td>420.656 ns</td><td>421.565 ns</td><td>-</td>
+</tr><tr><td>FuncPointers</td><td>FillIntArray_Pinned</td><td>.NET 6.0</td><td>Int32[1000]</td><td>427.671 ns</td><td>0.2681 ns</td><td>0.2376 ns</td><td>427.661 ns</td><td>427.258 ns</td><td>428.029 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_Pinned</td><td>.NET 6.0</td><td>Int32[1000]</td><td>427.834 ns</td><td>0.1249 ns</td><td>0.1043 ns</td><td>427.835 ns</td><td>427.684 ns</td><td>428.020 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>FillIntArray_Pinned</td><td>.NET Framework 4.8</td><td>Int32[1000]</td><td>483.684 ns</td><td>0.1473 ns</td><td>0.1306 ns</td><td>483.642 ns</td><td>483.559 ns</td><td>483.990 ns</td><td>-</td>
+</tr><tr><td>Managed</td><td>FillIntArray</td><td>.NET 6.0</td><td>Int32[1000]</td><td>614.694 ns</td><td>0.7558 ns</td><td>0.7070 ns</td><td>614.600 ns</td><td>613.406 ns</td><td>615.939 ns</td><td>-</td>
+</tr><tr><td>Managed</td><td>FillIntArray</td><td>.NET Framework 4.8</td><td>Int32[1000]</td><td>614.763 ns</td><td>0.7675 ns</td><td>0.7179 ns</td><td>614.707 ns</td><td>613.776 ns</td><td>615.868 ns</td><td>-</td>
+</tr></tbody></table>
+</body>
+</html>

@@ -1,0 +1,10 @@
+Category;OS;Target_Type;Target_Method;Job_Runtime;Params;Measurement_IterationMode;Measurement_IterationStage;Measurement_IterationIndex;Measurement_Operations;Measurement_Value;Gen_0;Gen_1;Gen_2;Allocated_Bytes
+CS_Arrays_InOut;Win32NT;Managed;FillIntArray;.NET 8.0;input=Int32[10];Workload;Result;1;1;400000;0;0;0;400
+CS_Arrays_InOut;Win32NT;Managed;FillIntArray;.NET 6.0;input=Int32[10];Workload;Result;1;1;513800;0;0;0;640
+CS_Arrays_InOut;Win32NT;Managed;FillIntArray;.NET Framework 4.8;input=Int32[10];Workload;Result;1;1;591400;0;0;0;0
+CS_Arrays_InOut;Win32NT;FuncPointers;FillIntArray;.NET 8.0;input=Int32[10];Workload;Result;1;1;31333100;0;0;0;400
+CS_Arrays_InOut;Win32NT;FuncPointers;FillIntArray;.NET 6.0;input=Int32[10];Workload;Result;1;1;32087500;0;0;0;640
+CS_Arrays_InOut;Win32NT;LibraryImport;FillIntArray;.NET 8.0;input=Int32[10];Workload;Result;1;1;32837100;0;0;0;400
+CS_Arrays_InOut;Win32NT;DllImport;FillIntArray;.NET Framework 4.8;input=Int32[10];Workload;Result;1;1;42272100;0;0;0;0
+CS_Arrays_InOut;Win32NT;DllImport;FillIntArray;.NET 6.0;input=Int32[10];Workload;Result;1;1;42610700;0;0;0;640
+CS_Arrays_InOut;Win32NT;DllImport;FillIntArray;.NET 8.0;input=Int32[10];Workload;Result;1;1;42747700;0;0;0;400

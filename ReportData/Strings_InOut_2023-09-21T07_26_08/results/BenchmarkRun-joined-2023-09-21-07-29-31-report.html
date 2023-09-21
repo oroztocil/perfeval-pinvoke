@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BenchmarkRun-joined-2023-09-21-07-29-31</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.8, Windows 10 (10.0.19045.3448/22H2/2022Update)
+Intel Core i5-10400F CPU 2.90GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 8.0.100-preview.7.23376.3
+  [Host]     : .NET 8.0.0 (8.0.23.37506), X64 RyuJIT AVX2
+  Job-QNWXYQ : .NET 8.0.0 (8.0.23.37506), X64 RyuJIT AVX2
+  Job-SIRCNU : .NET 6.0.22 (6.0.2223.42425), X64 RyuJIT AVX2
+  Job-FPXKRW : .NET Framework 4.8.1 (4.8.9181.0), X64 RyuJIT VectorSize=256
+</code></pre>
+<pre><code>MaxRelativeError=0.01  WarmupCount=5  
+</code></pre>
+
+<table>
+<thead><tr><th>Type   </th><th>Method                   </th><th>Runtime     </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Min</th><th>Max</th><th>Gen0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>LibraryImport</td><td>StringToUppercase_ByteArray</td><td>.NET 8.0</td><td>123.7 ns</td><td>0.19 ns</td><td>0.18 ns</td><td>123.7 ns</td><td>123.5 ns</td><td>124.2 ns</td><td>0.0153</td><td>96 B</td>
+</tr><tr><td>LibraryImport</td><td>StringToUppercase_Fixed</td><td>.NET 8.0</td><td>124.3 ns</td><td>0.16 ns</td><td>0.13 ns</td><td>124.3 ns</td><td>124.2 ns</td><td>124.6 ns</td><td>0.0153</td><td>96 B</td>
+</tr><tr><td>DllImport</td><td>StringToUppercase_Fixed</td><td>.NET 8.0</td><td>124.6 ns</td><td>0.09 ns</td><td>0.07 ns</td><td>124.6 ns</td><td>124.5 ns</td><td>124.7 ns</td><td>0.0153</td><td>96 B</td>
+</tr><tr><td>DllImport</td><td>StringToUppercase_ByteArray</td><td>.NET 8.0</td><td>126.7 ns</td><td>0.20 ns</td><td>0.17 ns</td><td>126.7 ns</td><td>126.6 ns</td><td>127.1 ns</td><td>0.0153</td><td>96 B</td>
+</tr><tr><td>FuncPointers</td><td>StringToUppercase_Fixed</td><td>.NET 8.0</td><td>127.4 ns</td><td>0.17 ns</td><td>0.16 ns</td><td>127.4 ns</td><td>127.2 ns</td><td>127.8 ns</td><td>0.0153</td><td>96 B</td>
+</tr><tr><td>DllImport</td><td>StringToUppercase_Fixed</td><td>.NET 6.0</td><td>139.8 ns</td><td>0.25 ns</td><td>0.20 ns</td><td>139.8 ns</td><td>139.3 ns</td><td>139.9 ns</td><td>0.0153</td><td>96 B</td>
+</tr><tr><td>FuncPointers</td><td>StringToUppercase_Fixed</td><td>.NET 6.0</td><td>140.2 ns</td><td>0.21 ns</td><td>0.19 ns</td><td>140.2 ns</td><td>139.8 ns</td><td>140.6 ns</td><td>0.0153</td><td>96 B</td>
+</tr><tr><td>DllImport</td><td>StringToUppercase_ByteArray</td><td>.NET 6.0</td><td>146.5 ns</td><td>0.26 ns</td><td>0.24 ns</td><td>146.5 ns</td><td>146.1 ns</td><td>147.0 ns</td><td>0.0153</td><td>96 B</td>
+</tr><tr><td>DllImport</td><td>StringToUppercase_StringBuilder</td><td>.NET 6.0</td><td>177.9 ns</td><td>0.08 ns</td><td>0.06 ns</td><td>177.9 ns</td><td>177.8 ns</td><td>178.1 ns</td><td>0.0381</td><td>240 B</td>
+</tr><tr><td>DllImport</td><td>StringToUppercase_StringBuilder</td><td>.NET 8.0</td><td>181.0 ns</td><td>0.37 ns</td><td>0.35 ns</td><td>180.9 ns</td><td>180.5 ns</td><td>181.8 ns</td><td>0.0381</td><td>240 B</td>
+</tr><tr><td>DllImport</td><td>StringToUppercase_StringBuilder</td><td>.NET Framework 4.8</td><td>272.8 ns</td><td>1.31 ns</td><td>1.22 ns</td><td>272.8 ns</td><td>270.9 ns</td><td>274.9 ns</td><td>0.0496</td><td>313 B</td>
+</tr><tr><td>DllImport</td><td>StringToUppercase_ByteArray</td><td>.NET Framework 4.8</td><td>279.3 ns</td><td>0.45 ns</td><td>0.40 ns</td><td>279.1 ns</td><td>278.9 ns</td><td>280.2 ns</td><td>0.0162</td><td>104 B</td>
+</tr><tr><td>DllImport</td><td>StringToUppercase_Fixed</td><td>.NET Framework 4.8</td><td>283.7 ns</td><td>0.05 ns</td><td>0.05 ns</td><td>283.7 ns</td><td>283.7 ns</td><td>283.8 ns</td><td>0.0162</td><td>104 B</td>
+</tr></tbody></table>
+</body>
+</html>

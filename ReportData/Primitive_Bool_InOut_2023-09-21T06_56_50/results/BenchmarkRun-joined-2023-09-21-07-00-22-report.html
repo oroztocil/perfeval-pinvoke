@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BenchmarkRun-joined-2023-09-21-07-00-22</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.8, Windows 10 (10.0.19045.3448/22H2/2022Update)
+Intel Core i5-10400F CPU 2.90GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 8.0.100-preview.7.23376.3
+  [Host]     : .NET 8.0.0 (8.0.23.37506), X64 RyuJIT AVX2
+  Job-GBHEAL : .NET 8.0.0 (8.0.23.37506), X64 RyuJIT AVX2
+  Job-PSTRIR : .NET 6.0.22 (6.0.2223.42425), X64 RyuJIT AVX2
+  Job-KOPCZC : .NET Framework 4.8.1 (4.8.9181.0), X64 RyuJIT VectorSize=256
+</code></pre>
+<pre><code>MaxRelativeError=0.01  WarmupCount=5  
+</code></pre>
+
+<table>
+<thead><tr><th>Type   </th><th>Method</th><th>Runtime     </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Min </th><th>Max </th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Managed</td><td>NegateBool</td><td>.NET 8.0</td><td>0.7025 ns</td><td>0.0088 ns</td><td>0.0082 ns</td><td>0.6979 ns</td><td>0.6971 ns</td><td>0.7166 ns</td><td>-</td>
+</tr><tr><td>Managed</td><td>NegateBool</td><td>.NET 6.0</td><td>0.7031 ns</td><td>0.0009 ns</td><td>0.0008 ns</td><td>0.7031 ns</td><td>0.7015 ns</td><td>0.7041 ns</td><td>-</td>
+</tr><tr><td>Managed</td><td>NegateBool</td><td>.NET Framework 4.8</td><td>1.0166 ns</td><td>0.0007 ns</td><td>0.0006 ns</td><td>1.0164 ns</td><td>1.0157 ns</td><td>1.0179 ns</td><td>-</td>
+</tr><tr><td>FuncPointers</td><td>NegateBool</td><td>.NET 8.0</td><td>6.8684 ns</td><td>0.0039 ns</td><td>0.0033 ns</td><td>6.8669 ns</td><td>6.8651 ns</td><td>6.8744 ns</td><td>-</td>
+</tr><tr><td>FuncPointers</td><td>NegateBool</td><td>.NET 6.0</td><td>7.0233 ns</td><td>0.0015 ns</td><td>0.0012 ns</td><td>7.0232 ns</td><td>7.0216 ns</td><td>7.0263 ns</td><td>-</td>
+</tr><tr><td>LibraryImport</td><td>NegateBool</td><td>.NET 8.0</td><td>9.4170 ns</td><td>0.0019 ns</td><td>0.0018 ns</td><td>9.4168 ns</td><td>9.4151 ns</td><td>9.4203 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>NegateBool</td><td>.NET 8.0</td><td>10.1142 ns</td><td>0.0023 ns</td><td>0.0018 ns</td><td>10.1135 ns</td><td>10.1122 ns</td><td>10.1177 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>NegateBool</td><td>.NET 6.0</td><td>10.1213 ns</td><td>0.0079 ns</td><td>0.0074 ns</td><td>10.1192 ns</td><td>10.1145 ns</td><td>10.1352 ns</td><td>-</td>
+</tr><tr><td>DllImport</td><td>NegateBool</td><td>.NET Framework 4.8</td><td>14.7499 ns</td><td>0.0096 ns</td><td>0.0085 ns</td><td>14.7488 ns</td><td>14.7366 ns</td><td>14.7680 ns</td><td>-</td>
+</tr></tbody></table>
+</body>
+</html>

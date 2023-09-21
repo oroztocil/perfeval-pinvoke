@@ -1,0 +1,182 @@
+Category;OS;Target_Type;Target_Method;Job_Runtime;Params;Measurement_IterationMode;Measurement_IterationStage;Measurement_IterationIndex;Measurement_Operations;Measurement_Value;Gen_0;Gen_1;Gen_2;Allocated_Bytes
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;1;4194304;124.16;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;2;4194304;123.82;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;3;4194304;123.63;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;4;4194304;123.88;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;5;4194304;123.56;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;6;4194304;123.71;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;7;4194304;123.64;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;8;4194304;123.62;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;9;4194304;124.05;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;10;4194304;123.9;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;11;4194304;123.73;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;12;4194304;123.54;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;13;4194304;123.67;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;14;4194304;123.68;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;15;4194304;123.6;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;1;4194304;124.65;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;2;4194304;124.31;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;3;4194304;124.3;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;4;4194304;124.22;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;5;4194304;124.16;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;6;4194304;124.22;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;7;4194304;124.26;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;8;4194304;124.33;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;9;4194304;124.49;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;10;4194304;124.26;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;11;4194304;124.2;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;12;4194304;124.29;64;0;0;96
+Strings_InOut;Win32NT;LibraryImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;13;4194304;124.27;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;1;4194304;124.73;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;2;4194304;124.63;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;3;4194304;124.55;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;4;4194304;124.51;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;5;4194304;124.53;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;6;4194304;124.62;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;7;4194304;124.56;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;8;4194304;124.64;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;9;4194304;124.69;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;10;4194304;124.55;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;11;4194304;124.58;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;12;4194304;124.64;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;1;4194304;126.9;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;2;4194304;126.74;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;3;4194304;126.73;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;4;4194304;126.77;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;5;4194304;126.61;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;6;4194304;126.71;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;7;4194304;127.03;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;8;4194304;126.68;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;9;4194304;126.62;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;10;4194304;126.67;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;11;4194304;126.57;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;12;4194304;127.14;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;13;4194304;126.56;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 8.0;;Workload;Result;14;4194304;126.59;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;1;4194304;127.75;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;2;4194304;127.29;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;3;4194304;127.29;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;4;4194304;127.19;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;5;4194304;127.56;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;6;4194304;127.76;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;7;4194304;127.4;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;8;4194304;127.47;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;9;4194304;127.48;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;10;4194304;127.39;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;11;4194304;127.32;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;12;4194304;127.46;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;13;4194304;127.41;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;14;4194304;127.32;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 8.0;;Workload;Result;15;4194304;127.56;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;1;4194304;139.94;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;2;4194304;139.9;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;3;4194304;139.86;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;4;4194304;139.85;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;5;4194304;139.93;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;6;4194304;139.83;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;7;4194304;139.82;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;8;4194304;139.79;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;9;4194304;139.81;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;10;4194304;139.72;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;11;4194304;139.38;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;12;4194304;139.34;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;1;4194304;140.29;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;2;4194304;140.32;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;3;4194304;140.32;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;4;4194304;140.33;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;5;4194304;140.33;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;6;4194304;139.92;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;7;4194304;140.03;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;8;4194304;140.07;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;9;4194304;140.31;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;10;4194304;140.2;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;11;4194304;140.22;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;12;4194304;140.62;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;13;4194304;140.24;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;14;4194304;140.11;64;0;0;96
+Strings_InOut;Win32NT;FuncPointers;StringToUppercase_Fixed;.NET 6.0;;Workload;Result;15;4194304;139.83;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 6.0;;Workload;Result;1;4194304;146.45;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 6.0;;Workload;Result;2;4194304;146.74;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 6.0;;Workload;Result;3;4194304;146.38;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 6.0;;Workload;Result;4;4194304;146.52;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 6.0;;Workload;Result;5;4194304;146.05;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 6.0;;Workload;Result;6;4194304;146.7;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 6.0;;Workload;Result;7;4194304;146.33;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 6.0;;Workload;Result;8;4194304;146.32;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 6.0;;Workload;Result;9;4194304;146.72;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 6.0;;Workload;Result;10;4194304;146.66;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 6.0;;Workload;Result;11;4194304;146.71;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 6.0;;Workload;Result;12;4194304;146.29;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 6.0;;Workload;Result;13;4194304;146.32;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 6.0;;Workload;Result;14;4194304;146.99;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET 6.0;;Workload;Result;15;4194304;146.52;64;0;0;96
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 6.0;;Workload;Result;1;4194304;177.9;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 6.0;;Workload;Result;2;4194304;177.93;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 6.0;;Workload;Result;3;4194304;177.84;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 6.0;;Workload;Result;4;4194304;178.09;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 6.0;;Workload;Result;5;4194304;177.9;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 6.0;;Workload;Result;6;4194304;177.96;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 6.0;;Workload;Result;7;4194304;177.9;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 6.0;;Workload;Result;8;4194304;177.93;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 6.0;;Workload;Result;9;4194304;177.91;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 6.0;;Workload;Result;10;4194304;177.96;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 6.0;;Workload;Result;11;4194304;178.02;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 6.0;;Workload;Result;12;4194304;177.94;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 8.0;;Workload;Result;1;4194304;181.79;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 8.0;;Workload;Result;2;4194304;181.35;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 8.0;;Workload;Result;3;4194304;180.74;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 8.0;;Workload;Result;4;4194304;180.98;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 8.0;;Workload;Result;5;4194304;180.66;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 8.0;;Workload;Result;6;4194304;180.71;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 8.0;;Workload;Result;7;4194304;180.87;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 8.0;;Workload;Result;8;4194304;181.25;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 8.0;;Workload;Result;9;4194304;180.86;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 8.0;;Workload;Result;10;4194304;180.98;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 8.0;;Workload;Result;11;4194304;180.86;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 8.0;;Workload;Result;12;4194304;180.76;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 8.0;;Workload;Result;13;4194304;180.48;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 8.0;;Workload;Result;14;4194304;181.39;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET 8.0;;Workload;Result;15;4194304;181.34;160;0;0;240
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET Framework 4.8;;Workload;Result;1;2097152;272.67;104;0;0;313
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET Framework 4.8;;Workload;Result;2;2097152;274.71;104;0;0;313
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET Framework 4.8;;Workload;Result;3;2097152;272.94;104;0;0;313
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET Framework 4.8;;Workload;Result;4;2097152;274.92;104;0;0;313
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET Framework 4.8;;Workload;Result;5;2097152;273.82;104;0;0;313
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET Framework 4.8;;Workload;Result;6;2097152;273.79;104;0;0;313
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET Framework 4.8;;Workload;Result;7;2097152;272.64;104;0;0;313
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET Framework 4.8;;Workload;Result;8;2097152;271.47;104;0;0;313
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET Framework 4.8;;Workload;Result;9;2097152;271.17;104;0;0;313
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET Framework 4.8;;Workload;Result;10;2097152;273.75;104;0;0;313
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET Framework 4.8;;Workload;Result;11;2097152;272.59;104;0;0;313
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET Framework 4.8;;Workload;Result;12;2097152;273.05;104;0;0;313
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET Framework 4.8;;Workload;Result;13;2097152;272.75;104;0;0;313
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET Framework 4.8;;Workload;Result;14;2097152;271.49;104;0;0;313
+Strings_InOut;Win32NT;DllImport;StringToUppercase_StringBuilder;.NET Framework 4.8;;Workload;Result;15;2097152;270.9;104;0;0;313
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET Framework 4.8;;Workload;Result;1;2097152;280.18;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET Framework 4.8;;Workload;Result;2;2097152;279.39;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET Framework 4.8;;Workload;Result;3;2097152;279.01;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET Framework 4.8;;Workload;Result;4;2097152;279.46;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET Framework 4.8;;Workload;Result;5;2097152;279.03;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET Framework 4.8;;Workload;Result;6;2097152;279.14;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET Framework 4.8;;Workload;Result;7;2097152;279.62;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET Framework 4.8;;Workload;Result;8;2097152;278.94;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET Framework 4.8;;Workload;Result;9;2097152;279.35;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET Framework 4.8;;Workload;Result;10;2097152;280.1;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET Framework 4.8;;Workload;Result;11;2097152;279.06;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET Framework 4.8;;Workload;Result;12;2097152;279.1;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET Framework 4.8;;Workload;Result;13;2097152;279.03;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_ByteArray;.NET Framework 4.8;;Workload;Result;14;2097152;279.15;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET Framework 4.8;;Workload;Result;1;2097152;283.82;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET Framework 4.8;;Workload;Result;2;2097152;283.73;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET Framework 4.8;;Workload;Result;3;2097152;283.81;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET Framework 4.8;;Workload;Result;4;2097152;283.75;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET Framework 4.8;;Workload;Result;5;2097152;283.77;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET Framework 4.8;;Workload;Result;6;2097152;283.66;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET Framework 4.8;;Workload;Result;7;2097152;283.71;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET Framework 4.8;;Workload;Result;8;2097152;283.76;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET Framework 4.8;;Workload;Result;9;2097152;283.8;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET Framework 4.8;;Workload;Result;10;2097152;283.72;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET Framework 4.8;;Workload;Result;11;2097152;283.78;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET Framework 4.8;;Workload;Result;12;2097152;283.74;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET Framework 4.8;;Workload;Result;13;2097152;283.71;34;0;0;104
+Strings_InOut;Win32NT;DllImport;StringToUppercase_Fixed;.NET Framework 4.8;;Workload;Result;14;2097152;283.71;34;0;0;104

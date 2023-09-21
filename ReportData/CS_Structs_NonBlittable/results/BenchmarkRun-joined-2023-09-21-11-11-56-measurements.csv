@@ -1,0 +1,10 @@
+Category;OS;Target_Type;Target_Method;Job_Runtime;Params;Measurement_IterationMode;Measurement_IterationStage;Measurement_IterationIndex;Measurement_Operations;Measurement_Value;Gen_0;Gen_1;Gen_2;Allocated_Bytes
+CS_Structs_NonBlittable;Win32NT;Managed;UpdateNonBlittableStruct_Manual;.NET 8.0;input=PInvo(...)truct [49];Workload;Result;1;1;508600;0;0;0;480
+CS_Structs_NonBlittable;Win32NT;Managed;UpdateNonBlittableStruct_Manual;.NET 6.0;input=PInvo(...)truct [49];Workload;Result;1;1;657600;0;0;0;720
+CS_Structs_NonBlittable;Win32NT;Managed;UpdateNonBlittableStruct_Manual;.NET Framework 4.8;input=PInvo(...)truct [49];Workload;Result;1;1;735000;0;0;0;0
+CS_Structs_NonBlittable;Win32NT;FuncPointers;UpdateNonBlittableStruct_Manual;.NET 8.0;input=PInvo(...)truct [49];Workload;Result;1;1;31672300;0;0;0;472
+CS_Structs_NonBlittable;Win32NT;FuncPointers;UpdateNonBlittableStruct_Manual;.NET 6.0;input=PInvo(...)truct [49];Workload;Result;1;1;31675200;0;0;0;712
+CS_Structs_NonBlittable;Win32NT;LibraryImport;UpdateNonBlittableStruct_Manual;.NET 8.0;input=PInvo(...)truct [49];Workload;Result;1;1;32515800;0;0;0;472
+CS_Structs_NonBlittable;Win32NT;DllImport;UpdateNonBlittableStruct_Manual;.NET 6.0;input=PInvo(...)truct [49];Workload;Result;1;1;42202900;0;0;0;712
+CS_Structs_NonBlittable;Win32NT;DllImport;UpdateNonBlittableStruct_Manual;.NET 8.0;input=PInvo(...)truct [49];Workload;Result;1;1;42330600;0;0;0;472
+CS_Structs_NonBlittable;Win32NT;DllImport;UpdateNonBlittableStruct_Manual;.NET Framework 4.8;input=PInvo(...)truct [49];Workload;Result;1;1;42906200;0;0;0;0

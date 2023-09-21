@@ -1,0 +1,10 @@
+Category;OS;Target_Type;Target_Method;Job_Runtime;Params;Measurement_IterationMode;Measurement_IterationStage;Measurement_IterationIndex;Measurement_Operations;Measurement_Value;Gen_0;Gen_1;Gen_2;Allocated_Bytes
+CS_Void_Empty;Win32NT;Managed;Empty_Void;.NET 6.0;;Workload;Result;1;1;285500;0;0;0;640
+CS_Void_Empty;Win32NT;Managed;Empty_Void;.NET 8.0;;Workload;Result;1;1;296800;0;0;0;400
+CS_Void_Empty;Win32NT;Managed;Empty_Void;.NET Framework 4.8;;Workload;Result;1;1;350600;0;0;0;0
+CS_Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 8.0;;Workload;Result;1;1;30786600;0;0;0;400
+CS_Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 6.0;;Workload;Result;1;1;31410400;0;0;0;640
+CS_Void_Empty;Win32NT;LibraryImport;Empty_Void;.NET 8.0;;Workload;Result;1;1;31675200;0;0;0;400
+CS_Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;1;1;41583900;0;0;0;0
+CS_Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;1;1;41986600;0;0;0;400
+CS_Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;1;1;42115600;0;0;0;640

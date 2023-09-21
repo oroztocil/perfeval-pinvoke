@@ -16,15 +16,15 @@ namespace PInvoke.Benchmarks
     {
         [Benchmark]
         [BenchmarkCategory(Categories.Void_Empty, Categories.SUCS, Categories.SLE)]
-        public void Empty_Void() => NativeFunctions.Empty_Void();
+        public void EmptyVoid() => NativeFunctions.Empty_Void();
 
         [Benchmark]
         [BenchmarkCategory(Categories.SUCS)]
-        public void Empty_VoidSUCS() => NativeFunctions.Empty_VoidSUCS();
+        public void EmptyVoid_SUCS() => NativeFunctions.Empty_VoidSUCS();
 
         [Benchmark]
         [BenchmarkCategory(Categories.SLE)]
-        public void Empty_VoidSLE() => NativeFunctions.Empty_VoidSLE();
+        public void EmptyVoid_SLE() => NativeFunctions.Empty_VoidSLE();
 
         [Benchmark]
         [BenchmarkCategory(Categories.Arrays_Empty_In)]
@@ -38,7 +38,7 @@ namespace PInvoke.Benchmarks
 
         [Benchmark]
         [BenchmarkCategory(Categories.Strings_Empty_In)]
-        public void Empty_String() => NativeFunctions.Empty_String(Data.NonAsciiString);
+        public void EmptyString() => NativeFunctions.Empty_String(Data.NonAsciiString);
 
         [Benchmark]
         [BenchmarkCategory(Categories.Primitive_Int_Out)]
@@ -126,16 +126,16 @@ namespace PInvoke.Benchmarks
     {
         [Benchmark]
         [BenchmarkCategory($"{Categories.CS}_{Categories.Void_Empty}")]
-        public void Empty_Void() => NativeFunctions.Empty_Void();
+        public void EmptyVoid() => NativeFunctions.Empty_Void();
 
         [Benchmark]
         [BenchmarkCategory($"{Categories.CS}_{Categories.Strings_Empty_In}")]
-        public void Empty_String() => NativeFunctions.Empty_String(Data.NonAsciiString);
+        public void EmptyString() => NativeFunctions.Empty_String(Data.NonAsciiString);
 
         [Benchmark]
         [BenchmarkCategory($"{Categories.CS}_{Categories.Arrays_InOut}")]
         [ArgumentsSource(nameof(EmptyIntArray))]
-        public void FillIntArray(int[] input) => NativeFunctions.FillIntArray(input, input.Length);
+        public void FillIntArray_ByValue(int[] input) => NativeFunctions.FillIntArray(input, input.Length);
 
         [Benchmark]
         [BenchmarkCategory($"{Categories.CS}_{Categories.Structs_Blittable}")]

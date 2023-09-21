@@ -21,16 +21,16 @@ namespace PInvoke.Benchmarks
     {
         [Benchmark]
         [BenchmarkCategory(Categories.Void_Empty)]
-        public void Empty_Void() => ManagedFunctions.Empty_Void();
+        public void EmptyVoid() => ManagedFunctions.Empty_Void();
 
         [Benchmark]
         [BenchmarkCategory(Categories.Arrays_Empty_In)]
         [ArgumentsSource(nameof(RandomIntArrays))]
-        public void Empty_IntArray(int[] input) => ManagedFunctions.Empty_IntArray(input, input.Length);
+        public void EmptyIntArrayManaged(int[] input) => ManagedFunctions.Empty_IntArray(input, input.Length);
 
         [Benchmark]
         [BenchmarkCategory(Categories.Strings_Empty_In)]
-        public void Empty_String() => ManagedFunctions.Empty_String(Data.NonAsciiString);
+        public void EmptyString() => ManagedFunctions.Empty_String(Data.NonAsciiString);
 
         [Benchmark]
         [BenchmarkCategory(Categories.Primitive_Int_Out)]
@@ -57,13 +57,13 @@ namespace PInvoke.Benchmarks
         [Benchmark]
         [BenchmarkCategory(Categories.Structs_Blittable)]
         [ArgumentsSource(nameof(BlittableStruct))]
-        public void SumIntsInStruct_Ref(BlittableStruct input) =>
+        public void SumIntsInStruct(BlittableStruct input) =>
             ManagedFunctions.SumIntsInStruct(ref input);
 
         [Benchmark]
         [BenchmarkCategory(Categories.Structs_NonBlittable)]
         [ArgumentsSource(nameof(NonBlittableStruct))]
-        public void UpdateNonBlittableStruct_Manual(NonBlittableStruct input) =>
+        public void UpdateNonBlittableStruct(NonBlittableStruct input) =>
             ManagedFunctions.UpdateNonBlittableStruct(ref input);
     }
 
