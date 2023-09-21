@@ -13,8 +13,6 @@ namespace PInvoke.NativeInterface.LibraryImport
 {
     public static partial class NativeFunctions
     {
-        // [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvSuppressGCTransition) })]
-
         // Primitive-type functions
 
         [LibraryImport(BenchLibrary.Name)]
@@ -22,14 +20,17 @@ namespace PInvoke.NativeInterface.LibraryImport
 
         [LibraryImport(BenchLibrary.Name, EntryPoint = "Empty_Void")]
         [SuppressGCTransition]
-        public static partial void Empty_Void_SGCT();
+        public static partial void Empty_VoidSGCT();
+
+        [LibraryImport(BenchLibrary.Name, EntryPoint = "Empty_Void", SetLastError = true)]
+        public static partial void Empty_VoidSLE();
 
         [LibraryImport(BenchLibrary.Name)]
         public static partial void Empty_IntArray(int[] arr, int count);
 
         [LibraryImport(BenchLibrary.Name, EntryPoint = "Empty_IntArray")]
         [SuppressGCTransition]
-        public static partial void Empty_IntArray_SGCT(int[] arr, int count);
+        public static partial void Empty_IntArraySGCT(int[] arr, int count);
 
         [LibraryImport(BenchLibrary.Name, EntryPoint = "Empty_IntArray")]
         internal static partial void Empty_IntArray_Fixed(IntPtr arr, int count);
@@ -47,7 +48,7 @@ namespace PInvoke.NativeInterface.LibraryImport
 
         [LibraryImport(BenchLibrary.Name, EntryPoint = "Empty_String", StringMarshalling = StringMarshalling.Utf8)]
         [SuppressGCTransition]
-        public static partial void Empty_String_SGCT(string str);
+        public static partial void Empty_StringSGCT(string str);
 
         [LibraryImport(BenchLibrary.Name)]
         public static partial int ConstantInt();
@@ -55,9 +56,8 @@ namespace PInvoke.NativeInterface.LibraryImport
         [LibraryImport(BenchLibrary.Name)]
         public static partial int MultiplyInt(int a, int b);
 
-        [LibraryImport(BenchLibrary.Name, EntryPoint = "MultiplyInt")]
-        [SuppressGCTransition]
-        public static partial int MultiplyInt_SGCT(int a, int b);
+        [LibraryImport(BenchLibrary.Name, EntryPoint = "MultiplyInt", SetLastError = true)]
+        public static partial int MultiplyIntSLE(int a, int b);
 
         [LibraryImport(BenchLibrary.Name)]
         [return: MarshalAs(UnmanagedType.U1)]

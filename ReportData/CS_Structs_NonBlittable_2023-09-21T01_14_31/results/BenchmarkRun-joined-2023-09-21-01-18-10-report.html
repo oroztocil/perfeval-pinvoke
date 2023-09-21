@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BenchmarkRun-joined-2023-09-21-01-18-10</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.8, Windows 10 (10.0.19045.3448/22H2/2022Update)
+Intel Core i5-10400F CPU 2.90GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 8.0.100-preview.7.23376.3
+  [Host]     : .NET 8.0.0 (8.0.23.37506), X64 RyuJIT AVX2
+  Job-PSJMGE : .NET 6.0.22 (6.0.2223.42425), X64 RyuJIT AVX2
+  Job-IMRMJU : .NET 8.0.0 (8.0.23.37506), X64 RyuJIT AVX2
+  Job-RRQHUO : .NET Framework 4.8.1 (4.8.9181.0), X64 RyuJIT VectorSize=256
+</code></pre>
+<pre><code>InvocationCount=1  IterationCount=1  IterationTime=250.0000 ms  
+LaunchCount=100  RunStrategy=ColdStart  UnrollFactor=1  
+WarmupCount=5  
+</code></pre>
+
+<table>
+<thead><tr><th>Type     </th><th>Method                   </th><th>Runtime     </th><th>input         </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Min </th><th>Max  </th>
+</tr>
+</thead><tbody><tr><td>DllImportCS</td><td>UpdateNonBlittableStruct_Manual</td><td>.NET 6.0</td><td>PInvo(...)truct [49]</td><td>2,041.7 &mu;s</td><td>1,440.63 &mu;s</td><td>4,247.73 &mu;s</td><td>1,609.3 &mu;s</td><td>1,562.5 &mu;s</td><td>44,090.5 &mu;s</td>
+</tr><tr><td>DllImportCS</td><td>UpdateNonBlittableStruct_Manual</td><td>.NET 8.0</td><td>PInvo(...)truct [49]</td><td>2,037.4 &mu;s</td><td>1,362.35 &mu;s</td><td>4,016.93 &mu;s</td><td>1,631.9 &mu;s</td><td>1,584.5 &mu;s</td><td>41,804.0 &mu;s</td>
+</tr><tr><td>DllImportCS</td><td>UpdateNonBlittableStruct_Manual</td><td>.NET Framework 4.8</td><td>PInvo(...)truct [49]</td><td>2,625.9 &mu;s</td><td>1,369.64 &mu;s</td><td>4,038.41 &mu;s</td><td>2,211.2 &mu;s</td><td>2,168.4 &mu;s</td><td>42,604.0 &mu;s</td>
+</tr><tr><td>FuncPointersCS</td><td>UpdateNonBlittableStruct_Manual</td><td>.NET 6.0</td><td>PInvo(...)truct [49]</td><td>2,162.4 &mu;s</td><td>1,122.53 &mu;s</td><td>3,309.81 &mu;s</td><td>1,823.8 &mu;s</td><td>1,798.3 &mu;s</td><td>34,928.8 &mu;s</td>
+</tr><tr><td>FuncPointersCS</td><td>UpdateNonBlittableStruct_Manual</td><td>.NET 8.0</td><td>PInvo(...)truct [49]</td><td>2,172.2 &mu;s</td><td>1,029.10 &mu;s</td><td>3,034.32 &mu;s</td><td>1,863.3 &mu;s</td><td>1,812.5 &mu;s</td><td>32,209.7 &mu;s</td>
+</tr><tr><td>LibraryImportCS</td><td>UpdateNonBlittableStruct_Manual</td><td>.NET 8.0</td><td>PInvo(...)truct [49]</td><td>1,862.5 &mu;s</td><td>1,074.42 &mu;s</td><td>3,167.95 &mu;s</td><td>1,545.8 &mu;s</td><td>1,496.3 &mu;s</td><td>33,224.1 &mu;s</td>
+</tr><tr><td>ManagedCS</td><td>UpdateNonBlittableStruct_Manual</td><td>.NET 6.0</td><td>PInvo(...)truct [49]</td><td>665.5 &mu;s</td><td>2.05 &mu;s</td><td>6.03 &mu;s</td><td>665.7 &mu;s</td><td>651.5 &mu;s</td><td>683.5 &mu;s</td>
+</tr><tr><td>ManagedCS</td><td>UpdateNonBlittableStruct_Manual</td><td>.NET 8.0</td><td>PInvo(...)truct [49]</td><td>498.4 &mu;s</td><td>3.05 &mu;s</td><td>8.98 &mu;s</td><td>497.1 &mu;s</td><td>484.5 &mu;s</td><td>549.0 &mu;s</td>
+</tr><tr><td>ManagedCS</td><td>UpdateNonBlittableStruct_Manual</td><td>.NET Framework 4.8</td><td>PInvo(...)truct [49]</td><td>746.5 &mu;s</td><td>3.02 &mu;s</td><td>8.91 &mu;s</td><td>746.8 &mu;s</td><td>727.9 &mu;s</td><td>769.0 &mu;s</td>
+</tr></tbody></table>
+</body>
+</html>

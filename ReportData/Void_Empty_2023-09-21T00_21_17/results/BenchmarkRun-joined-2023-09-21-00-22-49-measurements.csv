@@ -1,0 +1,121 @@
+Category;OS;Target_Type;Target_Method;Job_Runtime;Params;Measurement_IterationMode;Measurement_IterationStage;Measurement_IterationIndex;Measurement_Operations;Measurement_Value
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;1;27528930;9.08
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;2;27528930;9.08
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;3;27528930;9.09
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;4;27528930;9.08
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;5;27528930;9.1
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;6;27528930;9.08
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;7;27528930;9.1
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;8;27528930;9.08
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;9;27528930;9.09
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;10;27528930;9.08
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;11;27528930;9.1
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;12;27528930;9.09
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;13;27528930;9.08
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;14;27528930;9.09
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;15;27528930;9.08
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;1;27567377;9.08
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;2;27567377;9.07
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;3;27567377;9.08
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;4;27567377;9.07
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;5;27567377;9.07
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;6;27567377;9.08
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;7;27567377;9.09
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;8;27567377;9.09
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;9;27567377;9.08
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;10;27567377;9.08
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;11;27567377;9.08
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;12;27567377;9.07
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;13;27567377;9.08
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;1;17373380;14.41
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;2;17373380;14.4
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;3;17373380;14.39
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;4;17373380;14.4
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;5;17373380;14.38
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;6;17373380;14.38
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;7;17373380;14.36
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;8;17373380;14.37
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;9;17373380;14.4
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;10;17373380;14.33
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;11;17373380;14.35
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;12;17373380;14.38
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;13;17373380;14.39
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;14;17373380;14.32
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;15;17373380;14.38
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 6.0;;Workload;Result;1;28666242;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 6.0;;Workload;Result;2;28666242;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 6.0;;Workload;Result;3;28666242;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 6.0;;Workload;Result;4;28666242;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 6.0;;Workload;Result;5;28666242;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 6.0;;Workload;Result;6;28666242;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 6.0;;Workload;Result;7;28666242;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 6.0;;Workload;Result;8;28666242;8.72
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 6.0;;Workload;Result;9;28666242;8.72
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 6.0;;Workload;Result;10;28666242;8.72
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 6.0;;Workload;Result;11;28666242;8.72
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 6.0;;Workload;Result;12;28666242;8.72
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 6.0;;Workload;Result;13;28666242;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 8.0;;Workload;Result;1;28651543;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 8.0;;Workload;Result;2;28651543;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 8.0;;Workload;Result;3;28651543;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 8.0;;Workload;Result;4;28651543;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 8.0;;Workload;Result;5;28651543;8.74
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 8.0;;Workload;Result;6;28651543;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 8.0;;Workload;Result;7;28651543;8.72
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 8.0;;Workload;Result;8;28651543;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 8.0;;Workload;Result;9;28651543;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 8.0;;Workload;Result;10;28651543;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 8.0;;Workload;Result;11;28651543;8.73
+Void_Empty;Win32NT;FuncPointers;Empty_Void;.NET 8.0;;Workload;Result;12;28651543;8.73
+Void_Empty;Win32NT;LibraryImport;Empty_Void;.NET 8.0;;Workload;Result;1;27573805;9.08
+Void_Empty;Win32NT;LibraryImport;Empty_Void;.NET 8.0;;Workload;Result;2;27573805;9.07
+Void_Empty;Win32NT;LibraryImport;Empty_Void;.NET 8.0;;Workload;Result;3;27573805;9.07
+Void_Empty;Win32NT;LibraryImport;Empty_Void;.NET 8.0;;Workload;Result;4;27573805;9.07
+Void_Empty;Win32NT;LibraryImport;Empty_Void;.NET 8.0;;Workload;Result;5;27573805;9.08
+Void_Empty;Win32NT;LibraryImport;Empty_Void;.NET 8.0;;Workload;Result;6;27573805;9.07
+Void_Empty;Win32NT;LibraryImport;Empty_Void;.NET 8.0;;Workload;Result;7;27573805;9.08
+Void_Empty;Win32NT;LibraryImport;Empty_Void;.NET 8.0;;Workload;Result;8;27573805;9.08
+Void_Empty;Win32NT;LibraryImport;Empty_Void;.NET 8.0;;Workload;Result;9;27573805;9.08
+Void_Empty;Win32NT;LibraryImport;Empty_Void;.NET 8.0;;Workload;Result;10;27573805;9.07
+Void_Empty;Win32NT;LibraryImport;Empty_Void;.NET 8.0;;Workload;Result;11;27573805;9.08
+Void_Empty;Win32NT;LibraryImport;Empty_Void;.NET 8.0;;Workload;Result;12;27573805;9.07
+Void_Empty;Win32NT;LibraryImport;Empty_Void;.NET 8.0;;Workload;Result;13;27573805;9.07
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 6.0;;Workload;Result;1;90659760;0.69
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 6.0;;Workload;Result;2;90659760;0.69
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 6.0;;Workload;Result;3;90659760;0.69
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 6.0;;Workload;Result;4;90659760;0.69
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 6.0;;Workload;Result;5;90659760;0.69
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 6.0;;Workload;Result;6;90659760;0.69
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 6.0;;Workload;Result;7;90659760;0.69
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 6.0;;Workload;Result;8;90659760;0.69
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 6.0;;Workload;Result;9;90659760;0.69
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 6.0;;Workload;Result;10;90659760;0.69
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 6.0;;Workload;Result;11;90659760;0.69
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 6.0;;Workload;Result;12;90659760;0.69
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 6.0;;Workload;Result;13;90659760;0.69
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 8.0;;Workload;Result;1;85546432;0.7
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 8.0;;Workload;Result;2;85546432;0.7
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 8.0;;Workload;Result;3;85546432;0.7
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 8.0;;Workload;Result;4;85546432;0.7
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 8.0;;Workload;Result;5;85546432;0.7
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 8.0;;Workload;Result;6;85546432;0.7
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 8.0;;Workload;Result;7;85546432;0.7
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 8.0;;Workload;Result;8;85546432;0.7
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 8.0;;Workload;Result;9;85546432;0.7
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 8.0;;Workload;Result;10;85546432;0.7
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 8.0;;Workload;Result;11;85546432;0.7
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 8.0;;Workload;Result;12;85546432;0.7
+Void_Empty;Win32NT;Managed;Empty_Void;.NET 8.0;;Workload;Result;13;85546432;0.7
+Void_Empty;Win32NT;Managed;Empty_Void;.NET Framework 4.8;;Workload;Result;1;81891856;1.07
+Void_Empty;Win32NT;Managed;Empty_Void;.NET Framework 4.8;;Workload;Result;2;81891856;1.07
+Void_Empty;Win32NT;Managed;Empty_Void;.NET Framework 4.8;;Workload;Result;3;81891856;1.07
+Void_Empty;Win32NT;Managed;Empty_Void;.NET Framework 4.8;;Workload;Result;4;81891856;1.07
+Void_Empty;Win32NT;Managed;Empty_Void;.NET Framework 4.8;;Workload;Result;5;81891856;1.07
+Void_Empty;Win32NT;Managed;Empty_Void;.NET Framework 4.8;;Workload;Result;6;81891856;1.07
+Void_Empty;Win32NT;Managed;Empty_Void;.NET Framework 4.8;;Workload;Result;7;81891856;1.07
+Void_Empty;Win32NT;Managed;Empty_Void;.NET Framework 4.8;;Workload;Result;8;81891856;1.07
+Void_Empty;Win32NT;Managed;Empty_Void;.NET Framework 4.8;;Workload;Result;9;81891856;1.07
+Void_Empty;Win32NT;Managed;Empty_Void;.NET Framework 4.8;;Workload;Result;10;81891856;1.07
+Void_Empty;Win32NT;Managed;Empty_Void;.NET Framework 4.8;;Workload;Result;11;81891856;1.07
+Void_Empty;Win32NT;Managed;Empty_Void;.NET Framework 4.8;;Workload;Result;12;81891856;1.07
+Void_Empty;Win32NT;Managed;Empty_Void;.NET Framework 4.8;;Workload;Result;13;81891856;1.07

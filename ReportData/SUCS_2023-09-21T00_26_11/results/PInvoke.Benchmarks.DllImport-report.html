@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BenchmarkRun-joined-2023-09-21-00-29-51</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.8, Windows 10 (10.0.19045.3448/22H2/2022Update)
+Intel Core i5-10400F CPU 2.90GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 8.0.100-preview.7.23376.3
+  [Host]     : .NET 8.0.0 (8.0.23.37506), X64 RyuJIT AVX2
+  Job-PQSQNL : .NET 6.0.22 (6.0.2223.42425), X64 RyuJIT AVX2
+  Job-OYRDQZ : .NET 8.0.0 (8.0.23.37506), X64 RyuJIT AVX2
+  Job-DRIFLL : .NET Framework 4.8.1 (4.8.9181.0), X64 RyuJIT VectorSize=256
+</code></pre>
+<pre><code>IterationTime=250.0000 ms  WarmupCount=5  
+</code></pre>
+
+<table>
+<thead><tr><th>Method          </th><th>Runtime     </th><th>input</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Min</th><th>Max</th>
+</tr>
+</thead><tbody><tr><td>Empty_IntArray_ByValue</td><td>.NET 6.0</td><td>Int32[1000]</td><td>10.709 ns</td><td>0.0016 ns</td><td>0.0012 ns</td><td>10.709 ns</td><td>10.708 ns</td><td>10.712 ns</td>
+</tr><tr><td>Empty_IntArray_ByValue</td><td>.NET 8.0</td><td>Int32[1000]</td><td>10.362 ns</td><td>0.0032 ns</td><td>0.0025 ns</td><td>10.362 ns</td><td>10.360 ns</td><td>10.370 ns</td>
+</tr><tr><td>Empty_IntArray_ByValue</td><td>.NET Framework 4.8</td><td>Int32[1000]</td><td>15.487 ns</td><td>0.1747 ns</td><td>0.1549 ns</td><td>15.447 ns</td><td>15.228 ns</td><td>15.799 ns</td>
+</tr><tr><td>Empty_IntArray_ByValue</td><td>.NET 6.0</td><td>Int32[10]</td><td>8.773 ns</td><td>0.0346 ns</td><td>0.0307 ns</td><td>8.757 ns</td><td>8.753 ns</td><td>8.843 ns</td>
+</tr><tr><td>Empty_IntArray_ByValue</td><td>.NET 8.0</td><td>Int32[10]</td><td>8.277 ns</td><td>0.0067 ns</td><td>0.0056 ns</td><td>8.275 ns</td><td>8.270 ns</td><td>8.290 ns</td>
+</tr><tr><td>Empty_IntArray_ByValue</td><td>.NET Framework 4.8</td><td>Int32[10]</td><td>13.302 ns</td><td>0.0045 ns</td><td>0.0040 ns</td><td>13.301 ns</td><td>13.297 ns</td><td>13.309 ns</td>
+</tr><tr><td>Empty_StringSUCS</td><td>.NET 6.0</td><td>?</td><td>41.645 ns</td><td>0.0313 ns</td><td>0.0261 ns</td><td>41.646 ns</td><td>41.588 ns</td><td>41.684 ns</td>
+</tr><tr><td>Empty_VoidSUCS</td><td>.NET 6.0</td><td>?</td><td>7.008 ns</td><td>0.0024 ns</td><td>0.0019 ns</td><td>7.008 ns</td><td>7.006 ns</td><td>7.013 ns</td>
+</tr><tr><td>Empty_StringSUCS</td><td>.NET 8.0</td><td>?</td><td>34.854 ns</td><td>0.0925 ns</td><td>0.0772 ns</td><td>34.872 ns</td><td>34.605 ns</td><td>34.904 ns</td>
+</tr><tr><td>Empty_VoidSUCS</td><td>.NET 8.0</td><td>?</td><td>6.850 ns</td><td>0.0014 ns</td><td>0.0012 ns</td><td>6.850 ns</td><td>6.849 ns</td><td>6.853 ns</td>
+</tr><tr><td>Empty_StringSUCS</td><td>.NET Framework 4.8</td><td>?</td><td>70.962 ns</td><td>0.0900 ns</td><td>0.0798 ns</td><td>70.971 ns</td><td>70.717 ns</td><td>71.049 ns</td>
+</tr><tr><td>Empty_VoidSUCS</td><td>.NET Framework 4.8</td><td>?</td><td>8.490 ns</td><td>0.0019 ns</td><td>0.0015 ns</td><td>8.490 ns</td><td>8.488 ns</td><td>8.493 ns</td>
+</tr><tr><td>Empty_IntArraySUCS</td><td>.NET 6.0</td><td>Int32[1000]</td><td>8.762 ns</td><td>0.0206 ns</td><td>0.0193 ns</td><td>8.750 ns</td><td>8.747 ns</td><td>8.803 ns</td>
+</tr><tr><td>Empty_IntArraySUCS</td><td>.NET 8.0</td><td>Int32[1000]</td><td>8.277 ns</td><td>0.0067 ns</td><td>0.0056 ns</td><td>8.276 ns</td><td>8.270 ns</td><td>8.290 ns</td>
+</tr><tr><td>Empty_IntArraySUCS</td><td>.NET Framework 4.8</td><td>Int32[1000]</td><td>10.131 ns</td><td>0.0031 ns</td><td>0.0026 ns</td><td>10.130 ns</td><td>10.127 ns</td><td>10.136 ns</td>
+</tr><tr><td>Empty_IntArraySUCS</td><td>.NET 6.0</td><td>Int32[10]</td><td>8.753 ns</td><td>0.0142 ns</td><td>0.0125 ns</td><td>8.745 ns</td><td>8.742 ns</td><td>8.776 ns</td>
+</tr><tr><td>Empty_IntArraySUCS</td><td>.NET 8.0</td><td>Int32[10]</td><td>8.281 ns</td><td>0.0058 ns</td><td>0.0045 ns</td><td>8.279 ns</td><td>8.276 ns</td><td>8.290 ns</td>
+</tr><tr><td>Empty_IntArraySUCS</td><td>.NET Framework 4.8</td><td>Int32[10]</td><td>10.157 ns</td><td>0.0240 ns</td><td>0.0187 ns</td><td>10.163 ns</td><td>10.117 ns</td><td>10.179 ns</td>
+</tr><tr><td>Empty_String</td><td>.NET 6.0</td><td>?</td><td>42.346 ns</td><td>0.6584 ns</td><td>0.5837 ns</td><td>42.109 ns</td><td>41.860 ns</td><td>43.562 ns</td>
+</tr><tr><td>Empty_String</td><td>.NET 8.0</td><td>?</td><td>34.785 ns</td><td>0.2190 ns</td><td>0.2049 ns</td><td>34.700 ns</td><td>34.542 ns</td><td>35.160 ns</td>
+</tr><tr><td>Empty_String</td><td>.NET Framework 4.8</td><td>?</td><td>75.075 ns</td><td>1.0750 ns</td><td>0.8393 ns</td><td>74.685 ns</td><td>74.412 ns</td><td>76.937 ns</td>
+</tr><tr><td>Empty_Void</td><td>.NET 6.0</td><td>?</td><td>7.503 ns</td><td>0.1895 ns</td><td>0.5345 ns</td><td>7.466 ns</td><td>6.733 ns</td><td>9.054 ns</td>
+</tr><tr><td>Empty_Void</td><td>.NET 8.0</td><td>?</td><td>6.874 ns</td><td>0.0371 ns</td><td>0.0310 ns</td><td>6.857 ns</td><td>6.843 ns</td><td>6.924 ns</td>
+</tr><tr><td>Empty_Void</td><td>.NET Framework 4.8</td><td>?</td><td>13.417 ns</td><td>0.0407 ns</td><td>0.0340 ns</td><td>13.409 ns</td><td>13.385 ns</td><td>13.501 ns</td>
+</tr></tbody></table>
+</body>
+</html>

@@ -1,0 +1,123 @@
+Category;OS;Target_Type;Target_Method;Job_Runtime;Params;Measurement_IterationMode;Measurement_IterationStage;Measurement_IterationIndex;Measurement_Operations;Measurement_Value
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 6.0;;Workload;Result;1;24696187;10.11
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 6.0;;Workload;Result;2;24696187;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 6.0;;Workload;Result;3;24696187;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 6.0;;Workload;Result;4;24696187;10.11
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 6.0;;Workload;Result;5;24696187;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 6.0;;Workload;Result;6;24696187;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 6.0;;Workload;Result;7;24696187;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 6.0;;Workload;Result;8;24696187;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 6.0;;Workload;Result;9;24696187;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 6.0;;Workload;Result;10;24696187;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 6.0;;Workload;Result;11;24696187;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 6.0;;Workload;Result;12;24696187;10.13
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 6.0;;Workload;Result;13;24696187;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 8.0;;Workload;Result;1;24715506;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 8.0;;Workload;Result;2;24715506;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 8.0;;Workload;Result;3;24715506;10.13
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 8.0;;Workload;Result;4;24715506;10.13
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 8.0;;Workload;Result;5;24715506;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 8.0;;Workload;Result;6;24715506;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 8.0;;Workload;Result;7;24715506;10.13
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 8.0;;Workload;Result;8;24715506;10.13
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 8.0;;Workload;Result;9;24715506;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 8.0;;Workload;Result;10;24715506;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 8.0;;Workload;Result;11;24715506;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 8.0;;Workload;Result;12;24715506;10.13
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET 8.0;;Workload;Result;13;24715506;10.12
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET Framework 4.8;;Workload;Result;1;16968074;15.2
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET Framework 4.8;;Workload;Result;2;16968074;15.19
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET Framework 4.8;;Workload;Result;3;16968074;15.18
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET Framework 4.8;;Workload;Result;4;16968074;15.19
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET Framework 4.8;;Workload;Result;5;16968074;15.19
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET Framework 4.8;;Workload;Result;6;16968074;15.18
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET Framework 4.8;;Workload;Result;7;16968074;15.18
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET Framework 4.8;;Workload;Result;8;16968074;15.18
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET Framework 4.8;;Workload;Result;9;16968074;15.18
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET Framework 4.8;;Workload;Result;10;16968074;15.18
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET Framework 4.8;;Workload;Result;11;16968074;15.18
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET Framework 4.8;;Workload;Result;12;16968074;15.19
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET Framework 4.8;;Workload;Result;13;16968074;15.18
+Primitive_Bool_InOut;Win32NT;DllImport;NegateBool;.NET Framework 4.8;;Workload;Result;14;16968074;15.18
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 6.0;;Workload;Result;1;27554788;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 6.0;;Workload;Result;2;27554788;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 6.0;;Workload;Result;3;27554788;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 6.0;;Workload;Result;4;27554788;9.08
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 6.0;;Workload;Result;5;27554788;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 6.0;;Workload;Result;6;27554788;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 6.0;;Workload;Result;7;27554788;9.08
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 6.0;;Workload;Result;8;27554788;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 6.0;;Workload;Result;9;27554788;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 6.0;;Workload;Result;10;27554788;9.08
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 6.0;;Workload;Result;11;27554788;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 6.0;;Workload;Result;12;27554788;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 6.0;;Workload;Result;13;27554788;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 8.0;;Workload;Result;1;27542204;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 8.0;;Workload;Result;2;27542204;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 8.0;;Workload;Result;3;27542204;9.08
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 8.0;;Workload;Result;4;27542204;9.08
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 8.0;;Workload;Result;5;27542204;9.08
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 8.0;;Workload;Result;6;27542204;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 8.0;;Workload;Result;7;27542204;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 8.0;;Workload;Result;8;27542204;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 8.0;;Workload;Result;9;27542204;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 8.0;;Workload;Result;10;27542204;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 8.0;;Workload;Result;11;27542204;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 8.0;;Workload;Result;12;27542204;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 8.0;;Workload;Result;13;27542204;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 8.0;;Workload;Result;14;27542204;9.07
+Primitive_Bool_InOut;Win32NT;FuncPointers;NegateBool;.NET 8.0;;Workload;Result;15;27542204;9.07
+Primitive_Bool_InOut;Win32NT;LibraryImport;NegateBool;.NET 8.0;;Workload;Result;1;26550786;9.43
+Primitive_Bool_InOut;Win32NT;LibraryImport;NegateBool;.NET 8.0;;Workload;Result;2;26550786;9.42
+Primitive_Bool_InOut;Win32NT;LibraryImport;NegateBool;.NET 8.0;;Workload;Result;3;26550786;9.42
+Primitive_Bool_InOut;Win32NT;LibraryImport;NegateBool;.NET 8.0;;Workload;Result;4;26550786;9.42
+Primitive_Bool_InOut;Win32NT;LibraryImport;NegateBool;.NET 8.0;;Workload;Result;5;26550786;9.42
+Primitive_Bool_InOut;Win32NT;LibraryImport;NegateBool;.NET 8.0;;Workload;Result;6;26550786;9.42
+Primitive_Bool_InOut;Win32NT;LibraryImport;NegateBool;.NET 8.0;;Workload;Result;7;26550786;9.42
+Primitive_Bool_InOut;Win32NT;LibraryImport;NegateBool;.NET 8.0;;Workload;Result;8;26550786;9.42
+Primitive_Bool_InOut;Win32NT;LibraryImport;NegateBool;.NET 8.0;;Workload;Result;9;26550786;9.42
+Primitive_Bool_InOut;Win32NT;LibraryImport;NegateBool;.NET 8.0;;Workload;Result;10;26550786;9.42
+Primitive_Bool_InOut;Win32NT;LibraryImport;NegateBool;.NET 8.0;;Workload;Result;11;26550786;9.43
+Primitive_Bool_InOut;Win32NT;LibraryImport;NegateBool;.NET 8.0;;Workload;Result;12;26550786;9.42
+Primitive_Bool_InOut;Win32NT;LibraryImport;NegateBool;.NET 8.0;;Workload;Result;13;26550786;9.42
+Primitive_Bool_InOut;Win32NT;LibraryImport;NegateBool;.NET 8.0;;Workload;Result;14;26550786;9.43
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 6.0;;Workload;Result;1;90960464;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 6.0;;Workload;Result;2;90960464;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 6.0;;Workload;Result;3;90960464;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 6.0;;Workload;Result;4;90960464;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 6.0;;Workload;Result;5;90960464;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 6.0;;Workload;Result;6;90960464;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 6.0;;Workload;Result;7;90960464;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 6.0;;Workload;Result;8;90960464;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 6.0;;Workload;Result;9;90960464;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 6.0;;Workload;Result;10;90960464;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 6.0;;Workload;Result;11;90960464;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 6.0;;Workload;Result;12;90960464;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 6.0;;Workload;Result;13;90960464;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 8.0;;Workload;Result;1;86230624;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 8.0;;Workload;Result;2;86230624;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 8.0;;Workload;Result;3;86230624;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 8.0;;Workload;Result;4;86230624;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 8.0;;Workload;Result;5;86230624;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 8.0;;Workload;Result;6;86230624;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 8.0;;Workload;Result;7;86230624;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 8.0;;Workload;Result;8;86230624;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 8.0;;Workload;Result;9;86230624;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 8.0;;Workload;Result;10;86230624;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 8.0;;Workload;Result;11;86230624;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 8.0;;Workload;Result;12;86230624;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET 8.0;;Workload;Result;13;86230624;0.7
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET Framework 4.8;;Workload;Result;1;79109888;1.08
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET Framework 4.8;;Workload;Result;2;79109888;1.08
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET Framework 4.8;;Workload;Result;3;79109888;1.08
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET Framework 4.8;;Workload;Result;4;79109888;1.08
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET Framework 4.8;;Workload;Result;5;79109888;1.08
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET Framework 4.8;;Workload;Result;6;79109888;1.08
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET Framework 4.8;;Workload;Result;7;79109888;1.08
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET Framework 4.8;;Workload;Result;8;79109888;1.08
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET Framework 4.8;;Workload;Result;9;79109888;1.08
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET Framework 4.8;;Workload;Result;10;79109888;1.08
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET Framework 4.8;;Workload;Result;11;79109888;1.08
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET Framework 4.8;;Workload;Result;12;79109888;1.08
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET Framework 4.8;;Workload;Result;13;79109888;1.08
+Primitive_Bool_InOut;Win32NT;Managed;NegateBool;.NET Framework 4.8;;Workload;Result;14;79109888;1.08

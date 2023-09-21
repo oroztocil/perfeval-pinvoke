@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BenchmarkRun-joined-2023-09-21-00-31-50</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.8, Windows 10 (10.0.19045.3448/22H2/2022Update)
+Intel Core i5-10400F CPU 2.90GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 8.0.100-preview.7.23376.3
+  [Host]     : .NET 8.0.0 (8.0.23.37506), X64 RyuJIT AVX2
+  Job-TUOLVW : .NET 6.0.22 (6.0.2223.42425), X64 RyuJIT AVX2
+  Job-RPDXIF : .NET 8.0.0 (8.0.23.37506), X64 RyuJIT AVX2
+  Job-TGJNEI : .NET Framework 4.8.1 (4.8.9181.0), X64 RyuJIT VectorSize=256
+</code></pre>
+<pre><code>IterationTime=250.0000 ms  WarmupCount=5  
+</code></pre>
+
+<table>
+<thead><tr><th>Type   </th><th>Method  </th><th>Runtime     </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Min</th><th>Max</th>
+</tr>
+</thead><tbody><tr><td>DllImport</td><td>MultiplyInt</td><td>.NET 6.0</td><td>9.435 ns</td><td>0.0046 ns</td><td>0.0038 ns</td><td>9.436 ns</td><td>9.430 ns</td><td>9.440 ns</td>
+</tr><tr><td>DllImport</td><td>MultiplyInt</td><td>.NET 8.0</td><td>9.582 ns</td><td>0.1822 ns</td><td>0.1789 ns</td><td>9.478 ns</td><td>9.424 ns</td><td>9.846 ns</td>
+</tr><tr><td>DllImport</td><td>MultiplyInt</td><td>.NET Framework 4.8</td><td>14.939 ns</td><td>0.2934 ns</td><td>0.3492 ns</td><td>14.718 ns</td><td>14.695 ns</td><td>15.654 ns</td>
+</tr><tr><td>DllImport</td><td>Empty_VoidSLE</td><td>.NET 6.0</td><td>13.817 ns</td><td>0.0177 ns</td><td>0.0157 ns</td><td>13.809 ns</td><td>13.800 ns</td><td>13.843 ns</td>
+</tr><tr><td>DllImport</td><td>Empty_VoidSLE</td><td>.NET 8.0</td><td>14.631 ns</td><td>0.3213 ns</td><td>0.3700 ns</td><td>14.808 ns</td><td>14.078 ns</td><td>15.078 ns</td>
+</tr><tr><td>DllImport</td><td>Empty_VoidSLE</td><td>.NET Framework 4.8</td><td>15.651 ns</td><td>0.0629 ns</td><td>0.0525 ns</td><td>15.640 ns</td><td>15.592 ns</td><td>15.783 ns</td>
+</tr><tr><td>DllImport</td><td>Empty_Void</td><td>.NET 6.0</td><td>7.006 ns</td><td>0.0178 ns</td><td>0.0139 ns</td><td>7.000 ns</td><td>6.999 ns</td><td>7.047 ns</td>
+</tr><tr><td>DllImport</td><td>Empty_Void</td><td>.NET 8.0</td><td>6.849 ns</td><td>0.0022 ns</td><td>0.0017 ns</td><td>6.849 ns</td><td>6.848 ns</td><td>6.854 ns</td>
+</tr><tr><td>DllImport</td><td>Empty_Void</td><td>.NET Framework 4.8</td><td>13.288 ns</td><td>0.0248 ns</td><td>0.0194 ns</td><td>13.289 ns</td><td>13.245 ns</td><td>13.315 ns</td>
+</tr><tr><td>LibraryImport</td><td>Empty_VoidSLE</td><td>.NET 8.0</td><td>14.550 ns</td><td>0.0158 ns</td><td>0.0148 ns</td><td>14.552 ns</td><td>14.531 ns</td><td>14.578 ns</td>
+</tr><tr><td>LibraryImport</td><td>MultiplyIntSLE</td><td>.NET 8.0</td><td>11.699 ns</td><td>0.0258 ns</td><td>0.0241 ns</td><td>11.705 ns</td><td>11.653 ns</td><td>11.721 ns</td>
+</tr><tr><td>LibraryImport</td><td>Empty_Void</td><td>.NET 8.0</td><td>6.851 ns</td><td>0.0018 ns</td><td>0.0014 ns</td><td>6.850 ns</td><td>6.849 ns</td><td>6.853 ns</td>
+</tr></tbody></table>
+</body>
+</html>

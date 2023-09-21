@@ -1,0 +1,129 @@
+Category;OS;Target_Type;Target_Method;Job_Runtime;Params;Measurement_IterationMode;Measurement_IterationStage;Measurement_IterationIndex;Measurement_Operations;Measurement_Value
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 6.0;;Workload;Result;1;4965637;50.42
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 6.0;;Workload;Result;2;4965637;50.34
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 6.0;;Workload;Result;3;4965637;50.35
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 6.0;;Workload;Result;4;4965637;50.39
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 6.0;;Workload;Result;5;4965637;50.36
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 6.0;;Workload;Result;6;4965637;50.32
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 6.0;;Workload;Result;7;4965637;50.33
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 6.0;;Workload;Result;8;4965637;50.29
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 6.0;;Workload;Result;9;4965637;50.31
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 6.0;;Workload;Result;10;4965637;50.31
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 6.0;;Workload;Result;11;4965637;50.31
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 6.0;;Workload;Result;12;4965637;50.39
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 6.0;;Workload;Result;13;4965637;50.39
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 6.0;;Workload;Result;14;4965637;50.37
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 6.0;;Workload;Result;15;4965637;50.36
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 8.0;;Workload;Result;1;6100341;40.97
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 8.0;;Workload;Result;2;6100341;41
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 8.0;;Workload;Result;3;6100341;40.97
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 8.0;;Workload;Result;4;6100341;40.98
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 8.0;;Workload;Result;5;6100341;40.99
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 8.0;;Workload;Result;6;6100341;41.01
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 8.0;;Workload;Result;7;6100341;40.98
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 8.0;;Workload;Result;8;6100341;40.99
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 8.0;;Workload;Result;9;6100341;40.97
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 8.0;;Workload;Result;10;6100341;40.97
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 8.0;;Workload;Result;11;6100341;40.97
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 8.0;;Workload;Result;12;6100341;41.03
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET 8.0;;Workload;Result;13;6100341;40.99
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET Framework 4.8;;Workload;Result;1;3063425;81.42
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET Framework 4.8;;Workload;Result;2;3063425;81.29
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET Framework 4.8;;Workload;Result;3;3063425;81.29
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET Framework 4.8;;Workload;Result;4;3063425;81.32
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET Framework 4.8;;Workload;Result;5;3063425;81.41
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET Framework 4.8;;Workload;Result;6;3063425;81.22
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET Framework 4.8;;Workload;Result;7;3063425;81.34
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET Framework 4.8;;Workload;Result;8;3063425;81.28
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET Framework 4.8;;Workload;Result;9;3063425;81.3
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET Framework 4.8;;Workload;Result;10;3063425;81.3
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET Framework 4.8;;Workload;Result;11;3063425;81.32
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET Framework 4.8;;Workload;Result;12;3063425;81.3
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET Framework 4.8;;Workload;Result;13;3063425;81.33
+Strings_In;Win32NT;DllImport;StringLength_Utf8;.NET Framework 4.8;;Workload;Result;14;3063425;81.36
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 6.0;;Workload;Result;1;19165286;13.05
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 6.0;;Workload;Result;2;19165286;13.03
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 6.0;;Workload;Result;3;19165286;13.06
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 6.0;;Workload;Result;4;19165286;13.05
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 6.0;;Workload;Result;5;19165286;13.04
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 6.0;;Workload;Result;6;19165286;13.01
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 6.0;;Workload;Result;7;19165286;13.05
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 6.0;;Workload;Result;8;19165286;13.04
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 6.0;;Workload;Result;9;19165286;13.06
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 6.0;;Workload;Result;10;19165286;13.06
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 6.0;;Workload;Result;11;19165286;13.03
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 6.0;;Workload;Result;12;19165286;13.04
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 6.0;;Workload;Result;1;1808192;133.08
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 6.0;;Workload;Result;2;1808192;133.08
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 6.0;;Workload;Result;3;1808192;133.12
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 6.0;;Workload;Result;4;1808192;133.08
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 6.0;;Workload;Result;5;1808192;133.06
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 6.0;;Workload;Result;6;1808192;133.14
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 6.0;;Workload;Result;7;1808192;133.08
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 6.0;;Workload;Result;8;1808192;133.08
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 6.0;;Workload;Result;9;1808192;133.08
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 6.0;;Workload;Result;10;1808192;133.12
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 6.0;;Workload;Result;11;1808192;133.13
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 6.0;;Workload;Result;12;1808192;133.12
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 6.0;;Workload;Result;13;1808192;133.1
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 6.0;;Workload;Result;14;1808192;133.07
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 8.0;;Workload;Result;1;18764085;13.37
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 8.0;;Workload;Result;2;18764085;13.37
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 8.0;;Workload;Result;3;18764085;13.37
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 8.0;;Workload;Result;4;18764085;13.37
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 8.0;;Workload;Result;5;18764085;13.39
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 8.0;;Workload;Result;6;18764085;13.35
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 8.0;;Workload;Result;7;18764085;13.36
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 8.0;;Workload;Result;8;18764085;13.37
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 8.0;;Workload;Result;9;18764085;13.37
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 8.0;;Workload;Result;10;18764085;13.37
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 8.0;;Workload;Result;11;18764085;13.32
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 8.0;;Workload;Result;12;18764085;13.37
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 8.0;;Workload;Result;13;18764085;13.39
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 8.0;;Workload;Result;14;18764085;13.32
+Strings_In;Win32NT;FuncPointers;StringLength_Utf16;.NET 8.0;;Workload;Result;15;18764085;13.33
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 8.0;;Workload;Result;1;2183600;112.91
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 8.0;;Workload;Result;2;2183600;112.94
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 8.0;;Workload;Result;3;2183600;113.24
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 8.0;;Workload;Result;4;2183600;112.87
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 8.0;;Workload;Result;5;2183600;112.88
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 8.0;;Workload;Result;6;2183600;112.83
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 8.0;;Workload;Result;7;2183600;112.92
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 8.0;;Workload;Result;8;2183600;112.93
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 8.0;;Workload;Result;9;2183600;112.97
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 8.0;;Workload;Result;10;2183600;112.96
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 8.0;;Workload;Result;11;2183600;113.08
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 8.0;;Workload;Result;12;2183600;113.08
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 8.0;;Workload;Result;13;2183600;113.08
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 8.0;;Workload;Result;14;2183600;112.98
+Strings_In;Win32NT;FuncPointers;StringLength_Utf8;.NET 8.0;;Workload;Result;15;2183600;113.09
+Strings_In;Win32NT;LibraryImport;StringLength_Utf16;.NET 8.0;;Workload;Result;1;19138741;13.06
+Strings_In;Win32NT;LibraryImport;StringLength_Utf16;.NET 8.0;;Workload;Result;2;19138741;13.02
+Strings_In;Win32NT;LibraryImport;StringLength_Utf16;.NET 8.0;;Workload;Result;3;19138741;13.05
+Strings_In;Win32NT;LibraryImport;StringLength_Utf16;.NET 8.0;;Workload;Result;4;19138741;13.05
+Strings_In;Win32NT;LibraryImport;StringLength_Utf16;.NET 8.0;;Workload;Result;5;19138741;12.96
+Strings_In;Win32NT;LibraryImport;StringLength_Utf16;.NET 8.0;;Workload;Result;6;19138741;13.03
+Strings_In;Win32NT;LibraryImport;StringLength_Utf16;.NET 8.0;;Workload;Result;7;19138741;13.02
+Strings_In;Win32NT;LibraryImport;StringLength_Utf16;.NET 8.0;;Workload;Result;8;19138741;13.14
+Strings_In;Win32NT;LibraryImport;StringLength_Utf16;.NET 8.0;;Workload;Result;9;19138741;13.13
+Strings_In;Win32NT;LibraryImport;StringLength_Utf16;.NET 8.0;;Workload;Result;10;19138741;13.13
+Strings_In;Win32NT;LibraryImport;StringLength_Utf16;.NET 8.0;;Workload;Result;11;19138741;13.08
+Strings_In;Win32NT;LibraryImport;StringLength_Utf16;.NET 8.0;;Workload;Result;12;19138741;13.11
+Strings_In;Win32NT;LibraryImport;StringLength_Utf16;.NET 8.0;;Workload;Result;13;19138741;13.16
+Strings_In;Win32NT;LibraryImport;StringLength_Utf16;.NET 8.0;;Workload;Result;14;19138741;13.16
+Strings_In;Win32NT;LibraryImport;StringLength_Utf16;.NET 8.0;;Workload;Result;15;19138741;13.06
+Strings_In;Win32NT;LibraryImport;StringLength_Utf8;.NET 8.0;;Workload;Result;1;6814368;33.42
+Strings_In;Win32NT;LibraryImport;StringLength_Utf8;.NET 8.0;;Workload;Result;2;6814368;33.45
+Strings_In;Win32NT;LibraryImport;StringLength_Utf8;.NET 8.0;;Workload;Result;3;6814368;33.47
+Strings_In;Win32NT;LibraryImport;StringLength_Utf8;.NET 8.0;;Workload;Result;4;6814368;33.49
+Strings_In;Win32NT;LibraryImport;StringLength_Utf8;.NET 8.0;;Workload;Result;5;6814368;33.44
+Strings_In;Win32NT;LibraryImport;StringLength_Utf8;.NET 8.0;;Workload;Result;6;6814368;33.42
+Strings_In;Win32NT;LibraryImport;StringLength_Utf8;.NET 8.0;;Workload;Result;7;6814368;33.42
+Strings_In;Win32NT;LibraryImport;StringLength_Utf8;.NET 8.0;;Workload;Result;8;6814368;33.46
+Strings_In;Win32NT;LibraryImport;StringLength_Utf8;.NET 8.0;;Workload;Result;9;6814368;33.41
+Strings_In;Win32NT;LibraryImport;StringLength_Utf8;.NET 8.0;;Workload;Result;10;6814368;33.43
+Strings_In;Win32NT;LibraryImport;StringLength_Utf8;.NET 8.0;;Workload;Result;11;6814368;33.43
+Strings_In;Win32NT;LibraryImport;StringLength_Utf8;.NET 8.0;;Workload;Result;12;6814368;33.44
+Strings_In;Win32NT;LibraryImport;StringLength_Utf8;.NET 8.0;;Workload;Result;13;6814368;33.42
+Strings_In;Win32NT;LibraryImport;StringLength_Utf8;.NET 8.0;;Workload;Result;14;6814368;33.39
+Strings_In;Win32NT;LibraryImport;StringLength_Utf8;.NET 8.0;;Workload;Result;15;6814368;33.43

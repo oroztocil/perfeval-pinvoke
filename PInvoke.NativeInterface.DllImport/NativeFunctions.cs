@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Security;
 using System.Text;
 
 using PInvoke.NativeInterface.Models;
@@ -13,8 +14,19 @@ namespace PInvoke.NativeInterface.DllImport
         [DllImport(BenchLibrary.Name)]
         public static extern void Empty_Void();
 
+        [DllImport(BenchLibrary.Name, EntryPoint = "Empty_Void")]
+        [SuppressUnmanagedCodeSecurity]
+        public static extern void Empty_VoidSUCS();
+
+        [DllImport(BenchLibrary.Name, EntryPoint = "Empty_Void", SetLastError = true)]
+        public static extern void Empty_VoidSLE();
+
         [DllImport(BenchLibrary.Name)]
         public static extern void Empty_IntArray(int[] arr, int count);
+
+        [DllImport(BenchLibrary.Name, EntryPoint = "Empty_IntArray")]
+        [SuppressUnmanagedCodeSecurity]
+        public static extern void Empty_IntArraySUCS(int[] arr, int count);
 
         [DllImport(BenchLibrary.Name, EntryPoint = "Empty_IntArray")]
         internal static extern void Empty_IntArray_Fixed(IntPtr arr, int count);
@@ -30,6 +42,10 @@ namespace PInvoke.NativeInterface.DllImport
         [DllImport(BenchLibrary.Name)]
         public static extern void Empty_String([MarshalAs(UnmanagedType.LPUTF8Str)] string str);
 
+        [DllImport(BenchLibrary.Name, EntryPoint = "Empty_String")]
+        [SuppressUnmanagedCodeSecurity]
+        public static extern void Empty_StringSUCS([MarshalAs(UnmanagedType.LPUTF8Str)] string str);
+
         // Simple functions with primitive arguments
 
         [DllImport(BenchLibrary.Name)]
@@ -37,6 +53,9 @@ namespace PInvoke.NativeInterface.DllImport
 
         [DllImport(BenchLibrary.Name)]
         public static extern int MultiplyInt(int a, int b);
+
+        [DllImport(BenchLibrary.Name, EntryPoint = "MultiplyInt", SetLastError = true)]
+        public static extern int MultiplyIntSLE(int a, int b);
 
         [DllImport(BenchLibrary.Name)]
         [return: MarshalAs(UnmanagedType.U1)]

@@ -1,0 +1,395 @@
+Category;OS;Target_Type;Target_Method;Job_Runtime;Params;Measurement_IterationMode;Measurement_IterationStage;Measurement_IterationIndex;Measurement_Operations;Measurement_Value
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[1000];Workload;Result;1;23266721;10.71
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[1000];Workload;Result;2;23266721;10.71
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[1000];Workload;Result;3;23266721;10.71
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[1000];Workload;Result;4;23266721;10.71
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[1000];Workload;Result;5;23266721;10.71
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[1000];Workload;Result;6;23266721;10.71
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[1000];Workload;Result;7;23266721;10.71
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[1000];Workload;Result;8;23266721;10.71
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[1000];Workload;Result;9;23266721;10.71
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[1000];Workload;Result;10;23266721;10.71
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[1000];Workload;Result;11;23266721;10.71
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[1000];Workload;Result;12;23266721;10.71
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[1000];Workload;Result;1;24145896;10.36
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[1000];Workload;Result;2;24145896;10.36
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[1000];Workload;Result;3;24145896;10.36
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[1000];Workload;Result;4;24145896;10.36
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[1000];Workload;Result;5;24145896;10.36
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[1000];Workload;Result;6;24145896;10.36
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[1000];Workload;Result;7;24145896;10.36
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[1000];Workload;Result;8;24145896;10.37
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[1000];Workload;Result;9;24145896;10.36
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[1000];Workload;Result;10;24145896;10.36
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[1000];Workload;Result;11;24145896;10.36
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[1000];Workload;Result;12;24145896;10.36
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[1000];Workload;Result;1;16422710;15.23
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[1000];Workload;Result;2;16422710;15.37
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[1000];Workload;Result;3;16422710;15.8
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[1000];Workload;Result;4;16422710;15.47
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[1000];Workload;Result;5;16422710;15.45
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[1000];Workload;Result;6;16422710;15.52
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[1000];Workload;Result;7;16422710;15.45
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[1000];Workload;Result;8;16422710;15.68
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[1000];Workload;Result;9;16422710;15.53
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[1000];Workload;Result;10;16422710;15.41
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[1000];Workload;Result;11;16422710;15.72
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[1000];Workload;Result;12;16422710;15.42
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[1000];Workload;Result;13;16422710;15.39
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[1000];Workload;Result;14;16422710;15.38
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[10];Workload;Result;1;23119776;8.75
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[10];Workload;Result;2;23119776;8.77
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[10];Workload;Result;3;23119776;8.76
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[10];Workload;Result;4;23119776;8.75
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[10];Workload;Result;5;23119776;8.76
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[10];Workload;Result;6;23119776;8.84
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[10];Workload;Result;7;23119776;8.75
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[10];Workload;Result;8;23119776;8.75
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[10];Workload;Result;9;23119776;8.84
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[10];Workload;Result;10;23119776;8.76
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[10];Workload;Result;11;23119776;8.75
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[10];Workload;Result;12;23119776;8.79
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[10];Workload;Result;13;23119776;8.79
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 6.0;input=Int32[10];Workload;Result;14;23119776;8.76
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[10];Workload;Result;1;23785424;8.28
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[10];Workload;Result;2;23785424;8.28
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[10];Workload;Result;3;23785424;8.27
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[10];Workload;Result;4;23785424;8.28
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[10];Workload;Result;5;23785424;8.28
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[10];Workload;Result;6;23785424;8.28
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[10];Workload;Result;7;23785424;8.29
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[10];Workload;Result;8;23785424;8.27
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[10];Workload;Result;9;23785424;8.27
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[10];Workload;Result;10;23785424;8.28
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[10];Workload;Result;11;23785424;8.27
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[10];Workload;Result;12;23785424;8.27
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET 8.0;input=Int32[10];Workload;Result;13;23785424;8.27
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[10];Workload;Result;1;16251296;13.3
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[10];Workload;Result;2;16251296;13.31
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[10];Workload;Result;3;16251296;13.3
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[10];Workload;Result;4;16251296;13.3
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[10];Workload;Result;5;16251296;13.3
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[10];Workload;Result;6;16251296;13.3
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[10];Workload;Result;7;16251296;13.3
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[10];Workload;Result;8;16251296;13.31
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[10];Workload;Result;9;16251296;13.3
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[10];Workload;Result;10;16251296;13.3
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[10];Workload;Result;11;16251296;13.3
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[10];Workload;Result;12;16251296;13.31
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[10];Workload;Result;13;16251296;13.3
+Arrays_Empty_In;Win32NT;DllImport;Empty_IntArray_ByValue;.NET Framework 4.8;input=Int32[10];Workload;Result;14;16251296;13.3
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 6.0;;Workload;Result;1;5679840;41.64
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 6.0;;Workload;Result;2;5679840;41.65
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 6.0;;Workload;Result;3;5679840;41.63
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 6.0;;Workload;Result;4;5679840;41.61
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 6.0;;Workload;Result;5;5679840;41.65
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 6.0;;Workload;Result;6;5679840;41.67
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 6.0;;Workload;Result;7;5679840;41.68
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 6.0;;Workload;Result;8;5679840;41.66
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 6.0;;Workload;Result;9;5679840;41.65
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 6.0;;Workload;Result;10;5679840;41.67
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 6.0;;Workload;Result;11;5679840;41.64
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 6.0;;Workload;Result;12;5679840;41.64
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 6.0;;Workload;Result;13;5679840;41.59
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 6.0;;Workload;Result;1;27575008;7.01
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 6.0;;Workload;Result;2;27575008;7.01
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 6.0;;Workload;Result;3;27575008;7.01
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 6.0;;Workload;Result;4;27575008;7.01
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 6.0;;Workload;Result;5;27575008;7.01
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 6.0;;Workload;Result;6;27575008;7.01
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 6.0;;Workload;Result;7;27575008;7.01
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 6.0;;Workload;Result;8;27575008;7.01
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 6.0;;Workload;Result;9;27575008;7.01
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 6.0;;Workload;Result;10;27575008;7.01
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 6.0;;Workload;Result;11;27575008;7.01
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 6.0;;Workload;Result;12;27575008;7.01
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 8.0;;Workload;Result;1;6523616;34.6
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 8.0;;Workload;Result;2;6523616;34.84
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 8.0;;Workload;Result;3;6523616;34.87
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 8.0;;Workload;Result;4;6523616;34.87
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 8.0;;Workload;Result;5;6523616;34.89
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 8.0;;Workload;Result;6;6523616;34.89
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 8.0;;Workload;Result;7;6523616;34.87
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 8.0;;Workload;Result;8;6523616;34.88
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 8.0;;Workload;Result;9;6523616;34.89
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 8.0;;Workload;Result;10;6523616;34.9
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 8.0;;Workload;Result;11;6523616;34.89
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 8.0;;Workload;Result;12;6523616;34.87
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET 8.0;;Workload;Result;13;6523616;34.85
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 8.0;;Workload;Result;1;27555984;6.85
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 8.0;;Workload;Result;2;27555984;6.85
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 8.0;;Workload;Result;3;27555984;6.85
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 8.0;;Workload;Result;4;27555984;6.85
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 8.0;;Workload;Result;5;27555984;6.85
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 8.0;;Workload;Result;6;27555984;6.85
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 8.0;;Workload;Result;7;27555984;6.85
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 8.0;;Workload;Result;8;27555984;6.85
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 8.0;;Workload;Result;9;27555984;6.85
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 8.0;;Workload;Result;10;27555984;6.85
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 8.0;;Workload;Result;11;27555984;6.85
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 8.0;;Workload;Result;12;27555984;6.85
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET 8.0;;Workload;Result;13;27555984;6.85
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET Framework 4.8;;Workload;Result;1;3407520;70.72
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET Framework 4.8;;Workload;Result;2;3407520;70.95
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET Framework 4.8;;Workload;Result;3;3407520;70.97
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET Framework 4.8;;Workload;Result;4;3407520;71.04
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET Framework 4.8;;Workload;Result;5;3407520;71.01
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET Framework 4.8;;Workload;Result;6;3407520;70.95
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET Framework 4.8;;Workload;Result;7;3407520;70.96
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET Framework 4.8;;Workload;Result;8;3407520;70.98
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET Framework 4.8;;Workload;Result;9;3407520;70.99
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET Framework 4.8;;Workload;Result;10;3407520;71
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET Framework 4.8;;Workload;Result;11;3407520;70.98
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET Framework 4.8;;Workload;Result;12;3407520;71.05
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET Framework 4.8;;Workload;Result;13;3407520;70.91
+SUCS;Win32NT;DllImport;Empty_StringSUCS;.NET Framework 4.8;;Workload;Result;14;3407520;70.96
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET Framework 4.8;;Workload;Result;1;23879744;8.49
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET Framework 4.8;;Workload;Result;2;23879744;8.49
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET Framework 4.8;;Workload;Result;3;23879744;8.49
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET Framework 4.8;;Workload;Result;4;23879744;8.49
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET Framework 4.8;;Workload;Result;5;23879744;8.49
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET Framework 4.8;;Workload;Result;6;23879744;8.49
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET Framework 4.8;;Workload;Result;7;23879744;8.49
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET Framework 4.8;;Workload;Result;8;23879744;8.49
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET Framework 4.8;;Workload;Result;9;23879744;8.49
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET Framework 4.8;;Workload;Result;10;23879744;8.49
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET Framework 4.8;;Workload;Result;11;23879744;8.49
+SUCS;Win32NT;DllImport;Empty_VoidSUCS;.NET Framework 4.8;;Workload;Result;12;23879744;8.49
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[1000];Workload;Result;1;23100480;8.79
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[1000];Workload;Result;2;23100480;8.76
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[1000];Workload;Result;3;23100480;8.75
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[1000];Workload;Result;4;23100480;8.75
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[1000];Workload;Result;5;23100480;8.78
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[1000];Workload;Result;6;23100480;8.75
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[1000];Workload;Result;7;23100480;8.75
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[1000];Workload;Result;8;23100480;8.75
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[1000];Workload;Result;9;23100480;8.79
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[1000];Workload;Result;10;23100480;8.75
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[1000];Workload;Result;11;23100480;8.8
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[1000];Workload;Result;12;23100480;8.75
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[1000];Workload;Result;13;23100480;8.76
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[1000];Workload;Result;14;23100480;8.75
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[1000];Workload;Result;15;23100480;8.75
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[1000];Workload;Result;1;23640608;8.27
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[1000];Workload;Result;2;23640608;8.27
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[1000];Workload;Result;3;23640608;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[1000];Workload;Result;4;23640608;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[1000];Workload;Result;5;23640608;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[1000];Workload;Result;6;23640608;8.29
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[1000];Workload;Result;7;23640608;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[1000];Workload;Result;8;23640608;8.29
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[1000];Workload;Result;9;23640608;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[1000];Workload;Result;10;23640608;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[1000];Workload;Result;11;23640608;8.27
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[1000];Workload;Result;12;23640608;8.27
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[1000];Workload;Result;13;23640608;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[1000];Workload;Result;1;20465072;10.13
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[1000];Workload;Result;2;20465072;10.14
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[1000];Workload;Result;3;20465072;10.13
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[1000];Workload;Result;4;20465072;10.13
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[1000];Workload;Result;5;20465072;10.13
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[1000];Workload;Result;6;20465072;10.13
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[1000];Workload;Result;7;20465072;10.13
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[1000];Workload;Result;8;20465072;10.13
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[1000];Workload;Result;9;20465072;10.13
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[1000];Workload;Result;10;20465072;10.13
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[1000];Workload;Result;11;20465072;10.13
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[1000];Workload;Result;12;20465072;10.13
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[1000];Workload;Result;13;20465072;10.13
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[10];Workload;Result;1;23124736;8.76
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[10];Workload;Result;2;23124736;8.76
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[10];Workload;Result;3;23124736;8.77
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[10];Workload;Result;4;23124736;8.76
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[10];Workload;Result;5;23124736;8.75
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[10];Workload;Result;6;23124736;8.75
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[10];Workload;Result;7;23124736;8.78
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[10];Workload;Result;8;23124736;8.74
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[10];Workload;Result;9;23124736;8.74
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[10];Workload;Result;10;23124736;8.74
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[10];Workload;Result;11;23124736;8.74
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[10];Workload;Result;12;23124736;8.74
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[10];Workload;Result;13;23124736;8.74
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 6.0;input=Int32[10];Workload;Result;14;23124736;8.74
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[10];Workload;Result;1;23857536;8.29
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[10];Workload;Result;2;23857536;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[10];Workload;Result;3;23857536;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[10];Workload;Result;4;23857536;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[10];Workload;Result;5;23857536;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[10];Workload;Result;6;23857536;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[10];Workload;Result;7;23857536;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[10];Workload;Result;8;23857536;8.29
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[10];Workload;Result;9;23857536;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[10];Workload;Result;10;23857536;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[10];Workload;Result;11;23857536;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET 8.0;input=Int32[10];Workload;Result;12;23857536;8.28
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[10];Workload;Result;1;17814496;10.16
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[10];Workload;Result;2;17814496;10.17
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[10];Workload;Result;3;17814496;10.17
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[10];Workload;Result;4;17814496;10.15
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[10];Workload;Result;5;17814496;10.17
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[10];Workload;Result;6;17814496;10.13
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[10];Workload;Result;7;17814496;10.18
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[10];Workload;Result;8;17814496;10.16
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[10];Workload;Result;9;17814496;10.14
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[10];Workload;Result;10;17814496;10.16
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[10];Workload;Result;11;17814496;10.12
+SUCS;Win32NT;DllImport;Empty_IntArraySUCS;.NET Framework 4.8;input=Int32[10];Workload;Result;12;17814496;10.18
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 6.0;;Workload;Result;1;5383696;41.87
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 6.0;;Workload;Result;2;5383696;41.99
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 6.0;;Workload;Result;3;5383696;42.11
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 6.0;;Workload;Result;4;5383696;42.4
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 6.0;;Workload;Result;5;5383696;41.86
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 6.0;;Workload;Result;6;5383696;41.89
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 6.0;;Workload;Result;7;5383696;42.11
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 6.0;;Workload;Result;8;5383696;41.9
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 6.0;;Workload;Result;9;5383696;42.95
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 6.0;;Workload;Result;10;5383696;42.35
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 6.0;;Workload;Result;11;5383696;42.34
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 6.0;;Workload;Result;12;5383696;43.51
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 6.0;;Workload;Result;13;5383696;43.56
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 6.0;;Workload;Result;14;5383696;42
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 8.0;;Workload;Result;1;6456592;34.64
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 8.0;;Workload;Result;2;6456592;35.12
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 8.0;;Workload;Result;3;6456592;35
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 8.0;;Workload;Result;4;6456592;35.16
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 8.0;;Workload;Result;5;6456592;34.99
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 8.0;;Workload;Result;6;6456592;34.62
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 8.0;;Workload;Result;7;6456592;34.71
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 8.0;;Workload;Result;8;6456592;34.63
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 8.0;;Workload;Result;9;6456592;34.93
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 8.0;;Workload;Result;10;6456592;34.7
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 8.0;;Workload;Result;11;6456592;34.84
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 8.0;;Workload;Result;12;6456592;34.61
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 8.0;;Workload;Result;13;6456592;34.65
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 8.0;;Workload;Result;14;6456592;34.61
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET 8.0;;Workload;Result;15;6456592;34.54
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET Framework 4.8;;Workload;Result;1;3219552;74.6
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET Framework 4.8;;Workload;Result;2;3219552;74.98
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET Framework 4.8;;Workload;Result;3;3219552;75.28
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET Framework 4.8;;Workload;Result;4;3219552;74.57
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET Framework 4.8;;Workload;Result;5;3219552;74.69
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET Framework 4.8;;Workload;Result;6;3219552;74.62
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET Framework 4.8;;Workload;Result;7;3219552;74.85
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET Framework 4.8;;Workload;Result;8;3219552;74.68
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET Framework 4.8;;Workload;Result;9;3219552;74.62
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET Framework 4.8;;Workload;Result;10;3219552;76.94
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET Framework 4.8;;Workload;Result;11;3219552;74.41
+Strings_Empty_In;Win32NT;DllImport;Empty_String;.NET Framework 4.8;;Workload;Result;12;3219552;76.67
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;1;24903536;7.94
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;2;24903536;7.92
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;3;24903536;7.38
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;4;24903536;8.62
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;5;24903536;6.98
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;6;24903536;7.03
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;7;24903536;7.91
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;8;24903536;7.13
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;9;24903536;7.79
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;10;24903536;6.75
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;11;24903536;7.89
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;12;24903536;7.94
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;13;24903536;6.77
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;14;24903536;6.77
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;15;24903536;6.77
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;16;24903536;6.75
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;17;24903536;6.75
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;18;24903536;7.32
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;19;24903536;7.64
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;20;24903536;7.36
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;21;24903536;7.63
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;22;24903536;7.8
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;23;24903536;6.8
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;24;24903536;8.01
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;25;24903536;7.75
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;26;24903536;8.61
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;27;24903536;6.86
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;28;24903536;7.49
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;29;24903536;7.98
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;30;24903536;8.57
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;31;24903536;7.09
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;32;24903536;7.65
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;33;24903536;8.66
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;34;24903536;7.9
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;35;24903536;7.5
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;36;24903536;7.99
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;37;24903536;8.21
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;38;24903536;7.03
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;39;24903536;7.07
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;40;24903536;7.54
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;41;24903536;9.05
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;42;24903536;7.67
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;43;24903536;7.16
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;44;24903536;8.4
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;45;24903536;7.62
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;46;24903536;7.5
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;47;24903536;7.41
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;48;24903536;7.68
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;49;24903536;7.88
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;50;24903536;7.4
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;51;24903536;7.62
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;52;24903536;7.14
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;53;24903536;8.26
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;54;24903536;7.14
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;55;24903536;7.42
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;56;24903536;6.86
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;57;24903536;7.57
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;58;24903536;7.87
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;59;24903536;7.92
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;60;24903536;8.33
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;61;24903536;7.54
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;62;24903536;7.21
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;63;24903536;8.14
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;64;24903536;7.17
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;65;24903536;7.93
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;66;24903536;8.29
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;67;24903536;7.35
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;68;24903536;6.95
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;69;24903536;6.76
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;70;24903536;6.74
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;71;24903536;6.73
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;72;24903536;6.81
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;73;24903536;7.22
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;74;24903536;6.92
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;75;24903536;7.15
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;76;24903536;7.04
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;77;24903536;7.46
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;78;24903536;6.92
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;79;24903536;7.59
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;80;24903536;7.41
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;81;24903536;7.46
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;82;24903536;7.02
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;83;24903536;7.65
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;84;24903536;8.29
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;85;24903536;7.59
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;86;24903536;8.09
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;87;24903536;6.93
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;88;24903536;7.29
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;89;24903536;6.81
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;90;24903536;7.43
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;91;24903536;7.44
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 6.0;;Workload;Result;92;24903536;7.47
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;1;27500592;6.85
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;2;27500592;6.84
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;3;27500592;6.92
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;4;27500592;6.92
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;5;27500592;6.9
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;6;27500592;6.91
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;7;27500592;6.85
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;8;27500592;6.85
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;9;27500592;6.86
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;10;27500592;6.85
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;11;27500592;6.86
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;12;27500592;6.89
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET 8.0;;Workload;Result;13;27500592;6.85
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;1;17398400;13.42
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;2;17398400;13.41
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;3;17398400;13.4
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;4;17398400;13.41
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;5;17398400;13.48
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;6;17398400;13.39
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;7;17398400;13.5
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;8;17398400;13.4
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;9;17398400;13.41
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;10;17398400;13.38
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;11;17398400;13.4
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;12;17398400;13.41
+Void_Empty;Win32NT;DllImport;Empty_Void;.NET Framework 4.8;;Workload;Result;13;17398400;13.39

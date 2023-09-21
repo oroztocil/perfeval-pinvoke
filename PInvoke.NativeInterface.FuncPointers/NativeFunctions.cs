@@ -30,7 +30,7 @@ namespace PInvoke.NativeInterface.FuncPointers
         public static void Empty_Void() =>
             ((delegate* unmanaged<void>)ptr_Empty_Void)();
 
-        public static void Empty_Void_SGCT() =>
+        public static void Empty_VoidSGCT() =>
             ((delegate* unmanaged[SuppressGCTransition]<void>)ptr_Empty_Void)();
 
 
@@ -42,7 +42,7 @@ namespace PInvoke.NativeInterface.FuncPointers
             }
         }
 
-        public static void Empty_IntArray_SGCT(int[] arr, int count)
+        public static void Empty_IntArraySGCT(int[] arr, int count)
         {
             fixed (int* arrPtr = arr)
             {
@@ -60,7 +60,7 @@ namespace PInvoke.NativeInterface.FuncPointers
             }
         }
 
-        public static void Empty_String_SGCT(string str)
+        public static void Empty_StringSGCT(string str)
         {
             var bytes = Encoding.UTF8.GetBytes(str);
 

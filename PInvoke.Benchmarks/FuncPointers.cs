@@ -1,5 +1,4 @@
 ﻿using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Engines;
 using BenchmarkDotNet.Jobs;
 
 using PInvoke.NativeInterface.FuncPointers;
@@ -18,25 +17,21 @@ namespace PInvoke.Benchmarks
 
         [Benchmark]
         [BenchmarkCategory(Categories.SGCT)]
-        public void Empty_Void_SGCT() => NativeFunctions.Empty_Void_SGCT();
+        public void Empty_VoidSGCT() => NativeFunctions.Empty_VoidSGCT();
 
         [Benchmark]
-        [BenchmarkCategory(Categories.Arrays_Empty_In)]
+        [BenchmarkCategory(Categories.Arrays_Empty_In, Categories.SGCT)]
         [ArgumentsSource(nameof(RandomIntArrays))]
-        public void Empty_IntArray(int[] input) => NativeFunctions.Empty_IntArray(input, input.Length);
+        public void Empty_IntArray_Fixed(int[] input) => NativeFunctions.Empty_IntArray(input, input.Length);
 
         [Benchmark]
         [BenchmarkCategory(Categories.SGCT)]
         [ArgumentsSource(nameof(RandomIntArrays))]
-        public void Empty_IntArray_SGCT(int[] input) => NativeFunctions.Empty_IntArray_SGCT(input, input.Length);
+        public void Empty_IntArray_FixedSGCT(int[] input) => NativeFunctions.Empty_IntArraySGCT(input, input.Length);
 
         [Benchmark]
         [BenchmarkCategory(Categories.Strings_Empty_In)]
         public void Empty_String() => NativeFunctions.Empty_String(Data.NonAsciiString);
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.SGCT)]
-        public void Empty_String_SGCT() => NativeFunctions.Empty_String_SGCT(Data.NonAsciiString);
 
         [Benchmark]
         [BenchmarkCategory(Categories.Primitive_Int_Out)]
@@ -45,10 +40,6 @@ namespace PInvoke.Benchmarks
         [Benchmark]
         [BenchmarkCategory(Categories.Primitive_Int_InOut)]
         public int MultiplyInt() => NativeFunctions.MultiplyInt(1234, 4321);
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.SGCT)]
-        public int MultiplyInt_SGCT() => NativeFunctions.MultiplyInt_SGCT(1234, 4321);
 
         [Benchmark]
         [BenchmarkCategory(Categories.Primitive_Bool_InOut)]
@@ -62,12 +53,12 @@ namespace PInvoke.Benchmarks
         [Benchmark]
         [BenchmarkCategory(Categories.Arrays_InOut)]
         [ArgumentsSource(nameof(EmptyIntArrays))]
-        public void FillIntArray(int[] input) => NativeFunctions.FillIntArray(input, input.Length);
+        public void FillIntArray_Fixed(int[] input) => NativeFunctions.FillIntArray(input, input.Length);
 
         [Benchmark]
         [BenchmarkCategory(Categories.Arrays_InOut)]
         [ArgumentsSource(nameof(EmptyIntArrays))]
-        public void FillIntArray_PinnedHandle(int[] input) => NativeFunctions.FillIntArray_Pinned(input, input.Length);
+        public void FillIntArray_Pinned(int[] input) => NativeFunctions.FillIntArray_Pinned(input, input.Length);
 
         [Benchmark]
         [BenchmarkCategory(Categories.Strings_In)]

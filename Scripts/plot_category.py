@@ -21,9 +21,9 @@ def load_results_file(run_dir: str) -> pd.DataFrame:
     df = pd.read_csv(file, delimiter=";")
     return df
 
-
-def make_barplot(df: pd.DataFrame, unit: str, title: str):
-    grouped_df = df.groupby(["Target_Type", "Target_Method", "Job_Runtime"])
+def make_barplot(input_df: pd.DataFrame, category: str | None, unit: str, title: str):
+    category_df = input_df if category is None else input_df.query(f"Category == '{category}'")
+    grouped_df = category_df.groupby(["Target_Type", "Target_Method", "Job_Runtime"])
 
     items = []
     methods = {
@@ -52,20 +52,20 @@ def make_barplot(df: pd.DataFrame, unit: str, title: str):
     method_total = sum(map(len, methods.values()))
     method_ratios = list(map(lambda x: len(x) / method_total, methods.values()))
 
-    df = pd.DataFrame(items)
+    input_df = pd.DataFrame(items)
 
     fig, ax = plt.subplots(1, 3, sharey=True, gridspec_kw={'width_ratios': method_ratios})
     fig.suptitle(title, fontsize=16, fontweight="bold")
     fig.supylabel(f"Mean execution time ({unit})", fontsize=12)
 
     for i, runtime in [(0, ".NET 4.8"), (1, ".NET 6.0"), (2, ".NET 8.0")]:
-        _df = df[df.Runtime == runtime]
+        _df = input_df[input_df.Runtime == runtime]
         sns.barplot(
             ax=ax[i],
             data=_df,
             x="Type", y="Value",
             palette=color_map,
-            # saturation=0.9
+            saturation=1.0
         )
 
         ax[i].bar_label(ax[i].containers[0], fmt='%.2f', label_type="center")
@@ -78,7 +78,7 @@ def make_barplot(df: pd.DataFrame, unit: str, title: str):
 
 def main(argv):
     input_df = load_results_file(argv[0])
-    make_barplot(input_df, argv[1], argv[2])
+    make_barplot(input_df, argv[1], argv[2], argv[3])
 
 
 if __name__ == "__main__":

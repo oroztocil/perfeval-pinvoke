@@ -15,5 +15,7 @@ internal static class Categories
     public const string Structs_Blittable = nameof(Structs_Blittable);
     public const string Structs_NonBlittable = nameof(Structs_NonBlittable);
     public const string SGCT = nameof(SGCT);
+    public const string SUCS = nameof(SUCS);
+    public const string SLE = nameof(SLE);
     public const string CS = nameof(CS);
 }

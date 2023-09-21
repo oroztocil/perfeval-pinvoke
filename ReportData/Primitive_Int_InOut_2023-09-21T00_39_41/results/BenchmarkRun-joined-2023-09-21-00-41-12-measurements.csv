@@ -1,0 +1,129 @@
+Category;OS;Target_Type;Target_Method;Job_Runtime;Params;Measurement_IterationMode;Measurement_IterationStage;Measurement_IterationIndex;Measurement_Operations;Measurement_Value
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 6.0;;Workload;Result;1;26528169;9.42
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 6.0;;Workload;Result;2;26528169;9.42
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 6.0;;Workload;Result;3;26528169;9.42
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 6.0;;Workload;Result;4;26528169;9.43
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 6.0;;Workload;Result;5;26528169;9.43
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 6.0;;Workload;Result;6;26528169;9.42
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 6.0;;Workload;Result;7;26528169;9.42
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 6.0;;Workload;Result;8;26528169;9.43
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 6.0;;Workload;Result;9;26528169;9.42
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 6.0;;Workload;Result;10;26528169;9.43
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 6.0;;Workload;Result;11;26528169;9.42
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 6.0;;Workload;Result;12;26528169;9.43
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 6.0;;Workload;Result;13;26528169;9.43
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 6.0;;Workload;Result;14;26528169;9.43
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 8.0;;Workload;Result;1;26521436;9.43
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 8.0;;Workload;Result;2;26521436;9.43
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 8.0;;Workload;Result;3;26521436;9.45
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 8.0;;Workload;Result;4;26521436;9.43
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 8.0;;Workload;Result;5;26521436;9.44
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 8.0;;Workload;Result;6;26521436;9.43
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 8.0;;Workload;Result;7;26521436;9.42
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 8.0;;Workload;Result;8;26521436;9.43
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 8.0;;Workload;Result;9;26521436;9.43
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 8.0;;Workload;Result;10;26521436;9.42
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 8.0;;Workload;Result;11;26521436;9.43
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 8.0;;Workload;Result;12;26521436;9.43
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET 8.0;;Workload;Result;13;26521436;9.44
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET Framework 4.8;;Workload;Result;1;17006753;14.71
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET Framework 4.8;;Workload;Result;2;17006753;14.7
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET Framework 4.8;;Workload;Result;3;17006753;14.7
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET Framework 4.8;;Workload;Result;4;17006753;14.7
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET Framework 4.8;;Workload;Result;5;17006753;14.7
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET Framework 4.8;;Workload;Result;6;17006753;14.7
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET Framework 4.8;;Workload;Result;7;17006753;14.7
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET Framework 4.8;;Workload;Result;8;17006753;14.71
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET Framework 4.8;;Workload;Result;9;17006753;14.7
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET Framework 4.8;;Workload;Result;10;17006753;14.7
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET Framework 4.8;;Workload;Result;11;17006753;14.7
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET Framework 4.8;;Workload;Result;12;17006753;14.7
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET Framework 4.8;;Workload;Result;13;17006753;14.69
+Primitive_Int_InOut;Win32NT;DllImport;MultiplyInt;.NET Framework 4.8;;Workload;Result;14;17006753;14.7
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 6.0;;Workload;Result;1;27552664;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 6.0;;Workload;Result;2;27552664;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 6.0;;Workload;Result;3;27552664;9.08
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 6.0;;Workload;Result;4;27552664;9.08
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 6.0;;Workload;Result;5;27552664;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 6.0;;Workload;Result;6;27552664;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 6.0;;Workload;Result;7;27552664;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 6.0;;Workload;Result;8;27552664;9.08
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 6.0;;Workload;Result;9;27552664;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 6.0;;Workload;Result;10;27552664;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 6.0;;Workload;Result;11;27552664;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 6.0;;Workload;Result;12;27552664;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 6.0;;Workload;Result;13;27552664;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 6.0;;Workload;Result;14;27552664;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 6.0;;Workload;Result;15;27552664;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 8.0;;Workload;Result;1;27545365;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 8.0;;Workload;Result;2;27545365;9.08
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 8.0;;Workload;Result;3;27545365;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 8.0;;Workload;Result;4;27545365;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 8.0;;Workload;Result;5;27545365;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 8.0;;Workload;Result;6;27545365;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 8.0;;Workload;Result;7;27545365;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 8.0;;Workload;Result;8;27545365;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 8.0;;Workload;Result;9;27545365;9.08
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 8.0;;Workload;Result;10;27545365;9.08
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 8.0;;Workload;Result;11;27545365;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 8.0;;Workload;Result;12;27545365;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 8.0;;Workload;Result;13;27545365;9.07
+Primitive_Int_InOut;Win32NT;FuncPointers;MultiplyInt;.NET 8.0;;Workload;Result;14;27545365;9.08
+Primitive_Int_InOut;Win32NT;LibraryImport;MultiplyInt;.NET 8.0;;Workload;Result;1;26549154;9.42
+Primitive_Int_InOut;Win32NT;LibraryImport;MultiplyInt;.NET 8.0;;Workload;Result;2;26549154;9.42
+Primitive_Int_InOut;Win32NT;LibraryImport;MultiplyInt;.NET 8.0;;Workload;Result;3;26549154;9.43
+Primitive_Int_InOut;Win32NT;LibraryImport;MultiplyInt;.NET 8.0;;Workload;Result;4;26549154;9.42
+Primitive_Int_InOut;Win32NT;LibraryImport;MultiplyInt;.NET 8.0;;Workload;Result;5;26549154;9.42
+Primitive_Int_InOut;Win32NT;LibraryImport;MultiplyInt;.NET 8.0;;Workload;Result;6;26549154;9.42
+Primitive_Int_InOut;Win32NT;LibraryImport;MultiplyInt;.NET 8.0;;Workload;Result;7;26549154;9.42
+Primitive_Int_InOut;Win32NT;LibraryImport;MultiplyInt;.NET 8.0;;Workload;Result;8;26549154;9.42
+Primitive_Int_InOut;Win32NT;LibraryImport;MultiplyInt;.NET 8.0;;Workload;Result;9;26549154;9.42
+Primitive_Int_InOut;Win32NT;LibraryImport;MultiplyInt;.NET 8.0;;Workload;Result;10;26549154;9.42
+Primitive_Int_InOut;Win32NT;LibraryImport;MultiplyInt;.NET 8.0;;Workload;Result;11;26549154;9.42
+Primitive_Int_InOut;Win32NT;LibraryImport;MultiplyInt;.NET 8.0;;Workload;Result;12;26549154;9.43
+Primitive_Int_InOut;Win32NT;LibraryImport;MultiplyInt;.NET 8.0;;Workload;Result;13;26549154;9.42
+Primitive_Int_InOut;Win32NT;LibraryImport;MultiplyInt;.NET 8.0;;Workload;Result;14;26549154;9.42
+Primitive_Int_InOut;Win32NT;LibraryImport;MultiplyInt;.NET 8.0;;Workload;Result;15;26549154;9.42
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 6.0;;Workload;Result;1;89776544;0.72
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 6.0;;Workload;Result;2;89776544;0.72
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 6.0;;Workload;Result;3;89776544;0.72
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 6.0;;Workload;Result;4;89776544;0.72
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 6.0;;Workload;Result;5;89776544;0.72
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 6.0;;Workload;Result;6;89776544;0.72
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 6.0;;Workload;Result;7;89776544;0.72
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 6.0;;Workload;Result;8;89776544;0.72
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 6.0;;Workload;Result;9;89776544;0.72
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 6.0;;Workload;Result;10;89776544;0.72
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 6.0;;Workload;Result;11;89776544;0.72
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 6.0;;Workload;Result;12;89776544;0.72
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 6.0;;Workload;Result;13;89776544;0.72
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 6.0;;Workload;Result;14;89776544;0.72
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 8.0;;Workload;Result;1;86173184;0.7
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 8.0;;Workload;Result;2;86173184;0.7
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 8.0;;Workload;Result;3;86173184;0.7
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 8.0;;Workload;Result;4;86173184;0.7
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 8.0;;Workload;Result;5;86173184;0.7
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 8.0;;Workload;Result;6;86173184;0.7
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 8.0;;Workload;Result;7;86173184;0.7
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 8.0;;Workload;Result;8;86173184;0.7
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 8.0;;Workload;Result;9;86173184;0.7
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 8.0;;Workload;Result;10;86173184;0.7
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 8.0;;Workload;Result;11;86173184;0.7
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 8.0;;Workload;Result;12;86173184;0.7
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 8.0;;Workload;Result;13;86173184;0.7
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 8.0;;Workload;Result;14;86173184;0.7
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET 8.0;;Workload;Result;15;86173184;0.7
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET Framework 4.8;;Workload;Result;1;81896288;0.99
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET Framework 4.8;;Workload;Result;2;81896288;0.99
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET Framework 4.8;;Workload;Result;3;81896288;0.99
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET Framework 4.8;;Workload;Result;4;81896288;0.99
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET Framework 4.8;;Workload;Result;5;81896288;0.99
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET Framework 4.8;;Workload;Result;6;81896288;0.99
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET Framework 4.8;;Workload;Result;7;81896288;0.99
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET Framework 4.8;;Workload;Result;8;81896288;0.99
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET Framework 4.8;;Workload;Result;9;81896288;0.99
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET Framework 4.8;;Workload;Result;10;81896288;0.99
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET Framework 4.8;;Workload;Result;11;81896288;0.99
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET Framework 4.8;;Workload;Result;12;81896288;0.99
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET Framework 4.8;;Workload;Result;13;81896288;0.99
+Primitive_Int_InOut;Win32NT;Managed;MultiplyInt;.NET Framework 4.8;;Workload;Result;14;81896288;0.99
