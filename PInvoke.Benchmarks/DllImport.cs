@@ -65,12 +65,6 @@ namespace PInvoke.Benchmarks
         [Benchmark]
         [BenchmarkCategory(Categories.Arrays_InOut)]
         [ArgumentsSource(nameof(EmptyIntArrays))]
-        public void FillIntArray_OutAttr(int[] input) => NativeFunctions.FillIntArray_OutAttr(input, input.Length);
-
-
-        [Benchmark]
-        [BenchmarkCategory(Categories.Arrays_InOut)]
-        [ArgumentsSource(nameof(EmptyIntArrays))]
         public void FillIntArray_Pinned(int[] input) => NativeFunctions.FillIntArray_Pinned(input, input.Length);
 
         [Benchmark]

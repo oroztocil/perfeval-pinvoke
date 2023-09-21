@@ -70,9 +70,6 @@ namespace PInvoke.NativeInterface.DllImport
         public static extern void FillIntArray(int[] arr, int count);
 
         [DllImport(BenchLibrary.Name, EntryPoint = "FillIntArray")]
-        public static extern void FillIntArray_OutAttr([Out] int[] arr, int count);
-
-        [DllImport(BenchLibrary.Name, EntryPoint = "FillIntArray")]
         internal static extern void FillIntArray_Ptr(IntPtr arr, int count);
 
         public static void FillIntArray_Pinned(int[] arr, int count)

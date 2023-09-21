@@ -47,9 +47,13 @@ def make_barplot(input_df: pd.DataFrame, title, unit, category = None, param = N
         case = f"{type}-{method}"
         methods[runtime_version].add(case)
 
+        method_parts = method.split("_")
+        bar = type if len(method_parts) < 2 else f"{type}\n({method_parts[-1]})"
+        color_map[bar] = color_map[type]
+
         for val in data["Measurement_Value"].to_list():
             items.append({
-                "Type": type,
+                "Type": bar,
                 "Runtime": runtime_version,
                 "Value": val if unit == "ns" else val / 1000.0 / 1000.0,
                 "Order": order_map[type],
@@ -69,13 +73,16 @@ def make_barplot(input_df: pd.DataFrame, title, unit, category = None, param = N
 
     for i, runtime in [(0, ".NET 4.8"), (1, ".NET 6.0"), (2, ".NET 8.0")]:
         _df = input_df[input_df.Runtime == runtime]
-        sns.barplot(
+        plot = sns.barplot(
             ax=ax[i],
             data=_df,
             x="Type", y="Value",
             palette=color_map,
             saturation=1.0
         )
+
+        if method_total > 10:
+            plot.set_xticklabels(plot.get_xticklabels(), rotation=45, fontsize=9)
 
         ax[i].bar_label(ax[i].containers[0], fmt='%.2f', label_type="center")
         ax[i].set_xlabel("")
@@ -91,8 +98,9 @@ def main(args):
     # title = args[2]
     # category = None if len(args) < 4 else args[3]
     # make_barplot(input_df, category, unit, title)
-    df = merge_results_files("ColdResults/CS_Mixed1")
-    make_barplot(df, "Cold start time", "ms")
+    # df = merge_results_files("ColdResults/CS_Mixed1")
+    df = load_results_file("../ReportData/Arrays_InOut_2023-09-21T00_45_32")
+    make_barplot(df, "Arrays In Out", "ns")
 
 if __name__ == "__main__":
     main(sys.argv[1:])

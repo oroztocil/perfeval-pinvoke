@@ -52,17 +52,6 @@ namespace PInvoke.Tests
         }
 
         [Fact]
-        public void FillIntArray_Out()
-        {
-            var buffer = new int[10];
-            NativeFunctions.FillIntArray_OutAttr(buffer, buffer.Length);
-
-            var expected = Enumerable.Range(0, 10).ToArray();
-
-            Assert.Equal(expected, buffer);
-        }
-
-        [Fact]
         public void FillIntArray_Pinned()
         {
             var buffer = new int[10];
