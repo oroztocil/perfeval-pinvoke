@@ -23,7 +23,6 @@ def load_results_file(run_dir: str) -> pd.DataFrame:
 
 def merge_results_files(root_dir: str) -> pd.DataFrame:
     files = glob.glob(root_dir + "*/results/*measurements.csv")
-    print(files)
     result = pd.DataFrame()
     for file in files:
         df = pd.read_csv(file, delimiter=";")
@@ -32,7 +31,8 @@ def merge_results_files(root_dir: str) -> pd.DataFrame:
 
 def make_barplot(input_df: pd.DataFrame, title, unit, category = None, param = None, figsize = (14, 6)):
     category_df = input_df if category is None else input_df.query(f"Category == '{category}'")
-    grouped_df = category_df.groupby(["Target_Type", "Target_Method", "Job_Runtime"])
+    param_df = category_df if param is None else category_df.query(f"Params == '{param}'")
+    grouped_df = param_df.groupby(["Target_Type", "Target_Method", "Job_Runtime"])
 
     items = []
     methods = {
@@ -63,15 +63,18 @@ def make_barplot(input_df: pd.DataFrame, title, unit, category = None, param = N
     items.sort(key=lambda x: x["Order"])
 
     method_total = sum(map(len, methods.values()))
-    method_ratios = list(map(lambda x: len(x) / method_total, methods.values()))
+    method_ratios = list(filter(lambda x: x > 0, map(lambda x: len(x) / method_total, methods.values())))
+    
+    used_runtimes = list(filter(lambda kv: len(kv[1]) > 0, methods.items()))
+    runtime_plot_info = list(zip(used_runtimes, range(0, len(used_runtimes))))
 
     input_df = pd.DataFrame(items)
 
-    fig, ax = plt.subplots(1, 3, figsize=figsize, sharey=True, gridspec_kw={'width_ratios': method_ratios})
+    fig, ax = plt.subplots(1, len(runtime_plot_info), figsize=figsize, sharey=True, gridspec_kw={'width_ratios': method_ratios})
     fig.suptitle(title, fontsize=16, fontweight="bold")
     fig.supylabel(f"Mean execution time ({unit})", fontsize=12)
 
-    for i, runtime in [(0, ".NET 4.8"), (1, ".NET 6.0"), (2, ".NET 8.0")]:
+    for ((runtime, mets), i) in runtime_plot_info:
         _df = input_df[input_df.Runtime == runtime]
         plot = sns.barplot(
             ax=ax[i],
